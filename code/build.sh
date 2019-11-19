@@ -78,6 +78,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     lightdm-gtk-greeter-settings \
     plymouth \
+    plymouth-label \
     qt5ct \
     qt5-style-kvantum \
     qt5-style-kvantum-l10n \
