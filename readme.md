@@ -6,21 +6,13 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 ### Imagens
 
-Desktop |
-  --- |
-[![desktop](screenshots/desktop.png)](screenshots/desktop.png)|
+Desktop | Epiphany
+  --- | ---
+[![desktop](screenshots/desktop.png)](screenshots/desktop.png)|[![epiphany](screenshots/epiphany.png)](screenshots/epiphany.png)
 
-Epiphany |
-  --- |
-[![epiphany](screenshots/epiphany.png)](screenshots/epiphany.png)|
-
-Tilix & Nemo |
---- |
-[![tilix+nemo](screenshots/tilix+nemo.png)](screenshots/tilix+nemo.png)|
-
-Apps |
---- |
-[![apps](screenshots/apps.png)](screenshots/apps.png)|
+Tilix & Nemo | Apps
+--- | ---
+[![tilix+nemo](screenshots/tilix+nemo.png)](screenshots/tilix+nemo.png)|[![apps](screenshots/apps.png)](screenshots/apps.png)
 
 Plymouth |
 --- |
