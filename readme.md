@@ -8,23 +8,23 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 Desktop |
   --- |
-![desktop](screenshots/desktop.png)|
+[![desktop](screenshots/desktop.png)](screenshots/desktop.png)|
 
 Epiphany |
   --- |
-![epiphany](screenshots/epiphany.png)|
+[![epiphany](screenshots/epiphany.png)](screenshots/epiphany.png)|
 
 Tilix & Nemo |
 --- |
-![tilix+nemo](screenshots/tilix+nemo.png)|
+[![tilix+nemo](screenshots/tilix+nemo.png)](screenshots/tilix+nemo.png)|
 
 Apps |
 --- |
-![apps](screenshots/apps.png)|
+[![apps](screenshots/apps.png)](screenshots/apps.png)|
 
 Plymouth |
 --- |
-![plymouth](screenshots/plymouth.png)|
+[![plymouth](screenshots/plymouth.png)](screenshots/plymouth.png)|
 
 ### Características
  - [**Ubuntu 19.10**](https://ubuntu.com)
