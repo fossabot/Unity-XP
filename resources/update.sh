@@ -256,3 +256,23 @@ if promptyn "Você deseja mudar o tema do Plymouth para o Placidity? (s/n)"; the
 else
   clear
 fi
+
+# SMPlayer
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja instalar o SMPlayer? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja instalar o SMPlayer? (s/n)"; then
+  sudo apt install -y mplayer smplayer
+  mkdir -p $HOME/.config/smplayer
+  wget -cO $HOME/.config/smplayer/smplayer.ini https://github.com/rauldipeas/Unity-XP/raw/master/code/settings/smplayer.ini
+else
+  clear
+fi
