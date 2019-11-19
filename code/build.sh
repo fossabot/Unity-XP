@@ -75,7 +75,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 
 # Ambiente gráfico sem os extras recomendados
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
-    gnome-mpv \
     lightdm-gtk-greeter-settings \
     plymouth \
     plymouth-label \
@@ -116,6 +115,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     libreoffice-impress \
     libreoffice-l10n-pt-br \
     libreoffice-writer \
+    mplayer \
     nemo \
     neofetch \
     network-manager-gnome \
@@ -127,6 +127,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     rawtherapee \
     redshift-gtk \
     rygel \
+    smplayer \
     synaptic \
     telegram-desktop \
     tilix \
@@ -251,11 +252,11 @@ sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xd
 # Configurações do Qt5
 sudo cp -rfv code/settings/lightdm-gtk-greeter.conf $HOME/Unity-XP/chroot/etc/lightdm/lightdm-gtk-greeter.conf
 sudo cp -rfv code/settings/99qt5ct.conf $HOME/Unity-XP/chroot/etc/environment.d/99qt5ct.conf
-sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,qt5ct,olivevideoeditor.org/Olive}
+sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,smplayer,qt5ct,olivevideoeditor.org/Olive}
 sudo cp -rfv code/settings/kvantum.kvconfig $HOME/Unity-XP/chroot/etc/skel/.config/Kvantum/kvantum.kvconfig
 sudo cp -rfv code/settings/config.xml $HOME/Unity-XP/chroot/etc/skel/.config/olivevideoeditor.org/Olive/config.xml
+sudo cp -rfv code/settings/smplayer.ini $HOME/Unity-XP/chroot/etc/skel/.config/smplayer/smplayer.ini
 sudo cp -rfv code/settings/qt5ct.conf $HOME/Unity-XP/chroot/etc/skel/.config/qt5ct/qt5ct.conf
-sudo cp -rfv code/settings/99qt5ct.conf $HOME/Unity-XP/chroot/etc/environment.d/99qt5ct.conf
 
 # Configurações do DConf
 sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
