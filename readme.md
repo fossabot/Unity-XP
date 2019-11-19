@@ -4,20 +4,11 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 [![**downlad**](resources/download.png)](https://github.com/rauldipeas/Unity-XP/releases)
 
-### Área de trabalho
-![desktop](screenshots/desktop.png)
+### Imagens
 
-### Epiphany(Web)
-![epiphany](screenshots/epiphany.png)
-
-### Tilix & Nemo
-![tilix+nemo](screenshots/tilix+nemo.png)
-
-### Applicativos
-![apps](screenshots/apps.png)
-
-### Plymouth
-![apps](screenshots/plymouth.png)
+Desktop|Epiphany|Tilix & Nemo|Apps|Plymouth
+:||||:
+![desktop](screenshots/desktop.png)|![epiphany](screenshots/epiphany.png)|![tilix+nemo](screenshots/tilix+nemo.png)|![apps](screenshots/apps.png)|![plymouth](screenshots/plymouth.png)
 
 ### Características
  - [**Ubuntu 19.10**](https://ubuntu.com)
@@ -113,6 +104,7 @@ bash <(curl -s https://rauldipeas.github.io/Unity-XP/resources/update.sh)
 
 ### Extras
   - [**Android Studio**](https://docs.unityxp.tk/extras/android-studio)
+  - [**ASDF-VM**](https://docs.unityxp.tk/extras/asdf-vm)  
   - [**AV Studio**](https://docs.unityxp.tk/extras/av-studio)
   - [**Blender**](https://docs.unityxp.tk/extras/blender)
   - [**Bash-it**](https://docs.unityxp.tk/extras/bash-it)

@@ -201,7 +201,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y boot-repair
 sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
 sudo sed -i 's/\/usr\/share\/boot-sav\/x-boot-repair.png/grub-customizer/g' $HOME/Unity-XP/chroot/usr/share/applications/boot-repair.desktop
 # Remoção de pacotes desnecessários
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info mutter* nautilus vlc* xterm
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math linux*generic* info mutter* nautilus vlc* xterm
+sudo rm -rfv $HOME/Unity-XP/chroot/lib/modules/*generic* $HOME/Unity-XP/chroot/boot/*azure*
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y dmz-cursor-theme doc-base eog gnome-session-canberra gnome-shell gnome-terminal info libreoffice-math libyelp* mutter* nautilus vlc* xterm yelp*
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
@@ -268,7 +269,6 @@ sudo sed -i 's/inode\/directory=code.desktop;nemo.desktop;/inode\/directory=nemo
 
 # Criação do InitRD para o kernel XanMod
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-initramfs -u -k \`ls -t1 /boot/vmlinuz* |  head -n 1 | sed 's/\/boot\/vmlinuz-//g'\`"
-sudo rm -rfv $HOME/Unity-XP/chroot/boot/*azure* #Azure kernel initrd
 
 # Criação dos arquivos de inicialização da imagem de instalação
 cd $HOME/Unity-XP

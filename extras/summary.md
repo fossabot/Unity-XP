@@ -7,6 +7,7 @@
 ## Extras
 
 * [Android Studio](android-studio.md)
+* [ASDF-VM](asdf-vm.md)
 * [AV Studio](av-studio.md)
 * [Bash-it](bash-it.md)
 * [Blender](blender.md)
