@@ -8,7 +8,7 @@ sudo apt -y install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-###  [ZPlugin](https://github.com/zdharma/zplugin)
+### [ZPlugin](https://github.com/zdharma/zplugin)
  - [Syntax highlighting](https://github.com/zdharma/fast-syntax-highlighting)  
  - [Auto suggestions](https://github.com/zsh-users/zsh-autosuggestions)  
  - [ZSH completions](https://github.com/zsh-users/zsh-completions)  
