@@ -27,3 +27,5 @@ Após esses passos, é só aguardar a conclusão do download.
 O programa estará disponível no _dash_ do **Unity XP**.
 
 ![appimage-ao](images/appimage-ao.png)
+
+**Aviso**: Na primeira vez que você executar esse procedimento, será necessário reiniciar a sessão, porque a pasta criada pelo **OCS-URL** para armazenar os programas, não estará sendo monitorada pelo **AppImageD**(daemon que faz a integração automática), nas execuções seguintes não será necessário reiniciar a sessão.
