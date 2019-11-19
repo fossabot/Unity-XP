@@ -19,3 +19,4 @@
 * [PJe Office](pjeoffice.md)
 * [Ubuntu Make](ubuntu-make.md)
 * [WINE Staging](wine-staging.md)
+* [ZSH](zsh.md)
