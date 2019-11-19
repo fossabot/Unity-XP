@@ -77,6 +77,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     lightdm-gtk-greeter-settings \
+    plymouth \
     qt5ct \
     qt5-style-kvantum \
     qt5-style-kvantum-l10n \
@@ -120,7 +121,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     obs-studio \
     olive-editor \
     papirus-icon-theme \
-    plymouth-theme-ubuntu-logo \
     pulseaudio-module-bluetooth \
     python-tk \
     rawtherapee \
@@ -268,6 +268,7 @@ sudo sed -i 's/inode\/directory=code.desktop;nemo.desktop;/inode\/directory=nemo
 
 # Criação do InitRD para o kernel XanMod
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-initramfs -u -k \`ls -t1 /boot/vmlinuz* |  head -n 1 | sed 's/\/boot\/vmlinuz-//g'\`"
+sudo rm -rfv $HOME/Unity-XP/chroot/boot/*azure* #Azure kernel initrd
 
 # Criação dos arquivos de inicialização da imagem de instalação
 cd $HOME/Unity-XP
