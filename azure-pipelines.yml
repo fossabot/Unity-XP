@@ -1,7 +1,7 @@
 pool:
   vmImage: 'ubuntu-18.04'
+pr: none
 trigger:
-  pr: none
   branches:
     include: [ master ]
   paths:
