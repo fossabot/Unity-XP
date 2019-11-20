@@ -103,6 +103,8 @@ Após a instalação do sistema, **para se manter em dia com as atualizações _
 bash <(curl -s https://rauldipeas.github.io/Unity-XP/resources/update.sh)
 ```
 
+Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as atualizações.
+
 ### Extras
   - [**Android Studio**](https://docs.unityxp.tk/extras/android-studio)
   - [**ASDF-VM**](https://docs.unityxp.tk/extras/asdf-vm)  
