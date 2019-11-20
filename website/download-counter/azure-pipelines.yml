@@ -2,7 +2,6 @@ pool:
   vmImage: 'ubuntu-18.04'
 variables:
   - group: GitHub
-trigger: none
 schedules:
   - cron: "0 0 * * *"
     displayName: Meia-noite
