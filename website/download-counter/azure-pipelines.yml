@@ -2,16 +2,6 @@ pool:
   vmImage: 'ubuntu-18.04'
 variables:
   - group: GitHub
-trigger: none
-schedules:
-  - cron: "0 0 * * *"
-    displayName: Meia-noite
-  - cron: "0 6 * * *"
-    displayName: 6 da manhã
-  - cron: "0 12 * * *"
-    displayName: Meio-dia
-  - cron: "0 18 * * *"
-    displayName: 6 da tarde
 steps:
   - script: sudo apt update;sudo apt install -y git python-requests wget
     displayName: Instalação de dependências
