@@ -2,6 +2,7 @@ pool:
   vmImage: 'ubuntu-18.04'
 variables:
   - group: GitHub
+trigger: none
 schedules:
   - cron: "0 0 * * *"
     displayName: Meia-noite
@@ -11,7 +12,7 @@ schedules:
     displayName: Meio-dia
   - cron: "0 18 * * *"
     displayName: 6 da tarde
-  steps:
+steps:
   - script: sudo apt update;sudo apt install -y git python-requests wget
     displayName: Instalação de dependências
   - script: bash website/download-counter/download-counter.sh
