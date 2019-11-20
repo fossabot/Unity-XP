@@ -7,9 +7,9 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 ### Imagens
 
 #### Desktop
-Desktop | Epiphany | Tilix & Nemo | Apps | Plymouth
- --- | --- | --- | --- | ---
-<img src=screenshots/desktop.png width=1920px>|<img src=screenshots/epiphany.png width=1920px>|<img src=screenshots/tilix+nemo.png width=1920px>|<img src=screenshots/apps.png width=1920px>|<img src=screenshots/plymouth.png width=1920px>
+<img src=screenshots/desktop.png width=50%><img src=screenshots/epiphany.png width=50%>
+<img src=screenshots/tilix+nemo.png width=50%><img src=screenshots/apps.png width=50%>
+<img src=screenshots/plymouth.png width=50%>
 
 ### Características
  - [**Ubuntu 19.10**](https://ubuntu.com)
