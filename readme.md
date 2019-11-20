@@ -6,17 +6,9 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 ### Imagens
 
-A | B
--|-
-[![desktop](screenshots/desktop.png)](screenshots/desktop.png)|[![epiphany](screenshots/epiphany.png)](screenshots/epiphany.png)
-
-C | D
--|-
- [![tilix+nemo](screenshots/tilix+nemo.png)](screenshots/tilix+nemo.png)|[![apps](screenshots/apps.png)](screenshots/apps.png)
-
-E |
--|
-[![plymouth](screenshots/plymouth.png)](screenshots/plymouth.png)|
+A | B | C | D | E
+-|-|-|-|-
+[![desktop](screenshots/desktop.png)](screenshots/desktop.png)|[![epiphany](screenshots/epiphany.png)](screenshots/epiphany.png)|[![tilix+nemo](screenshots/tilix+nemo.png)](screenshots/tilix+nemo.png)|[![apps](screenshots/apps.png)](screenshots/apps.png)|[![plymouth](screenshots/plymouth.png)](screenshots/plymouth.png)|
 
 ### Características
  - [**Ubuntu 19.10**](https://ubuntu.com)
