@@ -305,7 +305,7 @@ sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/use
 sudo sed -i 's/us/br/g' $HOME/Unity-XP/chroot/etc/default/keyboard
 
 # Abertura de pastas com o Nemo
-sudo sed -i 's/inode\/directory=code.desktop;nemo.desktop;/inode\/directory=nemo.desktop;code.desktop;/g' $HOME/Unity-XP/chroot/usr/share/applications/mimeinfo.cache
+sudo sed -i 's/inode\/directory=codium.desktop;nemo.desktop;/inode\/directory=nemo.desktop;codium.desktop;/g' $HOME/Unity-XP/chroot/usr/share/applications/mimeinfo.cache
 
 # Criação do InitRD para o kernel XanMod
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-initramfs -u -k \`ls -t1 /boot/vmlinuz* |  head -n 1 | sed 's/\/boot\/vmlinuz-//g'\`"
