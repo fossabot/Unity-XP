@@ -454,7 +454,7 @@ grub-mkstandalone \
    --fonts="" \
    "boot/grub/grub.cfg=isolinux/grub.cfg"
 cat /usr/lib/grub/i386-pc/cdboot.img isolinux/core.img > isolinux/bios.img
-cp -rfv ../boot/grub/themes boot/grub/
+cp -rfv ../chroot/boot/grub/themes boot/grub/
 
 # Geração do MD5 interno da imagem de instalação
 sudo /bin/bash -c '(find . -type f -print0 | xargs -0 md5sum | grep -v "\./md5sum.txt" > md5sum.txt)'
