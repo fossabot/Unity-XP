@@ -112,5 +112,5 @@ fi
 # GRUB 2 themes (Tela)
 if promptyn "Você deseja instalar o tema Tela para o GRUB? (s/n)"; then
   git clone https://github.com/vinceliuice/grub2-themes;cd grub2-themes
-  sudo ./install.sh -t;cd ../rm -rfv grub2-themes
+  sudo ./install.sh -t;cd ..;rm -rfv grub2-themes
 fi
