@@ -63,7 +63,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Unity-Tweak-Tool](https://launchpad.net/unity-tweak-tool)
  - [Vinagre](https://wiki.gnome.org/Apps/Vinagre/)
  - [Vino](https://help.ubuntu.com/community/VNC/Servers)
- - [Visual Studio Code](https://code.visualstudio.com/)
+ - [VSCodium](https://vscodium.com/)
  - [XBoxDrv](https://xboxdrv.gitlab.io/)
 
 ### Temas
