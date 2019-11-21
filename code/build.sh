@@ -132,6 +132,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     telegram-desktop \
     tilix \
     timeshift \
+    ubuntu-wallpapers-eoan \
     unity-tweak-tool \
     vinagre \
     vino \
@@ -203,8 +204,42 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y boot-repair
 sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
 sudo sed -i 's/\/usr\/share\/boot-sav\/x-boot-repair.png/grub-customizer/g' $HOME/Unity-XP/chroot/usr/share/applications/boot-repair.desktop
 # Remoção de pacotes desnecessários
-sudo rm -rfv $HOME/Unity-XP/chroot/lib/modules/*generic* $HOME/Unity-XP/chroot/boot/*azure*
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y dmz-cursor-theme doc-base eog gnome-session-canberra gnome-shell gnome-terminal info libreoffice-math libyelp* mutter* nautilus vlc* xterm yelp*
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y \
+    dmz-cursor-theme \
+    doc-base \
+    eog \
+    fonts-dejavu-core \
+    fonte-freefont-ttf \
+    fonts-lato \
+    fonts-liberation2 \
+    fonts-open-sans \
+    gnome-accessibility-themes \
+    gnome-session-canberra \
+    gnome-shell \
+    gnome-terminal \
+    gsfonts \
+    humanity-icon-theme \
+    info \
+    libreoffice-math \
+    libyelp* \
+    light-themes \
+    mutter* \
+    nautilus \
+    printer-driver-pnm2ppa \
+    vlc* \
+    xterm \
+    yelp*
+sudo rm -rfv \
+    $HOME/Unity-XP/chroot/lib/modules/*generic* \
+    $HOME/Unity-XP/chroot/boot/*azure* \
+    $HOME/Unity-XP/chroot/usr/share/fonts/truetype/freefont \
+    $HOME/Unity-XP/chroot/usr/share/fonts/truetype/lato \
+    $HOME/Unity-XP/chroot/usr/share/fonts/truetype/liberation2 \
+    $HOME/Unity-XP/chroot/usr/share/fonts/truetype/open-sans \
+    $HOME/Unity-XP/chroot/usr/share/fonts/type1/gsfonts \
+    $HOME/Unity-XP/chroot/usr/share/icons/elementary* \
+    $HOME/Unity-XP/chroot/usr/share/icons/locolor* \
+    $HOME/Unity-XP/chroot/usr/share/icons/ubuntu-mono-*
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
@@ -259,7 +294,7 @@ sudo cp -rfv code/settings/qt5ct.conf $HOME/Unity-XP/chroot/etc/skel/.config/qt5
 
 # Configurações do DConf
 sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
-#Keyboard-indicator(off) #Yaru++(icons) #vimix-dark-laptop-ruby(gtk-theme) #Breeze Snow(cursor)
+#Keyboard-indicator(off) #Yaru++(icons) #vimix-dark-laptop-ruby(gtk-theme) #Breeze Snow(cursor) #Nemo desktop font(Ubuntu 11)
 #Wallpaper(ubuntu-glitch-logo) #Tilix on Nemo(open terminal here) #Tap-to-click(touchpad) #Unity launcher(favorites)
 
 # Layout português brasileiro para o teclado
