@@ -223,6 +223,7 @@ sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y \
     libreoffice-math \
     libyelp* \
     light-themes \
+    linux*generic* \
     mutter* \
     nautilus \
     printer-driver-pnm2ppa \
@@ -316,7 +317,6 @@ sudo cp chroot/boot/vmlinuz* image/casper/vmlinuz
 sudo cp chroot/boot/`ls -t1 chroot/boot/ |  head -n 1` image/casper/initrd
 touch image/Ubuntu
 # GRUB
-cp -rfv chroot/boot/grub/themes image/boot/grub/
 cat <<EOF > image/isolinux/grub.cfg
 search --set=root --file /Ubuntu
 insmod all_video
@@ -454,6 +454,7 @@ grub-mkstandalone \
    --fonts="" \
    "boot/grub/grub.cfg=isolinux/grub.cfg"
 cat /usr/lib/grub/i386-pc/cdboot.img isolinux/core.img > isolinux/bios.img
+cp -rfv ../boot/grub/themes boot/grub/
 
 # Geração do MD5 interno da imagem de instalação
 sudo /bin/bash -c '(find . -type f -print0 | xargs -0 md5sum | grep -v "\./md5sum.txt" > md5sum.txt)'
