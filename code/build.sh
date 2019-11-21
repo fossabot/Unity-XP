@@ -209,7 +209,7 @@ sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y \
     doc-base \
     eog \
     fonts-dejavu-core \
-    fonte-freefont-ttf \
+    fonts-freefont-ttf \
     fonts-lato \
     fonts-liberation2 \
     fonts-open-sans \
