@@ -114,3 +114,10 @@ if promptyn "Você deseja instalar o tema Tela para o GRUB? (s/n)"; then
   git clone https://github.com/vinceliuice/grub2-themes;cd grub2-themes
   sudo ./install.sh -t;cd ..;rm -rfv grub2-themes
 fi
+
+# VSCodium
+if promptyn "Você deseja instalar o VSCodium? (s/n)"; then
+  echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
+  wget -O- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/vscodium.gpg
+  sudo apt update;sudo apt install -y codium
+fi
