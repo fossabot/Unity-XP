@@ -181,6 +181,9 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "cp -rfv vimix-kde/Kvantum/Vimix* /usr/s
 sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes $HOME/Unity-XP/chroot/vimix-kde
 # Breeze Snow(cursor)
 sudo chroot $HOME/Unity-XP/chroot update-alternatives --set x-cursor-theme /etc/X11/cursors/Breeze_Snow.theme
+# GRUB2 Themes(Tela)
+sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/grub2-themes"
+sudo chroot $HOME/Unity-XP/chroot sh -c "cd grub2-themes;sudo ./install.sh -t"
 
 # Ubiquity(instalador do sistema)
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
@@ -274,8 +277,6 @@ wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/placidity.ta
 sudo tar -vzxf placidity.tar.gz -C $HOME/Unity-XP/chroot/usr/share/plymouth/themes/
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth 100"
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-alternatives --set default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth"
-sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/grub2-themes"
-sudo chroot $HOME/Unity-XP/chroot sh -c "cd grub2-themes;sudo ./install.sh -t"
 sudo rm -rfv $HOME/Unity-XP/chroot/grub2-themes
 sudo sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' $HOME/Unity-XP/chroot/etc/default/grub
 echo "RESUME=none" | sudo tee $HOME/Unity-XP/chroot/etc/initramfs-tools/conf.d/resume
