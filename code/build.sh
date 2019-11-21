@@ -58,7 +58,7 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'debconf debconf/frontend select N
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'resolvconf resolvconf/linkify-resolvconf boolean false' | debconf-set-selections"
 
 # Ferramentas base do Ubuntu
-sudo chroot $HOME/Unity-XP/chroot apt install -y \
+sudo chroot $HOME/Unity-XP/chroot apt install -y --fix-missing \
     casper \
     discover \
     laptop-detect \
@@ -274,6 +274,9 @@ wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/placidity.ta
 sudo tar -vzxf placidity.tar.gz -C $HOME/Unity-XP/chroot/usr/share/plymouth/themes/
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth 100"
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-alternatives --set default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth"
+sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/grub2-themes"
+sudo chroot $HOME/Unity-XP/chroot sh -c "cd grub2-themes;sudo ./install.sh -t"
+sudo rm -rfv $HOME/Unity-XP/chroot/grub2-themes
 sudo sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' $HOME/Unity-XP/chroot/etc/default/grub
 echo "RESUME=none" | sudo tee $HOME/Unity-XP/chroot/etc/initramfs-tools/conf.d/resume
 echo "FRAMEBUFFER=y" | sudo tee $HOME/Unity-XP/chroot/etc/initramfs-tools/conf.d/splash
@@ -314,11 +317,25 @@ sudo cp chroot/boot/vmlinuz* image/casper/vmlinuz
 sudo cp chroot/boot/`ls -t1 chroot/boot/ |  head -n 1` image/casper/initrd
 touch image/Ubuntu
 # GRUB
+cp -rfv chroot/boot/grub/themes image/boot/grub/
 cat <<EOF > image/isolinux/grub.cfg
 search --set=root --file /Ubuntu
 insmod all_video
 set default="0"
 set timeout=15
+
+if loadfont /boot/grub/themes/Tela/unifont-regular-16.pf2 ; then
+	insmod gfxmenu
+	insmod jpeg
+	insmod png
+	set theme=/boot/grub/themes/Tela/theme.txt
+	export theme
+	set gfxmode=auto
+	insmod efi_gop
+	insmod efi_uga
+	insmod gfxterm
+	terminal_output gfxterm
+fi
 
 menuentry "Unity XP(live-mode)" {
    linux /casper/vmlinuz boot=casper quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR ---
