@@ -17,6 +17,7 @@
 * [Hardcode-tray](hardcode-tray.md)
 * [Insomnia](insomnia.md)
 * [PJe Office](pjeoffice.md)
+* [RCloneTray](rclonetray.md)
 * [Ubuntu Make](ubuntu-make.md)
 * [WINE Staging](wine-staging.md)
 * [ZSH](zsh.md)
