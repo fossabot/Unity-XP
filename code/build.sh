@@ -160,6 +160,9 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1
 # Stacer
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/stacer_1.1.0_amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
+# VSCodium
+sed -i 's/Icon=\/usr\/share\/pixmaps\/vscodium.png/Icon=vscodium/g' $HOME/Unity-XP/chroot/usr/share/applications/codium.desktop
+echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100vscodium
 # GPU Test
 wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/GpuTest_Linux_x64_0.7.0.zip
 sudo mkdir -pv $HOME/Unity-XP/chroot/etc/skel/.local/share/applications
