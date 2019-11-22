@@ -148,6 +148,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/appimaged_1-alpha-git0f1c320.travis214_amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./appimaged_1-alpha-git0f1c320.travis214_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/appimaged*.deb
 sudo cp -rfv $HOME/Unity-XP/chroot/usr/share/applications/appimaged*.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/
+sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.local/bin
 # Crow translate
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/crow-translate/crow-translate/releases/download/2.2.3/crow-translate-2.2.3-amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./crow-translate-2.2.3-amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/crow-translate*.deb
