@@ -29,6 +29,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Boot Repair **(live-mode)**](https://sourceforge.net/projects/boot-repair/)
  - [CompizConfig Settings Manager](https://en.wikipedia.org/wiki/Compiz)
  - [Crow Translate](https://crow-translate.github.io/)
+ - [Deluge](https://www.deluge-torrent.org/)
  - [Diodon](https://launchpad.net/diodon)
  - [Disks](https://wiki.gnome.org/Apps/Disks)
  - [EmojiOne](https://www.joypixels.com/)
