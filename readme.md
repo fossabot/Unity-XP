@@ -117,7 +117,7 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**Hardcode-tray**](https://docs.unityxp.tk/extras/hardcode-tray)
   - [**Insomnia**](https://docs.unityxp.tk/extras/insomnia)
   - [**PJe Office**](https://docs.unityxp.tk/extras/pjeoffice)
-  - [**RCloneTray**](https://docks.unityxp.tk/extras/rclonetray)
+  - [**RCloneTray**](https://docs.unityxp.tk/extras/rclonetray)
   - [**Ubuntu Make**](https://docs.unityxp.tk/extras/ubuntu-make)
   - [**WINE Staging**](https://docs.unityxp.tk/extras/wine-staging)
   - [**ZSH**](https://docs.unityxp.tk/extras/zsh)
