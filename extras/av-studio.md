@@ -32,7 +32,7 @@ echo DPkg::Post-Invoke \{\"sed -i \'s/256/224/g\' /usr/share/ubuntustudio-contro
 ```bash
 wget -c https://www.reaper.fm/files/5.x/reaper5984_linux_x86_64.tar.xz #update_link
 tar -Jxf reaper*.tar.xz;cd reaper_linux*
-sudo ./install-reaper.sh --install /opt --quiet --integrate-desktop --usr-local-bin-symlink;cd ..
+sudo ./install-reaper.sh --install /opt --quiet --integrate-desktop --usr-local-bin-symlink;cd ..;rm -rfv reaper_linux*
 sudo wget -O /opt/REAPER/Plugins/reaper_sws64.so http://www.sws-extension.org/download/pre-release/linux-2.10.0.0/reaper_sws64.so
 mkdir -pv ~/.config/REAPER/UserPlugins
 wget -c https://github.com/cfillion/reapack/releases/download/v1.2.1/reaper_reapack64.so -O ~/.config/REAPER/UserPlugins/reaper_reapack64.so
@@ -67,13 +67,13 @@ Icon=text-x-plain" | sudo tee -a /usr/share/applications/cockos-reaper.desktop
 ### [LinVST](https://github.com/osxmidi/LinVst)
 ```bash
 wget -c https://github.com/osxmidi/LinVst/releases/download/2.7/LinVst-64bit-32bit_2.7.2.deb #update_link
-sudo apt install -y ./LinVst*.deb
+sudo apt install -y ./LinVst*.deb;rm -rfv LinVst*.deb
 ```
 
 ### [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
 ```bash
 wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ffmulticonverter_1.8.0-dmo1-1ubuntu1-rauldipeas_all.deb
-sudo apt install -y ./ffmulticonverter*rauldipeas*.deb ocl-icd-libopencl1
+sudo apt install -y ./ffmulticonverter*rauldipeas*.deb ocl-icd-libopencl1;rm -rfv ffmulticonverter*rauldipeas*.deb
 ```
 [**BAIXAR O DAVINCI RESOLVE MANUALMENTE NO SITE OFICIAL**](https://www.blackmagicdesign.com/products/davinciresolve)
 ```bash
