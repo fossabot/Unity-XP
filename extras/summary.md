@@ -13,6 +13,7 @@
 * [Blender](blender.md)
 * [DBeaver](dbeaver.md)
 * [Drawers](drawers.md)
+* [Folder-color](folder-color.md)
 * [Gestures](gestures.md)
 * [Hardcode-tray](hardcode-tray.md)
 * [Insomnia](insomnia.md)
