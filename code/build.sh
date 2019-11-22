@@ -276,7 +276,7 @@ sudo umount $HOME/Unity-XP/chroot/run
 
 # Configuração do GRUB e Plymouth
 sudo cp -rfv code/grub $HOME/Unity-XP/chroot/boot/grub/themes
-echo 'GRUB_THEME="/usr/share/grub/themes/Tela/theme.txt"' | sudo tee -a $HOME/Unity-XP/chroot/etc/default/grub
+echo 'GRUB_THEME="/boot/grub/themes/Tela/theme.txt"' | sudo tee -a $HOME/Unity-XP/chroot/etc/default/grub
 sudo sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' $HOME/Unity-XP/chroot/etc/default/grub
 wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/placidity.tar.gz
 sudo tar -vzxf placidity.tar.gz -C $HOME/Unity-XP/chroot/usr/share/plymouth/themes/
