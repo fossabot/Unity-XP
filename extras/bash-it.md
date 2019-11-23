@@ -1,6 +1,6 @@
 ### [Bash-it](https://github.com/Bash-it/bash-it)
 ```bash
-sudo apt install -y undistract-me
+sudo apt install -y fonts-powerline undistract-me
 wget -c https://github.com/hbin/top-programming-fonts/raw/master/Monaco-Linux.ttf
 mkdir -p ~/.fonts;cp -rv Monaco* ~/.fonts
 gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Regular 11'
