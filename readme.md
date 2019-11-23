@@ -123,3 +123,11 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**Ubuntu make**](https://docs.unityxp.tk/extras/ubuntu-make)
   - [**WINE staging**](https://docs.unityxp.tk/extras/wine-staging)
   - [**ZSH**](https://docs.unityxp.tk/extras/zsh)
+
+### Coisas por fazer
+  - [x] Mouse gestures = **Gestures**_(Extras)_
+  - [a] KDE connect = **PB-for-desktop**
+  - [ ] Fractional scalling = _**?**_
+  - [a] App store = **AppImageHub.com**_(Pling)_
+  - [x] Online accounts/Cloud storage = **GOA/RCloneTray**_(Extras)_
+  - [x] Backup solution = **TimeShift**
