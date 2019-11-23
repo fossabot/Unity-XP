@@ -125,7 +125,7 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**ZSH**](https://docs.unityxp.tk/extras/zsh)
 
 ### Coisas por fazer
-  - [x] Mouse gestures = **Gestures**_(Extras)_
+  - [x] Touchpad gestures = **Gestures**_(Extras)_
   - [ ] KDE connect = **PB-for-desktop**
   - [ ] Fractional scalling = _**?**_
   - [ ] App store = **AppImageHub.com**_(Pling)_
