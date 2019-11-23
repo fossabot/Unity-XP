@@ -119,7 +119,7 @@ fi
 if promptyn "Você deseja instalar o VSCodium? (s/n)"; then
   echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
   wget -O- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/vscodium.gpg
-  sudo apt update;sudo apt install -y codium
+  sudo apt update;sudo apt install -y ibus-gtk3 codium
   sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/vscodium.png/Icon=vscodium/g' /usr/share/applications/codium.desktop
   echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100vscodium
   sudo sed -i 's/inode\/directory=codium.desktop;nemo.desktop;/inode\/directory=nemo.desktop;codium.desktop;/g' /usr/share/applications/mimeinfo.cache
