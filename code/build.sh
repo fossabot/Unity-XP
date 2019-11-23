@@ -110,6 +110,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     gnome-themes-extra \
     gthumb \
     hud \
+    ibus-gtk3 \
     indicator-application \
     indicator-appmenu \
     indicator-session \
