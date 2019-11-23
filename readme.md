@@ -126,8 +126,8 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
 
 ### Coisas por fazer
   - [x] Mouse gestures = **Gestures**_(Extras)_
-  - [a] KDE connect = **PB-for-desktop**
+  - [ ] KDE connect = **PB-for-desktop**
   - [ ] Fractional scalling = _**?**_
-  - [a] App store = **AppImageHub.com**_(Pling)_
+  - [ ] App store = **AppImageHub.com**_(Pling)_
   - [x] Online accounts/Cloud storage = **GOA/RCloneTray**_(Extras)_
   - [x] Backup solution = **TimeShift**
