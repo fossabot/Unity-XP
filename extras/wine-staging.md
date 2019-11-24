@@ -15,4 +15,4 @@ STAGING_WRITECOPY=1
 STAGING_SHARED_MEMORY=1
 WINE_ENABLE_PIPE_SYNC_FOR_APP=1' >> ~/.profile
 ```
-[![bashrun-url](../resources/bashrun.png)](br:wine-staging)
+[![bashrun-url](images/bashrun-url.png)](br:wine-staging)

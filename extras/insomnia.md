@@ -5,4 +5,4 @@ wget -O- https://insomnia.rest/keys/debian-public.key.asc | gpg --dearmor | sudo
 sudo apt update
 sudo apt install -y insomnia
 ```
-[![bashrun-url](../resources/bashrun.png)](br:insomnia)
+[![bashrun-url](images/bashrun-url.png)](br:insomnia)

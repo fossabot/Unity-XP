@@ -5,4 +5,4 @@ sudo add-apt-repository -y ppa:papirus/hardcode-tray
 sudo apt install -y hardcode-tray
 sudo hardcode-tray --apply
 ```
-[![bashrun-url](../resources/bashrun.png)](br:hardocre-tray)
+[![bashrun-url](images/bashrun-url.png)](br:hardocre-tray)

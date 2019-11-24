@@ -10,4 +10,4 @@ sudo sed -i 's/org.cunidev.gestures/libinput-gestures/g' /usr/share/applications
 sudo mv -v /usr/share/applications/libinput-gestures.desktop /etc/xdg/autostart/
 sudo sed -i 's/modifier_map Mod3/\/\/ modifier_map Mod3/g' /usr/share/X11/xkb/symbols/br
 ```
-[![bashrun-url](../resources/bashrun.png)](br:gestures)
+[![bashrun-url](images/bashrun-url.png)](br:gestures)

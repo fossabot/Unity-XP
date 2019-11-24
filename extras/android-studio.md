@@ -3,4 +3,4 @@
 sudo add-apt-repository -y ppa:maarten-fonville/android-studio
 sudo apt install -y android-studio
 ```
-[![bashrun-url](../resources/bashrun.png)](br:android-studio)
+[![bashrun-url](images/bashrun-url.png)](br:android-studio)

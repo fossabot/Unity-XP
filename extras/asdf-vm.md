@@ -5,4 +5,4 @@ git checkout "$(git describe --abbrev=0 --tags)"
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 ```
-[![bashrun-url](../resources/bashrun.png)](br:asdf-vm)
+[![bashrun-url](images/bashrun-url.png)](br:asdf-vm)
