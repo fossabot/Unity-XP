@@ -3,4 +3,4 @@
 sudo add-apt-repository -y ppa:maarten-fonville/android-studio
 sudo apt install -y android-studio
 ```
-<a href="https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/android-studio.md"><img src="../resources/bashrun.png">
+<a href="https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/android-studio.md"><img src="../resources/bashrun.png"></a>
