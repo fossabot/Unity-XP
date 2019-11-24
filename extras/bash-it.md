@@ -19,4 +19,4 @@ echo DPkg::Post-Invoke \{\"sed -i \'s/took/levou/g\' /usr/share/undistract-me/lo
 echo DPkg::Post-Invoke \{\"sed -i \'s/dialog-information/xterm/g\' /usr/share/undistract-me/long-running.bash\"\;\}\; | sudo tee -a /etc/apt/apt.conf.d/100undistract-me
 echo DPkg::Post-Invoke \{\"sed -i \'s/Long\ command\ completed/Comando\ concluído\!/g\' /usr/share/undistract-me/long-running.bash\"\;\}\; | sudo tee -a /etc/apt/apt.conf.d/100undistract-me
 ```
-[![bashrun-url](../resources/bashrun.png)](br:https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/bash-it.md)
+[![bashrun-url](../resources/bashrun.png)](br://https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/bash-it.md)

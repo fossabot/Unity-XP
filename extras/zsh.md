@@ -22,4 +22,4 @@ echo zplugin light zsh-users/zsh-completions >> ~/.zshrc
 
 By [**Jonas Gabriel**](https://github.com/jgalmeida93)
 
-[![bashrun-url](../resources/bashrun.png)](br:https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/zsh.md)
+[![bashrun-url](../resources/bashrun.png)](br://https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/zsh.md)

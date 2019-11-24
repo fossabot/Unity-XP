@@ -6,4 +6,4 @@ sudo apt install -y ./drawers_14.05-0~175~ubuntu16.04.1_all.deb ./python-compizc
 rm -rfv drawers*.deb python-compizconfig*.deb
 sudo sed -i 's/\/opt\/extras.ubuntu.com\/drawers\/share\/drawers\/media\/drawers.svg/mate-panel-drawer/g' /usr/share/applications/extras-drawers.desktop
 ```
-[![bashrun-url](../resources/bashrun.png)](br:https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/drawers.md)
+[![bashrun-url](../resources/bashrun.png)](br://https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/drawers.md)

@@ -5,4 +5,4 @@ sudo apt install -y ./dbeaver*.deb;rm -rfv dbeaver*.deb
 sudo sed -i 's/Icon=\/usr\/share\/dbeaver\/dbeaver.png/Icon=dbeaver/g' /usr/share/applications/dbeaver.desktop
 sudo sed -i 's/Exec=/Exec=env GTK_THEME=vimix-laptop-ruby /g' /usr/share/applications/dbeaver.desktop
 ```
-[![bashrun-url](../resources/bashrun.png)](br:https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/dbeaver.md)
+[![bashrun-url](../resources/bashrun.png)](br://https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/dbeaver.md)

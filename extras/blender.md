@@ -6,4 +6,4 @@ mkdir -pv $HOME/.local/share/applications
 cp -rfv $HOME/.local/share/blender-2.80-linux-glibc217-x86_64/blender.desktop $HOME/.local/share/applications/
 sed -i "s/Exec=blender/Exec=.local\/share\/blender-2.80-linux-glibc217-x86_64\/blender/g" $HOME/.local/share/applications/blender.desktop
 ```
-[![bashrun-url](../resources/bashrun.png)](br:https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/blender.md)
+[![bashrun-url](../resources/bashrun.png)](br://https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/blender.md)
