@@ -15,3 +15,4 @@ STAGING_WRITECOPY=1
 STAGING_SHARED_MEMORY=1
 WINE_ENABLE_PIPE_SYNC_FOR_APP=1' >> ~/.profile
 ```
+[![bashrun-url](../resources/bashrun.png)](br:https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/extras/wine-staging.md)

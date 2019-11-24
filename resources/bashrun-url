@@ -1,0 +1,2 @@
+#!/bin/bash
+xterm -e "wget -qO- `echo $@|sed 's/br://g'` | dos2unix | bash"

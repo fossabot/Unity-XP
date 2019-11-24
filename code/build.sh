@@ -98,6 +98,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     deluged \
     deluge-gtk \
     diodon \
+    dos2unix \
     epiphany-browser \
     fonts-emojione \
     fonts-ubuntu \
@@ -142,6 +143,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     vinagre \
     vino \
     xserver-xorg-input-synaptics \
+    xterm \
     zram-config
 
 # Programas que não estão nos repositórios do Ubuntu
@@ -162,13 +164,19 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1
 # Stacer
 sudo cp -rfv resources/stacer*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
-# VSCodium
-sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/vscodium.png/Icon=vscodium/g' $HOME/Unity-XP/chroot/usr/share/applications/codium.desktop
-echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100vscodium
-# GPU Test
+# GPU test
 sudo mkdir -pv $HOME/Unity-XP/chroot/etc/skel/.local/share/applications
 sudo unzip resources/GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/etc/skel/.local/share/
 sudo cp -rfv resources/gputest.desktop $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.desktop 
+# Bash run
+wget -cO $HOME/Unity-XP/chroot/usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
+sudo chmod +x -v $HOME/Unity-XP/chroot/usr/bin/bashrun-url
+wget -cO $HOME/Unity-XP/chroot/usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
+sudo chroot $HOME/Unity-XP/chroot update-desktop-database
+sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
+# VSCodium
+sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/vscodium.png/Icon=vscodium/g' $HOME/Unity-XP/chroot/usr/share/applications/codium.desktop
+echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100vscodium
 
 # Temas
 # Yaru++(ícones)
@@ -233,7 +241,6 @@ sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y \
     nautilus \
     printer-driver-pnm2ppa \
     vlc* \
-    xterm \
     yelp*
 sudo rm -rfv \
     $HOME/Unity-XP/chroot/lib/modules/*generic* \

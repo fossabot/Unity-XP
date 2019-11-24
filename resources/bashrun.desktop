@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Bash Run
+Exec=bashrun-url %u
+Icon=xterm
+Type=Application
+Terminal=false
+MimeType=x-scheme-handler/br;
+Categories=System;
+NoDisplay=true

@@ -124,3 +124,13 @@ if promptyn "Você deseja instalar o VSCodium? (s/n)"; then
   echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100vscodium
   sudo sed -i 's/inode\/directory=codium.desktop;nemo.desktop;/inode\/directory=nemo.desktop;codium.desktop;/g' /usr/share/applications/mimeinfo.cache
 fi
+
+# Bash run
+if promptyn "Você deseja instalar o Bash run? (s/n)"; then
+  sudo apt install -y dos2unix xterm
+  wget -cO /usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
+  sudo chmod +x -v /usr/bin/bashrun-url
+  wget -cO /usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
+  sudo update-desktop-database
+  sudo rm -rfv /usr/share/applications/debian-*xterm.desktop
+fi
