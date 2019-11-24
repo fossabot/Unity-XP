@@ -4,7 +4,7 @@ echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUb
 wget -O- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/wine-obs.gpg
 sudo apt update;sudo apt install -y winehq-staging winetricks q4wine
 sudo wget -O /usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
-sudo chmod +x /usr/local/bin/winetricks
+sudo chmod +x -v /usr/local/bin/winetricks
 sudo setcap cap_sys_nice+ep /opt/wine-staging/bin/wineserver
 echo '# Wine-RT
 STAGING_RT_PRIORITY_SERVER=90
