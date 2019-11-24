@@ -4,7 +4,7 @@ sudo apt install -y fonts-powerline undistract-me
 mkdir -pv ~/.fonts;wget -cO ~/.fonts/Monaco-Linux.ttf https://github.com/hbin/top-programming-fonts/raw/master/Monaco-Linux.ttf
 gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Regular 11'
 wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/DroidSansMono.zip
-unzip DroidSansMono.zip -d ~/.fonts
+unzip DroidSansMono.zip -d ~/.fonts;rm -rfv DroidSansMono.zip
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 bash ~/.bash_it/install.sh --silent
 sed -i 's/bobby/powerline/g' ~/.bashrc
