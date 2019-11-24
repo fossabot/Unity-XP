@@ -1,2 +1,2 @@
 #!/bin/bash
-xterm -e "wget -qO- `echo $@|sed 's/br://g'` | dos2unix | bash"
+xterm -e "wget -qO- `echo $@.md|sed 's/br:/https:\/\/raw.githubusercontent.com\/rauldipeas\/Unity-XP\/master\/extras\//g'` | dos2unix | sed 's/\[/#\[/g' | bash"
