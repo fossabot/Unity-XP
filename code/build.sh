@@ -177,6 +177,8 @@ sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
 # VSCodium
 sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/vscodium.png/Icon=vscodium/g' $HOME/Unity-XP/chroot/usr/share/applications/codium.desktop
 echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100vscodium
+# Tilix
+sudo chroot $HOME/Unity-XP/chroot update-alternatives --set x-terminal-emulator /usr/bin/tilix.wrapper
 
 # Temas
 # Yaru++(ícones)
