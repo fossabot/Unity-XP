@@ -23,6 +23,6 @@ echo zplugin light zsh-users/zsh-autosuggestions >> ~/.zshrc
 echo zplugin light zsh-users/zsh-completions >> ~/.zshrc
 ```
 
-By [**Jonas Gabriel**](https://github.com/jgalmeida93)
+#### By [**Jonas Gabriel**](https://github.com/jgalmeida93)
 
 [![bashrun-url](images/bashrun-url.png)](br:zsh)
