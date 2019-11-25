@@ -128,9 +128,9 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**ZSH**](https://docs.unityxp.tk/extras/zsh)
 
 ### Coisas por fazer
-  - [x] Touchpad gestures = **Gestures**_(Extras)_
-  - [ ] KDE connect = **PB-for-desktop**
+  - [x] Touchpad gestures = [**Gestures**_(Extras)_](https://docs.unityxp.tk/extras/gestures)
+  - [ ] KDE connect = [**PB-for-desktop**](https://sidneys.github.io/pb-for-desktop/)
   - [ ] Fractional scalling = _**?**_
-  - [ ] App store = **AppImageHub.com**_(Pling)_
-  - [x] Online accounts/Cloud storage = **GOA/RCloneTray**_(Extras)_
-  - [x] Backup solution = **TimeShift**
+  - [ ] App store = [**AppImageHub.com**_(Pling)_](https://www.appimagehub.com/)
+  - [x] Online accounts/Cloud storage = [**GOA/RCloneTray**_(Extras)_](https://docs.unityxp.tk/extras/rclonetray)
+  - [x] Backup solution = [**TimeShift**](https://teejeetech.in/timeshift/)
