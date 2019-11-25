@@ -128,9 +128,9 @@ fi
 # Bash run
 if promptyn "Você deseja instalar o Bash run? (s/n)"; then
   sudo apt install -y dos2unix xterm
-  wget -cO /usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
+  sudo wget -cO /usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
   sudo chmod +x -v /usr/bin/bashrun-url
-  wget -cO /usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
+  sudo wget -cO /usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
   sudo update-desktop-database
   sudo rm -rfv /usr/share/applications/debian-*xterm.desktop
 fi
