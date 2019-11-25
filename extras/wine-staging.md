@@ -1,7 +1,7 @@
 ### [WINE staging](https://wiki.winehq.org/Wine-Staging)
 ```bash
-echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.10 ./" | sudo tee /etc/apt/sources.list.d/wine-obs.list
-wget -O- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/wine-obs.gpg
+echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_`lsb_release -sr` ./" | sudo tee /etc/apt/sources.list.d/wine-obs.list
+wget -O- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_`lsb_release -sr`/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/wine-obs.gpg
 sudo apt update;sudo apt install -y --reinstall winehq-staging winetricks q4wine
 sudo wget -O /usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 sudo chmod +x -v /usr/local/bin/winetricks
