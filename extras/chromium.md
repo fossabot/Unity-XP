@@ -16,12 +16,12 @@ sudo cp -rfv opt/google/chrome/WidevineCdm/ /usr/lib/chromium-browser/;cd ..;rm 
 
 ### **Chave API**
 
-#### Alguns recursos do Chromium, incluindo o Sync, exigem uma chave de API, que não está incluída nos pacotes instalados.
-#### Para usar esses recursos, siga as 11 etapas em http://www.chromium.org/developers/how-tos/api-keys.
-#### Em seguida, abra o arquivo `~/.profile` localizado na sua pasta pessoal (você precisará ver os arquivos ocultos) e adicione as três linhas a seguir ao final do arquivo (em uma nova linha):
+##### Alguns recursos do Chromium, incluindo o Sync, exigem uma chave de API, que não está incluída nos pacotes instalados.
+##### Para usar esses recursos, siga as 11 etapas em http://www.chromium.org/developers/how-tos/api-keys.
+##### Em seguida, abra o arquivo `~/.profile` localizado na sua pasta pessoal (você precisará ver os arquivos ocultos) e adicione as três linhas a seguir ao final do arquivo (em uma nova linha):
 
-#### `export GOOGLE_API_KEY="api_key"`
-#### `export GOOGLE_DEFAULT_CLIENT_ID="client_id"`
-#### `export GOOGLE_DEFAULT_CLIENT_SECRET="client_secret"`
+##### `export GOOGLE_API_KEY="api_key"`
+##### `export GOOGLE_DEFAULT_CLIENT_ID="client_id"`
+##### `export GOOGLE_DEFAULT_CLIENT_SECRET="client_secret"`
 
-#### Substitua o que está entre aspas (após o sinal `=` em cada linha) pelo valor apropriado. Você precisará fazer logoff e logon novamente (ou reiniciar, se preferir) para que o Chromium use as chaves.
+##### Substitua o que está entre aspas (após o sinal `=` em cada linha) pelo valor apropriado. Você precisará fazer logoff e logon novamente (ou reiniciar, se preferir) para que o Chromium use as chaves.
