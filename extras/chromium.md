@@ -1,7 +1,7 @@
 ### [Chromium](https://pt.wikipedia.org/wiki/Chromium)
 ```bash
-sudo rm -rfv /etc/apt/sources.list.d/saiarcot895-ubuntu-chromium-dev* /etc/apt/trusted.gpg.d/saiarcot895_ubuntu_chromium-dev*
-sudo add-apt-repository -y ppa:saiarcot895/chromium-dev
+sudo rm -rfv /etc/apt/sources.list.d/saiarcot895-ubuntu-chromium-beta* /etc/apt/trusted.gpg.d/saiarcot895_ubuntu_chromium-beta*
+sudo add-apt-repository -y ppa:saiarcot895/chromium-beta
 sudo apt install -y --reinstall chromium-browser
 ```
 
