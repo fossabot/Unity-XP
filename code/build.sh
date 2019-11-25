@@ -169,9 +169,9 @@ sudo mkdir -pv $HOME/Unity-XP/chroot/etc/skel/.local/share/applications
 sudo unzip resources/GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/etc/skel/.local/share/
 sudo cp -rfv resources/gputest.desktop $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.desktop 
 # Bash run
-wget -cO $HOME/Unity-XP/chroot/usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
+sudo wget -cO $HOME/Unity-XP/chroot/usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
 sudo chmod +x -v $HOME/Unity-XP/chroot/usr/bin/bashrun-url
-wget -cO $HOME/Unity-XP/chroot/usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
+sudo wget -cO $HOME/Unity-XP/chroot/usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
 sudo chroot $HOME/Unity-XP/chroot update-desktop-database
 sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
 # VSCodium
