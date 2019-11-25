@@ -25,4 +25,5 @@ sudo cp -rfv opt/google/chrome/WidevineCdm/ /usr/lib/chromium-browser/;cd ..;rm 
 ###### `export GOOGLE_DEFAULT_CLIENT_ID="client_id"`
 ###### `export GOOGLE_DEFAULT_CLIENT_SECRET="client_secret"`
 
-###### Substitua o que está entre aspas (após o sinal `=` em cada linha) pelo valor apropriado. Você precisará fazer logoff e logon novamente (ou reiniciar, se preferir) para que o Chromium use as chaves.
+###### Substitua o que está entre aspas (após o sinal `=` em cada linha) pelo valor apropriado.
+###### Você precisará fazer logoff e logon novamente (ou reiniciar, se preferir) para que o Chromium use as chaves.
