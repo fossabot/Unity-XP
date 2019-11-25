@@ -10,6 +10,7 @@
 * [ASDF-VM](asdf-vm.md)
 * [Bash-it](bash-it.md)
 * [Blender](blender.md)
+* [Chromium](chromium.md)
 * [DBeaver](dbeaver.md)
 * [Drawers](drawers.md)
 * [Folder-color](folder-color.md)

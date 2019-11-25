@@ -111,6 +111,7 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**ASDF-VM**](https://docs.unityxp.tk/extras/asdf-vm)  
   - [**Bash-it**](https://docs.unityxp.tk/extras/bash-it)
   - [**Blender**](https://docs.unityxp.tk/extras/blender)
+  - [**Chromium**](https://docs.unityxp.tk/extras/chromium)
   - [**DBeaver**](https://docs.unityxp.tk/extras/dbeaver)
   - [**Drawers**](https://docs.unityxp.tk/extras/drawers)
   - [**Folder-color**](https://docs.unityxp.tk/extras/folder-color)
