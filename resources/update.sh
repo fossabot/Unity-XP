@@ -35,7 +35,7 @@ if promptyn "Você deseja instalar o GpuTest? (s/n)"; then
   wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/GpuTest_Linux_x64_0.7.0.zip
   mkdir -pv $HOME/.local/share/applications
   unzip GpuTest_Linux_x64_0.7.0.zip -d $HOME/.local/share/;rm -rfv GpuTest*.zip
-  wget -cO $HOME/.local/share/applications/gputest.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/gputest.desktop
+  wget -O $HOME/.local/share/applications/gputest.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/gputest.desktop
 fi
 
 # Stacer
@@ -106,7 +106,7 @@ fi
 if promptyn "Você deseja instalar o SMPlayer? (s/n)"; then
   sudo apt install -y mplayer smplayer
   mkdir -p $HOME/.config/smplayer
-  wget -cO $HOME/.config/smplayer/smplayer.ini https://github.com/rauldipeas/Unity-XP/raw/master/code/settings/smplayer.ini
+  wget -O $HOME/.config/smplayer/smplayer.ini https://github.com/rauldipeas/Unity-XP/raw/master/code/settings/smplayer.ini
 fi
 
 # GRUB 2 themes (Tela)
@@ -128,9 +128,9 @@ fi
 # Bash run
 if promptyn "Você deseja instalar o Bash run? (s/n)"; then
   sudo apt install -y dos2unix xterm
-  sudo wget -cO /usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
+  sudo wget -O /usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
   sudo chmod +x -v /usr/bin/bashrun-url
-  sudo wget -cO /usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
+  sudo wget -O /usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
   sudo update-desktop-database
   sudo rm -rfv /usr/share/applications/debian-*xterm.desktop
 fi

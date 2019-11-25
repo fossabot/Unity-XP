@@ -1,6 +1,6 @@
 ### [ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 ```bash
-sudo apt -y install zsh
+sudo apt -y install --reinstall zsh
 ```
 
 ### [Oh-my-ZSH](https://ohmyz.sh/)
@@ -15,6 +15,9 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+sed -i 's/zplugin light zdharma/fast-syntax-highlighting//g' ~/.zshrc
+sed -i 's/zplugin light zsh-users/zsh-autosuggestions//g' ~/.zshrc
+sed -i 's/zplugin light zsh-users/zsh-completions//g' ~/.zshrc
 echo zplugin light zdharma/fast-syntax-highlighting >> ~/.zshrc
 echo zplugin light zsh-users/zsh-autosuggestions >> ~/.zshrc  
 echo zplugin light zsh-users/zsh-completions >> ~/.zshrc

@@ -1,7 +1,7 @@
 ### [Gestures](https://gitlab.com/cunidev/gestures)
 ```bash
 sudo gpasswd -a $USER input
-sudo apt install -y libinput-tools python3-setuptools wmctrl xdotool
+sudo apt install -y --reinstall libinput-tools python3-setuptools wmctrl xdotool
 git clone https://github.com/bulletmark/libinput-gestures.git
 cd libinput-gestures;sudo make install;cd ..;rm -rfv libinput-gestures*
 git clone https://gitlab.com/cunidev/gestures

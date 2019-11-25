@@ -1,6 +1,6 @@
 ### [Bash-it](https://github.com/Bash-it/bash-it)
 ```bash
-sudo apt install -y fonts-powerline undistract-me
+sudo apt install -y --reinstall fonts-powerline undistract-me
 mkdir -pv ~/.fonts;wget -cO ~/.fonts/Monaco-Linux.ttf https://github.com/hbin/top-programming-fonts/raw/master/Monaco-Linux.ttf
 gsettings set org.gnome.desktop.interface monospace-font-name 'Monaco Regular 11'
 wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/DroidSansMono.zip
@@ -8,6 +8,9 @@ unzip DroidSansMono.zip -d ~/.fonts;rm -rfv DroidSansMono.zip
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 bash ~/.bash_it/install.sh --silent
 sed -i 's/bobby/powerline/g' ~/.bashrc
+sed -i 's/# Undistract-Me//g' ~/.bashrc
+sed -i 's/. \/usr\/share\/undistract-me\/long-running.bash//g' ~/.bashrc
+sed -i 's/notify_when_long_running_commands_finish_install//g' ~/.bashrc
 echo '
 # Undistract-Me
 . /usr/share/undistract-me/long-running.bash
