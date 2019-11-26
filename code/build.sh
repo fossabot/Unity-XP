@@ -338,17 +338,17 @@ set default="0"
 set timeout=15
 
 if loadfont /boot/grub/themes/Tela/unifont-regular-16.pf2 ; then
-  loadfont /boot/grub/themes/Tela/dejavu_32.pf2
-  loadfont /boot/grub/themes/Tela/dejavu_sans_12.pf2
-  loadfont /boot/grub/themes/Tela/dejavu_sans_14.pf2
-  loadfont /boot/grub/themes/Tela/dejavu_sans_16.pf2
-  loadfont /boot/grub/themes/Tela/dejavu_sans_24.pf2
-  loadfont /boot/grub/themes/Tela/dejavu_sans_48.pf2
-  loadfont /boot/grub/themes/Tela/terminus-12.pf2
-  loadfont /boot/grub/themes/Tela/terminus-14.pf2
-  loadfont /boot/grub/themes/Tela/terminus-16.pf2
-  loadfont /boot/grub/themes/Tela/terminus-18.pf2
-	insmod gfxmenu
+    loadfont /boot/grub/themes/Tela/dejavu_32.pf2
+    loadfont /boot/grub/themes/Tela/dejavu_sans_12.pf2
+    loadfont /boot/grub/themes/Tela/dejavu_sans_14.pf2
+    loadfont /boot/grub/themes/Tela/dejavu_sans_16.pf2
+    loadfont /boot/grub/themes/Tela/dejavu_sans_24.pf2
+    loadfont /boot/grub/themes/Tela/dejavu_sans_48.pf2
+    loadfont /boot/grub/themes/Tela/terminus-12.pf2
+    loadfont /boot/grub/themes/Tela/terminus-14.pf2
+    loadfont /boot/grub/themes/Tela/terminus-16.pf2
+    loadfont /boot/grub/themes/Tela/terminus-18.pf2
+    insmod gfxmenu
 	insmod jpeg
 	insmod png
 	set theme=/boot/grub/themes/Tela/theme.txt
@@ -366,6 +366,17 @@ menuentry "Unity XP(live-mode)" {
 }
 menuentry "Unity XP(live-mode)(nvidia-legacy)" {
    linux /casper/vmlinuz boot=casper quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR modprobe.blacklist=nvidia,nvidia_uvm,nvidia_drm,nvidia_modeset ---
+   initrd /casper/initrd
+}
+EOF
+# Loopback
+cat <<EOF > boot/grub/loopback.cfg
+menuentry "Unity XP(live-mode)" {
+   linux /casper/vmlinuz boot=casper quiet splash iso-scan/filename=${iso_path} loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR ---
+   initrd /casper/initrd
+}
+menuentry "Unity XP(live-mode)(nvidia-legacy)" {
+   linux /casper/vmlinuz boot=casper quiet splash iso-scan/filename=${iso_path} loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR modprobe.blacklist=nvidia,nvidia_uvm,nvidia_drm,nvidia_modeset ---
    initrd /casper/initrd
 }
 EOF
