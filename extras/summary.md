@@ -20,6 +20,7 @@
 * [Jack](jack.md)
 * [LinVST](linvst.md)
 * [PJe Office](pjeoffice.md)
+* [Pushbullet indicator](pushbullet-indicator.md)
 * [RCloneTray](rclonetray.md)
 * [REAPER](reaper.md)
 * [Resolve](resolve.md)

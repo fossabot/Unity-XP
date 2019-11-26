@@ -121,6 +121,7 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**Jack**](https://docs.unityxp.tk/extras/jack)
   - [**LinVST**](https://docs.unityxp.tk/extras/linvst)
   - [**PJe office**](https://docs.unityxp.tk/extras/pjeoffice)
+  - [**Pushbullet indicator**](https://docs.unityxp.tk/extras/pjeoffice)
   - [**RCloneTray**](https://docs.unityxp.tk/extras/rclonetray)
   - [**REAPER**](https://docs.unityxp.tk/extras/reaper)
   - [**Resolve**](https://docs.unityxp.tk/extras/resolve)
