@@ -156,6 +156,9 @@ p.lead {
     background-color: #faf6fb;
 }
 
+.white-bg {
+    background-color: #fff;
+}
 .section {
     padding: 80px 0;
 }
@@ -744,3 +747,13 @@ header {
        width: 100%;
    }
 }
+
+.gif-background {
+		    position: fixed;
+		    min-width: 100%;
+		    min-height: 100%;
+		    top: 50%;
+		    left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -99;
+		}
