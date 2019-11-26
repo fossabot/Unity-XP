@@ -324,7 +324,7 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "update-initramfs -u -k \`ls -t1 /boot/v
 
 # Criação dos arquivos de inicialização da imagem de instalação
 cd $HOME/Unity-XP
-mkdir -pv image/{casper,isolinux,install,boot/grub}
+mkdir -pv image/{casper,isolinux,boot/grub}
 # Kernel
 sudo cp chroot/boot/vmlinuz* image/casper/vmlinuz
 sudo cp chroot/boot/`ls -t1 chroot/boot/ |  head -n 1` image/casper/initrd
@@ -372,11 +372,11 @@ EOF
 # Loopback
 cat <<EOF > image/boot/grub/loopback.cfg
 menuentry "Unity XP(live-mode)" {
-   linux /casper/vmlinuz boot=casper quiet splash iso-scan/filename=${iso_path} loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR ---
+   linux /casper/vmlinuz boot=casper quiet splash iso-scan/filename=\${iso_path} loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR ---
    initrd /casper/initrd
 }
 menuentry "Unity XP(live-mode)(nvidia-legacy)" {
-   linux /casper/vmlinuz boot=casper quiet splash iso-scan/filename=${iso_path} loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR modprobe.blacklist=nvidia,nvidia_uvm,nvidia_drm,nvidia_modeset ---
+   linux /casper/vmlinuz boot=casper quiet splash iso-scan/filename=\${iso_path} loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR modprobe.blacklist=nvidia,nvidia_uvm,nvidia_drm,nvidia_modeset ---
    initrd /casper/initrd
 }
 EOF
