@@ -370,7 +370,7 @@ menuentry "Unity XP(live-mode)(nvidia-legacy)" {
 }
 EOF
 # Loopback
-cat <<EOF > boot/grub/loopback.cfg
+cat <<EOF > image/boot/grub/loopback.cfg
 menuentry "Unity XP(live-mode)" {
    linux /casper/vmlinuz boot=casper quiet splash iso-scan/filename=${iso_path} loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR ---
    initrd /casper/initrd
