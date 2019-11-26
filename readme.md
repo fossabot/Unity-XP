@@ -73,6 +73,8 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
   - [Yaru++(icons)](https://github.com/Bonandry/yaru-plus)
   - [Papirus(icons, inherits)](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
   - [Breeze(Cursor)](https://github.com/KDE/breeze)
+  - [Tela(GRUB)](https://github.com/vinceliuice/grub2-themes)
+  - [Placidity(Plymouth)](https://www.pling.com/p/1201141/)
 
 ### Faça você mesmo
 [~~No momento, _**não há a possibilidade de disponibilizar uma imagem de instalação**_, porém,~~](https://github.com/rauldipeas/Unity-XP/releases) você pode _compilar a imagem por sua conta e risco_, usando os comandos _abaixo_:
