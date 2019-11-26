@@ -148,7 +148,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 
 # Programas que não estão nos repositórios do Ubuntu
 # AppImageD
-sudo cp -rfv resources/appimaged*.deb $HOME/Unity-XP/chroot/
+sudo cp -rfv resources/debs/appimaged*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./appimaged_1-alpha-git0f1c320.travis214_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/appimaged*.deb
 sudo cp -rfv $HOME/Unity-XP/chroot/usr/share/applications/appimaged*.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.local/bin
@@ -156,22 +156,22 @@ sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.local/bin
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/crow-translate/crow-translate/releases/download/2.2.3/crow-translate-2.2.3-amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./crow-translate-2.2.3-amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/crow-translate*.deb
 # HardInfo
-sudo cp -rfv resources/hardinfo*.deb $HOME/Unity-XP/chroot/
+sudo cp -rfv resources/debs/hardinfo*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./hardinfo_0.5.1+git20191030-1_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/hardinfo*.deb
 # OCS-URL
-sudo cp -rfv resources/ocs-url*.deb $HOME/Unity-XP/chroot/
+sudo cp -rfv resources/debs/ocs-url*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/ocs-url*.deb
 # Stacer
-sudo cp -rfv resources/stacer*.deb $HOME/Unity-XP/chroot/
+sudo cp -rfv resources/debs/stacer*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
 # GPU test
 sudo mkdir -pv $HOME/Unity-XP/chroot/etc/skel/.local/share/applications
-sudo unzip resources/GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/etc/skel/.local/share/
-sudo cp -rfv resources/gputest.desktop $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.desktop 
+sudo unzip resources/misc/GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/etc/skel/.local/share/
+sudo cp -rfv resources/launchers/gputest.desktop $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.desktop 
 # Bash run
-sudo wget -cO $HOME/Unity-XP/chroot/usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
+sudo cp -rfv resources/misc/bashrun-url $HOME/Unity-XP/chroot/usr/bin/bashrun-url
 sudo chmod +x -v $HOME/Unity-XP/chroot/usr/bin/bashrun-url
-sudo wget -cO $HOME/Unity-XP/chroot/usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
+sudo cp -rfv resources/launchers/bashrun.desktop $HOME/Unity-XP/chroot/usr/share/applications/bashrun.desktop
 sudo chroot $HOME/Unity-XP/chroot update-desktop-database
 sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
 # VSCodium
@@ -288,7 +288,7 @@ sudo umount $HOME/Unity-XP/chroot/run
 sudo cp -rfv code/grub $HOME/Unity-XP/chroot/boot/grub/themes
 echo 'GRUB_THEME="/boot/grub/themes/Tela/theme.txt"' | sudo tee -a $HOME/Unity-XP/chroot/etc/default/grub
 sudo sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' $HOME/Unity-XP/chroot/etc/default/grub
-sudo tar -vzxf resources/placidity.tar.gz -C $HOME/Unity-XP/chroot/usr/share/plymouth/themes/
+sudo tar -vzxf resources/misc/placidity.tar.gz -C $HOME/Unity-XP/chroot/usr/share/plymouth/themes/
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth 100"
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-alternatives --set default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth"
 echo "RESUME=none" | sudo tee $HOME/Unity-XP/chroot/etc/initramfs-tools/conf.d/resume

@@ -18,29 +18,29 @@ function promptyn(){
 
 # AppImageD
 if promptyn "Você deseja atualizar o AppImageD? (s/n)"; then
-  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/appimaged_1-alpha-git0f1c320.travis214_amd64.deb
+  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/debs/appimaged_1-alpha-git0f1c320.travis214_amd64.deb
   sudo apt install -y ./appimaged_1-alpha-git0f1c320.travis214_amd64.deb;rm -rfv appimaged*.deb
   sudo cp -rfv /usr/share/applications/appimaged*.desktop /etc/xdg/autostart/
 fi
 
 # OCS-URL
 if promptyn "Você deseja instalar o OCS-URL? (s/n)"; then
-  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ocs-url_3.1.0-0ubuntu1_amd64.deb
+  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/debs/ocs-url_3.1.0-0ubuntu1_amd64.deb
   sudo apt install -y ./ocs-url_3.1.0-0ubuntu1_amd64.deb;rm -rfv ocs-url*.deb
 fi
 
 # GpuTest
 if promptyn "Você deseja instalar o GpuTest? (s/n)"; then
   sudo apt intall -y python-tk
-  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/GpuTest_Linux_x64_0.7.0.zip
+  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/misc/GpuTest_Linux_x64_0.7.0.zip
   mkdir -pv $HOME/.local/share/applications
   unzip GpuTest_Linux_x64_0.7.0.zip -d $HOME/.local/share/;rm -rfv GpuTest*.zip
-  wget -O $HOME/.local/share/applications/gputest.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/gputest.desktop
+  wget -O $HOME/.local/share/applications/gputest.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/launchers/gputest.desktop
 fi
 
 # Stacer
 if promptyn "Você deseja instalar o Stacer? (s/n)"; then
-  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/stacer_1.1.0_amd64.deb
+  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/debs/stacer_1.1.0_amd64.deb
   sudo apt install -y ./stacer_1.1.0_amd64.deb;rm -rfv stacer*.deb
 fi
 
@@ -95,7 +95,7 @@ fi
 
 # Placidity plymouth
 if promptyn "Você deseja mudar o tema do Plymouth para o Placidity? (s/n)"; then
-  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/placidity.tar.gz
+  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/misc/placidity.tar.gz
   sudo tar -vzxf placidity.tar.gz -C /usr/share/plymouth/themes/;rm -rfv placidity*
   sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth 100
   sudo update-alternatives --set default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth
@@ -128,9 +128,9 @@ fi
 # Bash run
 if promptyn "Você deseja instalar o Bash run? (s/n)"; then
   sudo apt install -y dos2unix xterm
-  sudo wget -O /usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun-url
+  sudo wget -O /usr/bin/bashrun-url https://github.com/rauldipeas/Unity-XP/raw/master/resources/misc/bashrun-url
   sudo chmod +x -v /usr/bin/bashrun-url
-  sudo wget -O /usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/bashrun.desktop
+  sudo wget -O /usr/share/applications/bashrun.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/launchers/bashrun.desktop
   sudo update-desktop-database
   sudo rm -rfv /usr/share/applications/debian-*xterm.desktop
 fi

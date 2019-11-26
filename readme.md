@@ -2,7 +2,7 @@ O **Unity eXPerience** é um projeto de prova de conceito, que visa a possibilid
 
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**XanMod**](https://xanmod.org/).
 
-[![**downlad**](resources/download.png)](https://github.com/rauldipeas/Unity-XP/releases)
+[![**downlad**](resources/images/download.png)](https://github.com/rauldipeas/Unity-XP/releases)
 
 ### Imagens
 
@@ -101,7 +101,7 @@ O programa recomendado pra gravar a imagem no pendrive é o [**Etcher**](https:/
 Após a instalação do sistema, **para se manter em dia com as atualizações _deste projeto_**, será necessário executar o comando _abaixo_:
 
 ```bash
-bash <(curl -s https://rauldipeas.github.io/Unity-XP/resources/update.sh)
+bash <(curl -s https://rauldipeas.github.io/Unity-XP/update.sh)
 ```
 
 Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as atualizações.

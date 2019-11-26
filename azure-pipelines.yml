@@ -10,7 +10,8 @@ trigger:
       - _config.yml
       - netlify.toml
       - readme.md
-      - extras/*
+      - update.sh
+      - docs/*
       - resources/*
       - screenshots/*
       - website/*
@@ -26,5 +27,5 @@ steps:
     inputs:
       pathtoPublish: /home/vsts/Unity-XP/unity-xp-19.10-amd64.iso
       artifactName: 'Unity XP ISO'
-  - script: bash github-release.sh
+  - script: bash code/github-release.sh
     displayName: Upload da imagem de instalação para o GitHub Releases
