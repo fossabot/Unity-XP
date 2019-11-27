@@ -1,18 +1,8 @@
 name: Unity XP (ISO)
 on:
   push:
-    paths-ignore:
-    - .gitbook.yml
-    - _config.yml
-    - netlify.toml
-    - readme.md
-    - update.sh
-    - .azure-pipelines.yml
-    - .github/workflows/download-counter.yml
-    - docs/**
-    - resources/**
-    - screenshots/**
-    - website/**
+    paths:
+    - code/
 jobs:
   build:
     runs-on: ubuntu-18.04
