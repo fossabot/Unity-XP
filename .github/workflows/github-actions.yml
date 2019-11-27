@@ -20,6 +20,6 @@ jobs:
     - name: Instalação de dependências
       run: sudo apt update;sudo apt install -y debootstrap mtools squashfs-tools xorriso
     - name: Compilação da imagem de instalação
-      run: bash code/build.sh
+      run: bash -x code/build.sh
     - name: Upload da imagem de instalação para o GitHub Releases
       run: bash code/github-release.sh
