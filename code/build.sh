@@ -521,6 +521,6 @@ sudo xorriso \
       /EFI/efiboot.img=isolinux/efiboot.img
 
 # Geração do MD5 externo da imagem de instalação.
-md5sum ../iso/unity-xp-19.10-amd64.iso > ../iso/unity-xp-19.10-amd64.md5
+md5sum ../iso/unity-xp-19.10-amd64.iso | sudo tee ../iso/unity-xp-19.10-amd64.md5
 
 # FIM DO SCRIPT
