@@ -100,6 +100,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     diodon \
     dos2unix \
     epiphany-browser \
+    fonts-dejavu-core \
     fonts-emojione \
     fonts-ubuntu \
     gdebi \
@@ -165,6 +166,10 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1
 # Stacer
 sudo cp -rfv resources/debs/stacer*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
+# Indicator weather
+sudo cp -rfv resources/debs/indicator-weather*.deb $HOME/Unity-XP/chroot/
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./indicator-weather_1.1-0ubuntu5_all.deb";sudo rm -rfv $HOME/Unity-XP/chroot/indicator-weather*.deb
+sudo sed -i 's/Icon=\/usr\/share\/icons\/hicolor\/64x64\/apps\/indicator-weather.png/Icon=indicator-weather/g' $HOME/Unity-XP/chroot/usr/share/applications/indicator-weather.desktop
 # GPU test
 sudo mkdir -pv $HOME/Unity-XP/chroot/etc/skel/.local/share/applications
 sudo unzip resources/misc/GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/etc/skel/.local/share/
@@ -224,7 +229,6 @@ sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y \
     dmz-cursor-theme \
     doc-base \
     eog \
-    fonts-dejavu-core \
     fonts-freefont-ttf \
     fonts-lato \
     fonts-liberation2 \
