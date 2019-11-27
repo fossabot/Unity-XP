@@ -94,7 +94,7 @@ if promptyn "Você deseja instalar o suporte à emojis? (s/n)"; then
 fi
 
 # Placidity plymouth
-if promptyn "Você deseja mudar o tema do Plymouth para o Placidity? (s/n)"; then
+if promptyn "Você deseja atualizar o tema do Plymouth? (s/n)"; then
   wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/misc/placidity.tar.gz
   sudo tar -vzxf placidity.tar.gz -C /usr/share/plymouth/themes/;rm -rfv placidity*
   sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth 100
@@ -113,6 +113,8 @@ fi
 if promptyn "Você deseja instalar o tema Tela para o GRUB? (s/n)"; then
   git clone https://github.com/vinceliuice/grub2-themes;cd grub2-themes
   sudo ./install.sh -t;cd ..;rm -rfv grub2-themes
+  sudo wget -O /usr/share/grub/themes/Tela/terminus-24.pf2 https://github.com/rauldipeas/Unity-XP/raw/master/code/grub/Tela/terminus-24.pf2
+  sudo sed -i 's/14/24/g' /usr/share/grub/themes/Tela/theme.txt;sudo sed -i 's/16/24/g' /usr/share/grub/themes/Tela/theme.txt
 fi
 
 # VSCodium
