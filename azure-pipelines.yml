@@ -11,6 +11,7 @@ trigger:
       - netlify.toml
       - readme.md
       - update.sh
+      - .github
       - docs/*
       - resources/*
       - screenshots/*
