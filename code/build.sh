@@ -107,6 +107,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     git \
     gnome-calculator \
     gnome-disk-utility \
+    gnome-font-viewer \
     gnome-screenshot \
     gnome-themes-extra \
     gthumb \
