@@ -1,4 +1,4 @@
-name: Unity XP (ISO)
+name: Unity XP (download-counter)
 on:
   schedules:
     - cron: "*/60 * * * *"
