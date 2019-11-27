@@ -142,9 +142,18 @@ if promptyn "Você deseja instalar o gerenciador de fontes do GNOME? (s/n)"; the
   sudo apt install -y gnome-font-viewer
 fi
 
-# Indicator weather
-if promptyn "Você deseja instalar o gerenciador de fontes do GNOME? (s/n)"; then
+# Simple weather indicator
+if promptyn "Você deseja instalar o indicator de clima? (s/n)"; then
   wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/debs/indicator-weather_1.1-0ubuntu5_all.deb
   sudo apt install -y fonts-dejavu-core ./indicator-weather_1.1-0ubuntu5_all.deb;rm -rfv $HOME/Unity-XP/chroot/indicator-weather*.deb
   sudo sed -i 's/Icon=\/usr\/share\/icons\/hicolor\/64x64\/apps\/indicator-weather.png/Icon=indicator-weather/g' /usr/share/applications/indicator-weather.desktop
+fi
+
+# SAMBA
+if promptyn "Você deseja instalar o suporte ao SAMBA? (s/n)"; then
+  sudo apt install -y libnss-winbind samba winbind
+  sudo chmod 1775 /var/lib/samba/usershares/
+  sudo sed -i 's/\ dns/\ wins\ dns\ mdns4/g' /etc/nsswitch.conf
+  sudo sed -i 's/\#\ \ \ wins\ support\ \=\ no/\ \ \ wins\ support\ \=\ yes/g' /etc/samba/smb.conf
+  sudo sed -i 's/workgroup = WORKGROUP/workgroup = WORKGROUP\n   client max protocol = NT1/g' /etc/samba/smb.conf
 fi

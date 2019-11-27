@@ -117,6 +117,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     indicator-application \
     indicator-appmenu \
     indicator-session \
+    libnss-winbind \
     libreoffice-calc \
     libreoffice-draw \
     libreoffice-gtk2 \
@@ -135,6 +136,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     rawtherapee \
     redshift-gtk \
     rygel \
+    samba \
     smplayer \
     synaptic \
     telegram-desktop \
@@ -144,6 +146,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     unity-tweak-tool \
     vinagre \
     vino \
+    winbind \
     xserver-xorg-input-synaptics \
     xterm \
     zram-config
@@ -166,6 +169,11 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1
 # Stacer
 sudo cp -rfv resources/debs/stacer*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
+### SAMBA
+sudo chmod 1775 -v $HOME/Unity-XP/chroot/var/lib/samba/usershares/
+sudo sed -i 's/\ dns/\ wins\ dns\ mdns4/g' $HOME/Unity-XP/chroot/etc/nsswitch.conf
+sudo sed -i 's/\#\ \ \ wins\ support\ \=\ no/\ \ \ wins\ support\ \=\ yes/g' $HOME/Unity-XP/chroot/etc/samba/smb.conf
+sudo sed -i 's/workgroup = WORKGROUP/workgroup = WORKGROUP\n   client max protocol = NT1/g' $HOME/Unity-XP/chroot/etc/samba/smb.conf
 # Indicator weather
 sudo cp -rfv resources/debs/indicator-weather*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./indicator-weather_1.1-0ubuntu5_all.deb";sudo rm -rfv $HOME/Unity-XP/chroot/indicator-weather*.deb
