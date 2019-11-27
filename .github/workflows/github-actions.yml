@@ -8,10 +8,10 @@ on:
     - readme.md
     - update.sh
     - .azure-pipelines.yml
-    - docs/*
-    - resources/*
-    - screenshots/*
-    - website/*
+    - docs/**
+    - resources/**
+    - screenshots/**
+    - website/**
 jobs:
   build:
     runs-on: ubuntu-18.04
