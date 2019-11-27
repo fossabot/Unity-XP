@@ -8,7 +8,7 @@ on:
     - readme.md
     - update.sh
     - .azure-pipelines.yml
-    - .github/download-counter.yml
+    - .github/workflows/download-counter.yml
     - docs/**
     - resources/**
     - screenshots/**
