@@ -26,7 +26,7 @@ jobs:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       run: |
         sudo npm install netlify-cli -g
-        netlify deploy --site=e7d6683a-0043-4f51-b74c-b2dad950e893 --dir=$HOME/Unity-XP/iso --prod
+        sudo netlify deploy --site=e7d6683a-0043-4f51-b74c-b2dad950e893 --dir=$HOME/Unity-XP/iso --prod
     - name: Upload da imagem de instalação para o GitHub Releases
       run: |
         tag="`date '+%d-%m-%y-%H-%M-%S'`"
