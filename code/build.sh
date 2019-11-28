@@ -136,7 +136,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     rawtherapee \
     redshift-gtk \
     rygel \
-    samba \
     smplayer \
     synaptic \
     telegram-desktop \
