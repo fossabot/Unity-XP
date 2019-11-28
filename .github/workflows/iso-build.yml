@@ -24,14 +24,14 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: Upload da imagem de instalação para os artefatos do Github Actions
-        path: iso/
+        path: /home/runner/Unity-XP/iso/
     - name: Upload da imagem de instalação para o Netlify
       env:
        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       run: |
         sudo npm install netlify-cli -g
         sudo chown -R $USER:$(id -gn $USER) /home/runner/.config
-        netlify deploy --site=e7d6683a-0043-4f51-b74c-b2dad950e893 --dir=iso --prod
+        netlify deploy --site=e7d6683a-0043-4f51-b74c-b2dad950e893 --dir=/home/runner/Unity-XP/iso/ --prod
 #    - name: Upload da imagem de instalação para o GitHub Releases
 #      run: |
 #        tag="`date '+%d-%m-%y-%H-%M-%S'`"
