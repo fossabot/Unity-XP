@@ -1,7 +1,7 @@
 name: Unity XP (download-counter)
 on:
   schedule:
-    - cron: "*/60 * * * *"
+    - cron: "*/180 * * * *"
 jobs:
   build:
     runs-on: ubuntu-18.04
