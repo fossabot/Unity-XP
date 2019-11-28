@@ -151,7 +151,7 @@ fi
 
 # SAMBA
 if promptyn "Você deseja instalar o suporte ao SAMBA? (s/n)"; then
-  sudo apt install -y libnss-winbind samba winbind
+  sudo apt install -y libnss-winbind winbind
   sudo chmod 1775 /var/lib/samba/usershares/
   sudo sed -i 's/\ dns/\ wins\ dns\ mdns4/g' /etc/nsswitch.conf
   sudo sed -i 's/\#\ \ \ wins\ support\ \=\ no/\ \ \ wins\ support\ \=\ yes/g' /etc/samba/smb.conf
