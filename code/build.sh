@@ -497,7 +497,7 @@ cat /usr/lib/grub/i386-pc/cdboot.img isolinux/core.img > isolinux/bios.img
 sudo /bin/bash -c '(find . -type f -print0 | xargs -0 md5sum | grep -v "\./md5sum.txt" > md5sum.txt)'
 
 # Compilação da imagem de instalação
-sudo mkdir -pv ../iso
+mkdir -pv ../iso
 sudo xorriso \
    -as mkisofs \
    -iso-level 3 \
@@ -521,6 +521,6 @@ sudo xorriso \
       /EFI/efiboot.img=isolinux/efiboot.img
 
 # Geração do MD5 externo da imagem de instalação.
-md5sum ../iso/unity-xp-19.10-amd64.iso | sudo tee ../iso/unity-xp-19.10-amd64.md5
+md5sum ../iso/unity-xp-19.10-amd64.iso > ../iso/unity-xp-19.10-amd64.md5
 
 # FIM DO SCRIPT
