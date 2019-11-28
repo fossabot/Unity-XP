@@ -168,7 +168,10 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1
 # Stacer
 sudo cp -rfv resources/debs/stacer*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
-### SAMBA
+# Nemo share
+sudo cp -rfv resources/debs/nemo-share*.deb $HOME/Unity-XP/chroot/
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./nemo-share_4.0.0-1_disco0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/nemo-share*.deb
+# SAMBA
 sudo chmod 1775 -v $HOME/Unity-XP/chroot/var/lib/samba/usershares/
 sudo sed -i 's/\ dns/\ wins\ dns\ mdns4/g' $HOME/Unity-XP/chroot/etc/nsswitch.conf
 sudo sed -i 's/\#\ \ \ wins\ support\ \=\ no/\ \ \ wins\ support\ \=\ yes/g' $HOME/Unity-XP/chroot/etc/samba/smb.conf
