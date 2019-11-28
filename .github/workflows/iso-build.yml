@@ -24,7 +24,7 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: Upload da imagem de instalação para os artefatos do Github Actions
-        path: $HOME/Unity-XP/iso/
+        path: iso/
 #    - name: Upload da imagem de instalação para o Netlify
 #      env:
 #       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
