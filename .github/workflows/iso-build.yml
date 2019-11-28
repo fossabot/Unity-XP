@@ -21,19 +21,23 @@ jobs:
       run: sudo apt update;sudo apt install -y apt-transport-https debootstrap mtools npm squashfs-tools xorriso
     - name: Compilação da imagem de instalação
       run: bash -x code/build.sh
-    - name: Upload da imagem de instalação para o Netlify
-      env:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      run: |
-        sudo npm install netlify-cli -g
-        netlify deploy --site=e7d6683a-0043-4f51-b74c-b2dad950e893 --dir=$HOME/Unity-XP/iso --prod
-    - name: Upload da imagem de instalação para o GitHub Releases
-      run: |
-        tag="`date '+%d-%m-%y-%H-%M-%S'`"
-        wget -cO github-release https://github.com/buildkite/github-release/releases/download/v1.0/github-release-linux-amd64
-        chmod +x -v github-release
-        ./github-release "Unity eXPerience ISO" $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* \
-        --commit "master" \
-        --tag "$tag" \
-        --github-repository "rauldipeas/Unity-XP" \
-        --github-access-token "${{ secrets.GITHUB_ACCESS_TOKEN }}"
+    - uses: actions/upload-artifact@v1
+      with:
+        name: Upload da imagem de instalação para os artefatos do Github Actions
+        path: $HOME/Unity-XP/iso/
+#    - name: Upload da imagem de instalação para o Netlify
+#      env:
+#       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#      run: |
+#        sudo npm install netlify-cli -g
+#        netlify deploy --site=e7d6683a-0043-4f51-b74c-b2dad950e893 --dir=$HOME/Unity-XP/iso --prod
+#    - name: Upload da imagem de instalação para o GitHub Releases
+#      run: |
+#        tag="`date '+%d-%m-%y-%H-%M-%S'`"
+#        wget -cO github-release https://github.com/buildkite/github-release/releases/download/v1.0/github-release-linux-amd64
+#        chmod +x -v github-release
+#        ./github-release "Unity eXPerience ISO" $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* \
+#        --commit "master" \
+#        --tag "$tag" \
+#        --github-repository "rauldipeas/Unity-XP" \
+#        --github-access-token "${{ secrets.GITHUB_ACCESS_TOKEN }}"
