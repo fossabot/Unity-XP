@@ -1,6 +1,6 @@
 name: Unity XP (download-counter)
 on:
-  schedules:
+  schedule:
     - cron: "*/30 * * * *"
 jobs:
   build:
