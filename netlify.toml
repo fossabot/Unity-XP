@@ -1,4 +1,4 @@
 [build]
-  ignore = "git diff --quiet HEAD^ HEAD website"
+#  ignore = "git diff --quiet HEAD^ HEAD website"
   publish = "website"
   command = "bash -x ./website/download-counter/download-counter.sh"
