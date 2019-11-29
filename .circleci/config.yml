@@ -1,6 +1,6 @@
 workflows:
   version: 2
-  meia-noite:
+  0am:
     triggers:
       - schedule:
           cron: "0 0 * * *"
@@ -13,7 +13,67 @@ workflows:
   3am:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
+          cron: "0 3 * * *"
+          filters:
+             branches:
+               only:
+                 - master
+    jobs:
+      - download-counter
+  6am:
+    triggers:
+      - schedule:
+          cron: "0 6 * * *"
+          filters:
+             branches:
+               only:
+                 - master
+    jobs:
+      - download-counter
+  9am:
+    triggers:
+      - schedule:
+          cron: "0 9 * * *"
+          filters:
+             branches:
+               only:
+                 - master
+    jobs:
+      - download-counter
+  0pm:
+    triggers:
+      - schedule:
+          cron: "0 12 * * *"
+          filters:
+             branches:
+               only:
+                 - master
+    jobs:
+      - download-counter
+  3pm:
+    triggers:
+      - schedule:
+          cron: "0 15 * * *"
+          filters:
+             branches:
+               only:
+                 - master
+    jobs:
+      - download-counter
+  6pm:
+    triggers:
+      - schedule:
+          cron: "0 18 * * *"
+          filters:
+             branches:
+               only:
+                 - master
+    jobs:
+      - download-counter
+  9pm:
+    triggers:
+      - schedule:
+          cron: "0 21 * * *"
           filters:
              branches:
                only:
