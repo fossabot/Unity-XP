@@ -177,7 +177,12 @@ fi
 # RCloneTray & RClone browser
 if promptyn "Você deseja instalar o RCloneTray e o RClone browser? (s/n)"; then
   wget -c https://github.com/dimitrov-adrian/RcloneTray/releases/download/v1.0.0/rclonetray_1.0.0_amd64.deb
-  sudo apt isntall -y rclone rclone-browser ./rclonetray_1.0.0_amd64.deb;rm -rfv rclonetray*.deb
+  sudo apt install -y rclone rclone-browser ./rclonetray_1.0.0_amd64.deb;rm -rfv rclonetray*.deb
   sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/rclone-browser.png/Icon=rclone-browser/g' /usr/share/applications/rclone-browser.desktop
   echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/rclone-browser.png/Icon=rclone-browser/g\' /usr/share/applications/rclone-browser*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100rclone-browser
+fi
+
+# KDEConnect
+if promptyn "Você deseja instalar o KDEConnect? (s/n)"; then
+  sudo apt install -y --no-install-recommends kdeconnect
 fi

@@ -78,6 +78,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y --fix-missing \
 
 # Ambiente gráfico sem os extras recomendados
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
+    kdeconnect \
     lightdm-gtk-greeter-settings \
     plymouth \
     plymouth-label \

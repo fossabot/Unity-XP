@@ -45,6 +45,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [GpuTest](https://www.geeks3d.com/20140304/gputest-0-7-0-opengl-benchmark-win-linux-osx-new-fp64-opengl-4-test-and-online-gpu-database/)
  - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
  - [HardInfo](https://www.berlios.de/software/hardinfo/)
+ - [KDEConnect](https://community.kde.org/KDEConnect)
  - [Kvantum](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
  - [LibreOffice(Calc, Draw, Impress e Writer)](https://pt-br.libreoffice.org/)
  - [LightDM GTK greeter](https://launchpad.net/lightdm-gtk-greeter)
