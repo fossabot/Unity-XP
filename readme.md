@@ -25,6 +25,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 ### Lista de programas inclusos:
  - [Activity log manager](https://launchpad.net/activity-log-manager)
  - [AppImageD](https://github.com/AppImage/appimaged)
+ - [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher)
  - [Audacity](https://www.audacityteam.org/)
  - [Boot repair **(live-mode)**](https://sourceforge.net/projects/boot-repair/)
  - [CompizConfig settings manager](https://en.wikipedia.org/wiki/Compiz)

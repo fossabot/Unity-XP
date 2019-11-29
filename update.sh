@@ -16,10 +16,12 @@ function promptyn(){
   done
 }
 
-# AppImageD
+# AppImageD & AppImageLauncher
 if promptyn "Você deseja atualizar o AppImageD? (s/n)"; then
   wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/debs/appimaged_1-alpha-git0f1c320.travis214_amd64.deb
-  sudo apt install -y ./appimaged_1-alpha-git0f1c320.travis214_amd64.deb;rm -rfv appimaged*.deb
+  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/debs/appimagelauncher_2.0.3-travis888.4f7bc8e.eoan_amd64.deb
+  wget -cO ~/.config/appimagelauncher.cfg https://github.com/rauldipeas/Unity-XP/raw/master/code/settings/appimagelauncher.cfg
+  sudo apt install -y ./appimaged_1-alpha-git0f1c320.travis214_amd64.deb ./appimagelauncher_2.0.3-travis888.4f7bc8e.eoan_amd64.deb;rm -rfv appimage*.deb
   sudo cp -rfv /usr/share/applications/appimaged*.desktop /etc/xdg/autostart/
 fi
 

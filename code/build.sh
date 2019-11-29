@@ -157,9 +157,9 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     zram-config
 
 # Programas que não estão nos repositórios do Ubuntu
-# AppImageD
-sudo cp -rfv resources/debs/appimaged*.deb $HOME/Unity-XP/chroot/
-sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./appimaged_1-alpha-git0f1c320.travis214_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/appimaged*.deb
+# AppImageD & AppImageLauncher
+sudo cp -rfv resources/debs/appimage*.deb $HOME/Unity-XP/chroot/
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./appimaged_1-alpha-git0f1c320.travis214_amd64.deb ./appimagelauncher_2.0.3-travis888.4f7bc8e.eoan_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/appimage*.deb
 sudo cp -rfv $HOME/Unity-XP/chroot/usr/share/applications/appimaged*.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.local/bin
 # Crow translate
@@ -340,6 +340,7 @@ sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xd
 sudo cp -rfv code/settings/lightdm-gtk-greeter.conf $HOME/Unity-XP/chroot/etc/lightdm/lightdm-gtk-greeter.conf
 sudo cp -rfv code/settings/99qt5ct.conf $HOME/Unity-XP/chroot/etc/environment.d/99qt5ct.conf
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,smplayer,qt5ct,olivevideoeditor.org/Olive}
+sudo cp -rfv code/settings/appimagelauncher.cfg $HOME/Unity-XP/chroot/etc/skel/.config/appimagelauncher.cfg
 sudo cp -rfv code/settings/kvantum.kvconfig $HOME/Unity-XP/chroot/etc/skel/.config/Kvantum/kvantum.kvconfig
 sudo cp -rfv code/settings/config.xml $HOME/Unity-XP/chroot/etc/skel/.config/olivevideoeditor.org/Olive/config.xml
 sudo cp -rfv code/settings/smplayer.ini $HOME/Unity-XP/chroot/etc/skel/.config/smplayer/smplayer.ini
