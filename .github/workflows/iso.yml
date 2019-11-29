@@ -5,6 +5,7 @@ on:
       - 'releases/**'
     paths-ignore:
       - '.gitbook.yml'
+      - '.travis.yml'
       - '_config.yml'
       - 'netlify.toml'
       - 'readme.md'
