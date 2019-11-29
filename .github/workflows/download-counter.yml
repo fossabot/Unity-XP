@@ -1,0 +1,10 @@
+name: Unity XP (download-counter)
+on:
+  schedules:
+    - cron: "*/30 * * * *"
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Netlify deploy download-counter
+      run: curl -X POST -d {} https://api.netlify.com/build_hooks/5de16402ae043f52c6e457dd
