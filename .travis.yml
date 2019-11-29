@@ -1,7 +1,14 @@
-language: generic
-
+sudo: false
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+install:
+  - pip install requests
 after_success: |
-  pip install --user requests
   wget -q https://raw.githubusercontent.com/mmilidoni/github-downloads-count/master/gdc;chmod +x -v gdc
   ./gdc rauldipeas Unity-XP | tac | awk 'NR <=1' | awk '{print $1}'  | echo +$(xargs expr 600 +) Downloads | tee website/download-counter/download-counter.log;rm -rfv gdc
   git config --global user.email "rauldipeas@mail.com";git config --global user.name "Raul Dipeas"
