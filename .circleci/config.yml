@@ -3,7 +3,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "\60 * * * *"
+          cron: "0 0 * * *"
     jobs:
       build:
         machine: true
