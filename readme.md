@@ -84,7 +84,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
  - **Instalando as dependências necessárias para compilação**
 ```bash
-sudo apt install debootstrap grub-efi-amd64-signed mtools squashfs-tools xorriso
+sudo apt install apt-transport-https debootstrap grub-efi-amd64-signed mtools squashfs-tools xorriso
 ```
  - **Baixando os arquivos necessários para a compilação**
 ```bash
