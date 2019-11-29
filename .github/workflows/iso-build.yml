@@ -1,8 +1,9 @@
 name: Unity XP (ISO)
 on:
   push:
-    branches-ignore:
-      - 'releases/**'
+    branches:
+      - 'master'
+      - '!releases/**'
     paths-ignore:
       - '.gitbook.yml'
       - '_config.yml'
