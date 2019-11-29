@@ -9,6 +9,7 @@ on:
       - 'netlify.toml'
       - 'readme.md'
       - 'update.sh'
+      - 'circleci/**'
       - '.github/workflows/download-counter.yml'
       - 'docs/**'
       - 'resources/**'
