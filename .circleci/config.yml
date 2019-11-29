@@ -4,12 +4,19 @@ workflows:
     triggers:
       - schedule:
           cron: "0 0 * * *"
+      - schedule:
           cron: "0 3 * * *"
+      - schedule:
           cron: "0 6 * * *"
+      - schedule:
           cron: "0 9 * * *"
+      - schedule:
           cron: "0 12 * * *"
+      - schedule:
           cron: "0 15 * * *"
+      - schedule:
           cron: "0 18 * * *"
+      - schedule:
           cron: "0 21 * * *"
     jobs:
       build:
