@@ -456,7 +456,7 @@ ubiquity-slideshow-ubuntu
 ubiquity-ubuntu-artwork
 user-setup" | sudo tee image/casper/filesystem.manifest-remove
 # SquashFS
-sudo mksquashfs chroot image/casper/filesystem.squashfs
+sudo mksquashfs chroot image/casper/filesystem.squashfs -comp xz
 printf $(sudo du -sx --block-size=1 chroot | cut -f1) > image/casper/filesystem.size
 # Definições de disco
 cat <<EOF > image/README.diskdefines
