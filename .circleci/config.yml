@@ -3,55 +3,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
-          filters:
-             branches:
-               only:
-                 - master
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-             branches:
-               only:
-                 - master
-      - schedule:
-          cron: "0 3 * * *"
-          filters:
-             branches:
-               only:
-                 - master
-       - schedule:
-          cron: "0 6 * * *"
-          filters:
-             branches:
-               only:
-                 - master
-        - schedule:
-          cron: "0 9 * * *"
-          filters:
-             branches:
-               only:
-                 - master
-        - schedule:
-          cron: "0 12 * * *"
-          filters:
-             branches:
-               only:
-                 - master
-        - schedule:
-          cron: "0 15 * * *"
-          filters:
-             branches:
-               only:
-                 - master
-        - schedule:
-          cron: "0 18 * * *"
-          filters:
-             branches:
-               only:
-                 - master
-        - schedule:
-          cron: "0 21 * * *"
+          cron: "*/30 * * * *"
           filters:
              branches:
                only:
