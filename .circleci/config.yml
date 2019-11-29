@@ -19,7 +19,7 @@ workflows:
       - schedule:
         cron: "0 21 * * *"
     jobs:
-      -
+      - download-counter
 executors:
   vm:
     machine:
