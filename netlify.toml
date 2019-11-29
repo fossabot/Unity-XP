@@ -1,3 +1,3 @@
 [build]
   publish = "website"
-  command = "bash ./website/download-counter/download-counter.sh"
+  command = "bash -x ./website/download-counter/download-counter.sh"
