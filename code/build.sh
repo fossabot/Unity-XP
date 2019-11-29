@@ -137,6 +137,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     python-tk \
     rawtherapee \
     rclone \
+    rclone-browser \
     redshift-gtk \
     rygel \
     smplayer \
@@ -206,10 +207,10 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "cd gestures;sudo python3 setup.py insta
 sudo sed -i 's/org.cunidev.gestures/libinput-gestures/g' $HOME/Unity-XP/chroot/usr/share/applications/org.cunidev.gestures.desktop
 sudo chroot $HOME/Unity-XP/chroot sh -c "mv -v /usr/share/applications/libinput-gestures.desktop /etc/xdg/autostart/"
 sudo sed -i 's/modifier_map Mod3/\/\/ modifier_map Mod3/g' $HOME/Unity-XP/chroot/usr/share/X11/xkb/symbols/br
-# RCloneTray
-sudo cp -rfv resources/debs/rclone*.deb $HOME/Unity-XP/chroot/
-sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./rclone-browser_1.2_amd64.deb ./rclonetray_1.0.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/rclone*.deb
-sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/rclone-browser.png/Icon=rclone-browser/g' $HOME/Unity-XP/chroot/usr/share/applications/rclone-browser.desktop
+# RCloneTray & RClone browser
+sudo cp -rfv resources/debs/rclonetray*.deb $HOME/Unity-XP/chroot/
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./rclonetray_1.0.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/rclonetray*.deb
+echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/rclone-browser.png/Icon=rclone-browser/g\' /usr/share/applications/rclone-browser*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100rclone-browser
 # VSCodium
 sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/vscodium.png/Icon=vscodium/g' $HOME/Unity-XP/chroot/usr/share/applications/codium.desktop
 echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100vscodium
