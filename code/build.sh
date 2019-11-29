@@ -117,6 +117,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     indicator-application \
     indicator-appmenu \
     indicator-session \
+    libinput-tools \
     libnss-winbind \
     libreoffice-calc \
     libreoffice-draw \
@@ -132,6 +133,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     olive-editor \
     papirus-icon-theme \
     pulseaudio-module-bluetooth \
+    python3-setuptools \
     python-tk \
     rawtherapee \
     redshift-gtk \
@@ -146,6 +148,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     vinagre \
     vino \
     winbind \
+    wmctrl \
+    xdotool \
     xserver-xorg-input-synaptics \
     xterm \
     zram-config
@@ -190,6 +194,20 @@ sudo chmod +x -v $HOME/Unity-XP/chroot/usr/bin/bashrun-url
 sudo cp -rfv resources/launchers/bashrun.desktop $HOME/Unity-XP/chroot/usr/share/applications/bashrun.desktop
 sudo chroot $HOME/Unity-XP/chroot update-desktop-database
 sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
+# Gestures
+sed -i 's/#EXTRA_GROUPS/EXTRA_GROUPS/g' $HOME/Unity-XP/chroot/etc/adduser.conf
+sed -i 's/plugdev users/plugdev users input virtualbox/g' $HOME/Unity-XP/chroot/etc/adduser.conf
+sed -i 's/#ADD_EXTRA_GROUPS/ADD_EXTRA_GROUPS/g' $HOME/Unity-XP/chroot/etc/adduser.conf
+sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/bulletmark/libinput-gestures.git"
+sudo chroot $HOME/Unity-XP/chroot sh -c "cd libinput-gestures;sudo make install;cd ..;rm -rfv libinput-gestures*"
+sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://gitlab.com/cunidev/gestures"
+sudo chroot $HOME/Unity-XP/chroot sh -c "cd gestures;sudo python3 setup.py install;cd ..;sudo rm -rfv gestures*"
+sudo sed -i 's/org.cunidev.gestures/libinput-gestures/g' $HOME/Unity-XP/chroot/usr/share/applications/org.cunidev.gestures.desktop
+sudo chroot $HOME/Unity-XP/chroot sh -c "mv -v /usr/share/applications/libinput-gestures.desktop /etc/xdg/autostart/"
+sudo sed -i 's/modifier_map Mod3/\/\/ modifier_map Mod3/g' $HOME/Unity-XP/chroot/usr/share/X11/xkb/symbols/br
+# RCloneTray
+sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/dimitrov-adrian/RcloneTray/releases/download/v1.0.0/rclonetray_1.0.0_amd64.deb"
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./rclonetray_1.0.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/rclonetray*.deb
 # VSCodium
 sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/vscodium.png/Icon=vscodium/g' $HOME/Unity-XP/chroot/usr/share/applications/codium.desktop
 echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100vscodium
