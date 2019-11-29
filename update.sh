@@ -145,7 +145,7 @@ fi
 # Simple weather indicator
 if promptyn "Você deseja instalar o indicator de clima? (s/n)"; then
   wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/debs/indicator-weather_1.1-0ubuntu5_all.deb
-  sudo apt install -y fonts-dejavu-core ./indicator-weather_1.1-0ubuntu5_all.deb;rm -rfv $HOME/Unity-XP/chroot/indicator-weather*.deb
+  sudo apt install -y fonts-dejavu-core ./indicator-weather_1.1-0ubuntu5_all.deb;rm -rfv indicator-weather*.deb
   sudo sed -i 's/Icon=\/usr\/share\/icons\/hicolor\/64x64\/apps\/indicator-weather.png/Icon=indicator-weather/g' /usr/share/applications/indicator-weather.desktop
 fi
 
@@ -157,4 +157,25 @@ if promptyn "Você deseja instalar o suporte ao SAMBA? (s/n)"; then
   sudo sed -i 's/\ dns/\ wins\ dns\ mdns4/g' /etc/nsswitch.conf
   sudo sed -i 's/\#\ \ \ wins\ support\ \=\ no/\ \ \ wins\ support\ \=\ yes/g' /etc/samba/smb.conf
   sudo sed -i 's/workgroup = WORKGROUP/workgroup = WORKGROUP\n   client max protocol = NT1/g' /etc/samba/smb.conf
+fi
+
+# Gestures
+if promptyn "Você deseja instalar o suporte ao gestos do touchpad? (s/n)"; then
+  sudo gpasswd -a $USER input
+  sudo apt install -y --reinstall libinput-tools python3-setuptools wmctrl xdotool
+  git clone https://github.com/bulletmark/libinput-gestures.git
+  cd libinput-gestures;sudo make install;cd ..;rm -rfv libinput-gestures*
+  git clone https://gitlab.com/cunidev/gestures
+  cd gestures;sudo python3 setup.py install;cd ..;sudo rm -rfv gestures*
+  sudo sed -i 's/org.cunidev.gestures/libinput-gestures/g' /usr/share/applications/org.cunidev.gestures.desktop
+  sudo mv -v /usr/share/applications/libinput-gestures.desktop /etc/xdg/autostart/
+  sudo sed -i 's/modifier_map Mod3/\/\/ modifier_map Mod3/g' /usr/share/X11/xkb/symbols/br
+fi
+
+# RCloneTray & RClone browser
+if promptyn "Você deseja instalar o RCloneTray e o RClone browser? (s/n)"; then
+  wget -c https://github.com/dimitrov-adrian/RcloneTray/releases/download/v1.0.0/rclonetray_1.0.0_amd64.deb
+  wget -c https://github.com/mmozeiko/RcloneBrowser/releases/download/1.2/rclone-browser_1.2_amd64.deb
+  sudo apt isntall -y rclone ./rclonetray_1.0.0_amd64.deb ./rclone-browser_1.2_amd64.deb;rm -rfv rclone*.deb
+  sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/rclone-browser.png/Icon=rclone-browser/g' /usr/share/applications/rclone-browser.desktop
 fi
