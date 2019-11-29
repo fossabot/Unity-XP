@@ -1,7 +1,16 @@
-version: 2
 workflows:
   version: 2
-  nightly:
+  meia-noite:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+             branches:
+               only:
+                 - master
+    jobs:
+      - download-counter
+  3am:
     triggers:
       - schedule:
           cron: "0 0 * * *"
