@@ -83,7 +83,8 @@ workflows:
 jobs:
   download-counter:
   build:
-    executor: machine
+    executor:
+      machine: true
     steps:
       - checkout
       - run:
