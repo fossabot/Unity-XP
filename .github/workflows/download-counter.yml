@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - name: Netlify deploy download-counter
-      run: curl -X POST -d {} https://api.netlify.com/build_hooks/5de16402ae043f52c6e457dd
+      run: curl -X POST -d {} https://api.netlify.com/build_hooks/5de1b366c2685ae3c615f24b
