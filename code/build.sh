@@ -39,6 +39,8 @@ sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:papirus/papirus-dev
 # Hardcode-tray
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:papirus/hardcode-tray
+# Folder color
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:costales/folder-color
 # VSCodium
 echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/vscodium.list
 wget -O- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/vscodium.gpg
@@ -105,6 +107,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     diodon \
     dos2unix \
     epiphany-browser \
+    folder-color-nemo \
     fonts-dejavu-core \
     fonts-emojione \
     fonts-ubuntu \
@@ -158,6 +161,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     winbind \
     wmctrl \
     xdotool \
+    xfce4-notifyd \
     xserver-xorg-input-synaptics \
     xterm \
     zram-config
@@ -204,6 +208,10 @@ sudo chmod +x -v $HOME/Unity-XP/chroot/usr/bin/bashrun-url
 sudo cp -rfv resources/launchers/bashrun.desktop $HOME/Unity-XP/chroot/usr/share/applications/bashrun.desktop
 sudo chroot $HOME/Unity-XP/chroot update-desktop-database
 sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
+# XFCE4 notifyd
+sudo cp -rfv resources/launchers/xfce4-notifyd-unity.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/xfce4-notifyd-unity.desktop
+sudo sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g' $HOME/Unity-XP/chroot/usr/share/applications/xfce4-notifyd-config.desktop
+echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100xfce4-notifyd-unity
 # Gestures
 sed -i 's/#EXTRA_GROUPS/EXTRA_GROUPS/g' $HOME/Unity-XP/chroot/etc/adduser.conf
 sed -i 's/plugdev users/plugdev users input virtualbox/g' $HOME/Unity-XP/chroot/etc/adduser.conf
@@ -233,6 +241,9 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "ln -sv /usr/share/icons/Papirus/22x22/p
 sudo chroot $HOME/Unity-XP/chroot sh -c "sed -i 's/Yaru,/Papirus,/g' /usr/share/icons/Yaru++/index.theme"
 sudo sed -i 's/Yaru,/Yaru,Papirus,/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo touch $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
+# Suru++(ícones)(inherit)
+sudo chroot $HOME/Unity-XP/chroot sh -c "wget -O- https://raw.githubusercontent.com/Bonandry/suru-plus-ubuntu/master/install.sh | sh"
+sudo sed -i 's/Papirus/Suru++-Ubuntu,Papirus/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 # Vimix GTK
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-kde"

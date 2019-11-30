@@ -194,3 +194,20 @@ if promptyn "Você deseja adicionar um atalho para a Pling store? (s/n)"; then
   sudo apt install -y papirus-icon-theme
   sudo wget -O /usr/share/applications/pling-store.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/launchers/pling-store.desktop
 fi
+
+# Folder color Nemo
+if promptyn "Você deseja instalar o Folder color para o Nemo? (s/n)"; then
+  sudo rm -rfv /etc/apt/sources.list.d/costales-ubuntu-folder-color* /etc/apt/trusted.gpg.d/costales_ubuntu_folder-color*
+  sudo add-apt-repository -y ppa:costales/folder-color
+  sudo apt install -y folder-color-nemo
+  wget -O- https://raw.githubusercontent.com/Bonandry/suru-plus-ubuntu/master/install.sh | sh
+  sudo sed -i 's/Papirus/Suru++-Ubuntu,Papirus/g' /usr/share/icons/Yaru++/index.theme
+fi
+
+# XFCE notifyd
+if promptyn "Você deseja instalar o XFCE notifyd? (s/n)"; then
+  sudo apt install -y xfce4-notifyd
+  sudo wget -O /etc/xdg/autostart/xfce4-notifyd-unity.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/launchers/xfce4-notifyd-unity.desktop
+  sudo sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g' /usr/share/applications/xfce4-notifyd-config.desktop
+  echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100xfce4-notifyd-unity
+fi

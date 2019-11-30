@@ -36,6 +36,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [EmojiOne](https://www.joypixels.com/)
  - [Epiphany(Web)](https://wiki.gnome.org/Apps/Web)
  - [Ferramenta de captura de tela do GNOME](https://en.wikipedia.org/wiki/GNOME_Screenshot)
+ - [Folder color Nemo](http://foldercolor.tuxfamily.org/)
  - [GDebI](https://launchpad.net/gdebi)
  - [Gestures](https://gitlab.com/cunidev/gestures)
  - [GIMP](https://www.gimp.org/)
@@ -76,11 +77,13 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Vino](https://help.ubuntu.com/community/VNC/Servers)
  - [VSCodium](https://vscodium.com/)
  - [XBoxDrv](https://xboxdrv.gitlab.io/)
+ - [XFCE notifyd](https://docs.xfce.org/apps/notifyd/start)
 
 ### Temas
   - [Vimix(GTK)](https://vinceliuice.github.io/theme-vimix.html)
   - [Vimix(Kvantum)](https://github.com/vinceliuice/vimix-kde)
   - [Yaru++(icons)](https://github.com/Bonandry/yaru-plus)
+  - [Suru++-Ubuntu(icons, inhetits)](https://github.com/Bonandry/suru-plus-ubuntu)
   - [Papirus(icons, inherits)](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
   - [Breeze(Cursor)](https://github.com/KDE/breeze)
   - [Tela(GRUB)](https://github.com/vinceliuice/grub2-themes)
