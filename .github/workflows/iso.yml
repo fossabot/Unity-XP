@@ -5,16 +5,13 @@ on:
       - 'releases/**'
     paths-ignore:
       - '.gitbook.yml'
-      - '.travis.yml'
       - '_config.yml'
-      - 'netlify.toml'
       - 'readme.md'
       - 'update.sh'
       - '.github/workflows/download-counter.yml'
       - 'docs/**'
       - 'resources/**'
       - 'screenshots/**'
-      - 'website/**'
 jobs:
   build:
     runs-on: ubuntu-18.04
