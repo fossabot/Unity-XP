@@ -35,6 +35,10 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:yannubuntu/boot-repair
 # Lutris
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
+# Papirus-dev
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:papirus/papirus-dev
+# Hardcode-tray
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:papirus/hardcode-tray
 # VSCodium
 echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/vscodium.list
 wget -O- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/vscodium.gpg
@@ -113,6 +117,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     gnome-screenshot \
     gnome-themes-extra \
     gthumb \
+    hardcode-tray \
     hud \
     ibus-gtk3 \
     indicator-application \
@@ -191,6 +196,8 @@ sudo sed -i 's/Icon=\/usr\/share\/icons\/hicolor\/64x64\/apps\/indicator-weather
 sudo mkdir -pv $HOME/Unity-XP/chroot/etc/skel/.local/share/applications
 sudo unzip resources/misc/GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/etc/skel/.local/share/
 sudo cp -rfv resources/launchers/gputest.desktop $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.desktop 
+# Pling store
+sudo cp -rfv resources/launchers/pling-store.desktop $HOME/Unity-XP/chroot/usr/share/applications/pling-store.desktop
 # Bash run
 sudo cp -rfv resources/misc/bashrun-url $HOME/Unity-XP/chroot/usr/bin/bashrun-url
 sudo chmod +x -v $HOME/Unity-XP/chroot/usr/bin/bashrun-url

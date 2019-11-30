@@ -186,3 +186,11 @@ fi
 if promptyn "Você deseja instalar o KDEConnect? (s/n)"; then
   sudo apt install -y --no-install-recommends kdeconnect
 fi
+
+# Pling store
+if promptyn "Você deseja adicionar um atalho para a Pling store? (s/n)"; then
+  sudo rm -rfv /etc/apt/sources.list.d/papirus-ubuntu-papirus-dev* /etc/apt/trusted.gpg.d/papirus_ubuntu_papirus-dev*
+  sudo add-apt-repository -y ppa:papirus/papirus-dev
+  sudo apt install -y papirus-icon-theme
+  sudo wget -O /usr/share/applications/pling-store.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/launchers/pling-store.desktop
+fi

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Pling-Store
+Exec=xdg-open https://pling.com
+Icon=pling-store
+Type=Application
+Terminal=false
+NoDisplay=false
+Categories=Network;Settings;
