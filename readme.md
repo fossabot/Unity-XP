@@ -139,5 +139,6 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**REAPER**](https://docs.unityxp.tk/extras/reaper)
   - [**Resolve**](https://docs.unityxp.tk/extras/resolve)
   - [**Ubuntu make**](https://docs.unityxp.tk/extras/ubuntu-make)
+  - [**VirtualBox**](https://docs.unityxp.tk/extras/virtualbox)
   - [**WINE staging**](https://docs.unityxp.tk/extras/wine-staging)
   - [**ZSH**](https://docs.unityxp.tk/extras/zsh)

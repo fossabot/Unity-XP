@@ -23,5 +23,6 @@
 * [REAPER](extras/reaper.md)
 * [Resolve](extras/resolve.md)
 * [Ubuntu Make](extras/ubuntu-make.md)
+* [VirtualBox](extras/virtualbox.md)
 * [WINE Staging](extras/wine-staging.md)
 * [ZSH](extras/zsh.md)
