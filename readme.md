@@ -135,6 +135,7 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**LinVST**](https://docs.unityxp.tk/extras/linvst)
   - [**PJe office**](https://docs.unityxp.tk/extras/pjeoffice)
   - [**Pushbullet indicator**](https://docs.unityxp.tk/extras/pushbullet-indicator)
+  - [**Rambox**](https://docs.unityxp.tk/extras/rambox)
   - [**REAPER**](https://docs.unityxp.tk/extras/reaper)
   - [**Resolve**](https://docs.unityxp.tk/extras/resolve)
   - [**Ubuntu make**](https://docs.unityxp.tk/extras/ubuntu-make)
