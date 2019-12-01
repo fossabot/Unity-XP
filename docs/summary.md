@@ -13,6 +13,7 @@
 * [Chromium](extras/chromium.md)
 * [DBeaver](extras/dbeaver.md)
 * [Drawers](extras/drawers.md)
+* [FreeOffice](extras/freeoffice.md)
 * [Insomnia](extras/insomnia.md)
 * [Jack](extras/jack.md)
 * [LinVST](extras/linvst.md)
