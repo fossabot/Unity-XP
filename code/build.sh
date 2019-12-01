@@ -44,6 +44,12 @@ sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:costales/folder-col
 # VSCodium
 echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/vscodium.list
 wget -O- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/vscodium.gpg
+# WINE staging
+echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_`lsb_release -sr` ./" | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/wine-obs.list
+wget -O- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_`lsb_release -sr`/Release.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/wine-obs.gpg
+# MellowPlayer
+echo 'deb http://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_19.10/ /' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/mellowplayer.list
+wget -O- https://download.opensuse.org/repositories/home:ColinDuquesnoy/xUbuntu_19.10/Release.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/mellowplayer.gpg
 # XanMod
 echo 'deb http://deb.xanmod.org releases main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/xanmod-kernel.list
 wget -O- https://dl.xanmod.org/gpg.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/xanmod-kernel.gpg
@@ -107,6 +113,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     diodon \
     dos2unix \
     epiphany-browser \
+    feedreader \
     folder-color-nemo \
     fonts-dejavu-core \
     fonts-emojione \
@@ -134,6 +141,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     libreoffice-impress \
     libreoffice-l10n-pt-br \
     libreoffice-writer \
+    mellowplayer \
     mplayer \
     nemo \
     neofetch \
@@ -144,6 +152,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     pulseaudio-module-bluetooth \
     python3-setuptools \
     python-tk \
+    q4wine \
     rawtherapee \
     rclone \
     rclone-browser \
@@ -159,6 +168,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     vinagre \
     vino \
     winbind \
+    winehq-staging \
+    winetricks \
     wmctrl \
     xdotool \
     xfce4-notifyd \
@@ -184,6 +195,9 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1
 # Stacer
 sudo cp -rfv resources/debs/stacer*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
+# Stremio
+sudo cp -rfv resources/debs/stremio*.deb $HOME/Unity-XP/chroot/
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stremio_4.4.52-1_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stremio*.deb
 # Nemo share
 sudo cp -rfv resources/debs/nemo-share*.deb $HOME/Unity-XP/chroot/
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./nemo-share_4.0.0-1_disco0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/nemo-share*.deb
@@ -230,6 +244,18 @@ echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/rclone-bro
 # VSCodium
 sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/vscodium.png/Icon=vscodium/g' $HOME/Unity-XP/chroot/usr/share/applications/codium.desktop
 echo DPkg::Post-Invoke \{\"sed -i \'s/Icon=\\/usr\\/share\\/pixmaps\\/vscodium.png/Icon=vscodium/g\' /usr/share/applications/codium*.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100vscodium
+# WINETricks
+sudo wget -O $HOME/Unity-XP/chroot/usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+sudo chmod +x -v $HOME/Unity-XP/chroot/usr/local/bin/winetricks
+sudo setcap cap_sys_nice+ep $HOME/Unity-XP/chroot/opt/wine-staging/bin/wineserver
+echo '# Wine-RT
+STAGING_RT_PRIORITY_SERVER=90
+STAGING_RT_PRIORITY_BASE=90
+WINE_RT=15
+WINE_SRV_RT=10
+STAGING_WRITECOPY=1
+STAGING_SHARED_MEMORY=1
+WINE_ENABLE_PIPE_SYNC_FOR_APP=1' | sudo tee -a $HOME/Unity-XP/chroot/etc/skel/.profile
 # Tilix
 sudo chroot $HOME/Unity-XP/chroot update-alternatives --set x-terminal-emulator /usr/bin/tilix.wrapper
 

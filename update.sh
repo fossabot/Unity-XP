@@ -211,3 +211,52 @@ if promptyn "Você deseja instalar o XFCE notifyd? (s/n)"; then
   sudo sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g' /usr/share/applications/xfce4-notifyd-config.desktop
   echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100xfce4-notifyd-unity
 fi
+
+# WINE staging
+if promptyn "Você deseja instalar o WINE staging? (s/n)"; then
+  echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_`lsb_release -sr` ./" | sudo tee /etc/apt/sources.list.d/wine-obs.list
+  wget -O- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_`lsb_release -sr`/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/wine-obs.gpg
+  sudo apt update;sudo apt install -y --reinstall winehq-staging winetricks q4wine
+  sudo wget -O /usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+  sudo chmod +x -v /usr/local/bin/winetricks
+  sudo setcap cap_sys_nice+ep /opt/wine-staging/bin/wineserver
+  sed -i 's/# Wine-RT//g' ~/.profile
+  sed -i 's/STAGING_RT_PRIORITY_SERVER=90//g' ~/.profile
+  sed -i 's/STAGING_RT_PRIORITY_BASE=90//g' ~/.profile
+  sed -i 's/WINE_RT=15//g' ~/.profile
+  sed -i 's/WINE_SRV_RT=10//g' ~/.profile
+  sed -i 's/STAGING_WRITECOPY=1//g' ~/.profile
+  sed -i 's/STAGING_SHARED_MEMORY=1//g' ~/.profile
+  sed -i 's/WINE_ENABLE_PIPE_SYNC_FOR_APP=1//g' ~/.profile
+  echo '# Wine-RT
+  STAGING_RT_PRIORITY_SERVER=90
+  STAGING_RT_PRIORITY_BASE=90
+  WINE_RT=15
+  WINE_SRV_RT=10
+  STAGING_WRITECOPY=1
+  STAGING_SHARED_MEMORY=1
+  WINE_ENABLE_PIPE_SYNC_FOR_APP=1' >> ~/.profile
+fi
+
+# MellowPlayer
+if promptyn "Você deseja instalar o MellowPlayer? (s/n)"; then
+  sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_19.10/ /' > /etc/apt/sources.list.d/mellowplayer.list"
+  wget -O- https://download.opensuse.org/repositories/home:ColinDuquesnoy/xUbuntu_19.10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/mellowplayer.gpg
+  sudo apt update;sudo apt install -y mellowplayer
+fi
+
+# Stremio
+if promptyn "Você deseja instalar o Stremio? (s/n)"; then
+  wget -c https://dl.strem.io/linux/v4.4.54/stremio_4.4.52-1_amd64.deb
+  sudo apt install -y ./stremio_4.4.52-1_amd64.deb;rm -rfv stremio*.deb
+fi
+
+# KColorChooser
+if promptyn "Você deseja instalar o KColorChooser? (s/n)"; then
+  sudo apt install -y kcolorchooser
+fi
+
+# FeedReader
+if promptyn "Você deseja instalar o FeedReader? (s/n)"; then
+  sudo apt install -y feedreader
+fi

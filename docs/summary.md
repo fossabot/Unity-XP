@@ -17,7 +17,6 @@
 * [Insomnia](extras/insomnia.md)
 * [Jack](extras/jack.md)
 * [LinVST](extras/linvst.md)
-* [MellowPlayer](extras/mellowplayer.md)
 * [MKUSB](extras/mkusb.md)
 * [PJe Office](extras/pjeoffice.md)
 * [Pushbullet indicator](extras/pushbullet-indicator.md)
@@ -26,5 +25,4 @@
 * [Resolve](extras/resolve.md)
 * [Ubuntu Make](extras/ubuntu-make.md)
 * [VirtualBox](extras/virtualbox.md)
-* [WINE Staging](extras/wine-staging.md)
 * [ZSH](extras/zsh.md)
