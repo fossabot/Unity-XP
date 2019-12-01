@@ -29,7 +29,7 @@
 
 #### APT
  - KColorChooser [**#apt**](apt:kcolorchooser)
- - ```bash
+ ```bash
  install --no-install-recommends
  ```
  - KPat [**#apt**](apt:kpat)
