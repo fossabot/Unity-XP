@@ -32,9 +32,6 @@
 #### APT
  - Inkscape [**#apt**](apt:inkscape)
  - KColorChooser [**#apt**](apt:kcolorchooser)
- ```bash
- install --no-install-recommends
- ```
  - KPat [**#apt**](apt:kpat)
  ```bash
  install --no-install-recommends
