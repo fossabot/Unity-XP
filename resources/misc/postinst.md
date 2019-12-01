@@ -32,7 +32,7 @@
  ```bash
  install --no-install-recommends
  echo 'StartupWMClass=kpat' | sudo tee -a /usr/share/applications/org.kde.kpat.desktop
-  => (apt.conf.d/100kpat)
+ => (apt.conf.d/100kpat)
  ```
  - Sweeper [**#apt**](apt:sweeper)
  - FeedReader [**#apt**](apt:feedreader)
