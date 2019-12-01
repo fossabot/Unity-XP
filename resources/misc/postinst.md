@@ -18,6 +18,7 @@
  - 4KVideoDownloader [#deb](https://dl.4kdownload.com/app/4kvideodownloader_4.9.3-1_amd64.deb)
  - AsarUI [#deb](https://github.com/myazarc/AsarUI/releases/download/v1.0.2/asarui_1.0.2_amd64.deb) [#appimage](https://github.com/myazarc/AsarUI/releases/download/v1.0.2/asarui-1.0.2-x86_64.AppImage)
  - Dropbox [#deb](https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2019.02.14_amd64.deb) (_Nemo_) [#deb](https://launchpad.net/~embrosyn/+archive/ubuntu/cinnamon/+files/nemo-dropbox_4.0.0-1~disco0_amd64.deb)
+ - Deezloader [#appimage](https://t.me/DeezloaderRemix/97)
  - Etcher [#deb](https://github.com/balena-io/etcher/releases/download/v1.5.64/balena-etcher-electron_1.5.64_amd64.deb) [#appimage](https://github.com/balena-io/etcher/releases/download/v1.5.64/balenaEtcher-1.5.64-x64.AppImage)
  - GNOME ALSA mixer [#deb](https://ubuntu.pkgs.org/18.04/ubuntu-universe-amd64/gnome-alsamixer_0.9.7~cvs.20060916.ds.1-5build1_amd64.deb.html)
  ```bash
