@@ -18,6 +18,7 @@
 * [Jack](extras/jack.md)
 * [LinVST](extras/linvst.md)
 * [MKUSB](extras/mkusb.md)
+* [MellowPlayer](extras/mellowplayer.md)
 * [PJe Office](extras/pjeoffice.md)
 * [Pushbullet indicator](extras/pushbullet-indicator.md)
 * [Rambox](extras/rambox.md)

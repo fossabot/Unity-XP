@@ -134,6 +134,7 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**Jack**](https://docs.unityxp.tk/extras/jack)
   - [**LinVST**](https://docs.unityxp.tk/extras/linvst)
   - [**MKUSB**](https://docs.unityxp.tk/extras/mkusb)
+  - [**MellowPlayer**](https://docs.unityxp.tk/extras/mellowplayer)
   - [**PJe office**](https://docs.unityxp.tk/extras/pjeoffice)
   - [**Pushbullet indicator**](https://docs.unityxp.tk/extras/pushbullet-indicator)
   - [**Rambox**](https://docs.unityxp.tk/extras/rambox)
