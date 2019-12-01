@@ -1,2 +1,2 @@
 wget -O- 'https://sourceforge.net/projects/unity-xp/files/stats/json?start_date=2010-01-1&end_date=2020-12-1' |\
-grep -Po '(?<=total)\W*\K[^ ]*' | sed 's/,//g' | echo +$(xargs expr 635 +) Downloads |\ tee website/download-counter/download-counter.log
+grep -Po '(?<=total)\W*\K[^ ]*' | sed 's/,//g' | echo +$(xargs expr 635 +) Downloads | tee website/download-counter/download-counter.log
