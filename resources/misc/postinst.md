@@ -35,6 +35,8 @@
  - KPat [**#apt**](apt:kpat)
  ```bash
  install --no-install-recommends
+ ```
+ ```bash
  echo 'StartupWMClass=kpat' | sudo tee -a /usr/share/applications/org.kde.kpat.desktop
  => (apt.conf.d/100kpat)
  ```
