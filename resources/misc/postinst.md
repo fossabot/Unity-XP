@@ -25,4 +25,4 @@
  - FeedReader [#apt](apt:feedreader)
  - OpenSSH server [#apt](apt:openssh-server)
  - X11VNC [#apt](apt:x11vnc)
- - Caffeíne [#apt](apt:caffeine) (_sudo rm -rfv /usr/share/applications/caffeine.desktop) => (apt.conf.d/100caffeine_)
+ - Caffeine [#apt](apt:caffeine) (_sudo rm -rfv /usr/share/applications/caffeine.desktop) => (apt.conf.d/100caffeine_)
