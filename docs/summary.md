@@ -17,6 +17,7 @@
 * [Insomnia](extras/insomnia.md)
 * [Jack](extras/jack.md)
 * [LinVST](extras/linvst.md)
+* [MKUSB](extras/mkusb.md)
 * [PJe Office](extras/pjeoffice.md)
 * [Pushbullet indicator](extras/pushbullet-indicator.md)
 * [Rambox](extras/rambox.md)
