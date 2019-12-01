@@ -28,6 +28,10 @@
  - ToneLib Zoom [#deb](https://www.tonelib.net/download/ToneLib-Zoom-amd64.deb)
 
 #### APT
+ - KColorChooser [**#apt**](apt:kcolorchooser)
+ - ```bash
+ install --no-install-recommends
+ ```
  - KPat [**#apt**](apt:kpat)
  ```bash
  install --no-install-recommends
