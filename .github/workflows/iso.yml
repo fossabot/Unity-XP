@@ -22,7 +22,7 @@ jobs:
     - name: Compilação da imagem de instalação
       run: bash code/build.sh
     - name: Upload da imagem de instalação para o SourceForge
-      run: sshpass -p '$SOURCEFORGE_PASS' rsync -avP -e 'ssh -o StrictHostKeyChecking=no' $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* rauldipeas@frs.sourceforge.net:/home/frs/project/unity-xp/ISO
+      run: sshpass -p '${{ secrets.SOURCEFORGE_PASS }}' rsync -avP -e 'ssh -o StrictHostKeyChecking=no' $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* rauldipeas@frs.sourceforge.net:/home/frs/project/unity-xp/ISO
 #    - name: Upload da imagem de instalação para o GitHub Releases
 #      run: |
 #        tag="`date '+%d-%m-%y-%H-%M-%S'`"
