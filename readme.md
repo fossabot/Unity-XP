@@ -2,7 +2,7 @@ O **Unity eXPerience** é um projeto de prova de conceito, que visa a possibilid
 
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**XanMod**](https://xanmod.org/).
 
-[![**downlad**](resources/images/download.png)](https://github.com/rauldipeas/Unity-XP/releases)
+[![**downlad**](resources/images/download.png)](https://sourceforge.net/projects/unity-xp/files/ISO/)
 
 ### Imagens
 
