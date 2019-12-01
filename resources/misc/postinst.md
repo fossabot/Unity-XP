@@ -44,8 +44,8 @@
  ```
  - Sweeper [**#apt**](apt:sweeper)
  - FeedReader [**#apt**](apt:feedreader)
- - OpenSSH server [**#apt**](apt:openssh-server)
- - X11VNC [**#apt**](apt:x11vnc)
+ - [**!**]() OpenSSH server [**#apt**](apt:openssh-server)
+ - [**!**]() X11VNC [**#apt**](apt:x11vnc)
  - Caffeine [**#apt**](apt:caffeine)
  ```bash
  sudo rm -rfv /usr/share/applications/caffeine.desktop
