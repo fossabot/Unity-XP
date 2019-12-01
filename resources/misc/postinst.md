@@ -28,17 +28,17 @@
  - ToneLib Zoom [#deb](https://www.tonelib.net/download/ToneLib-Zoom-amd64.deb)
 
 #### APT
- - KPat [#apt](apt://kpat)
+ - KPat [**#apt**](apt:kpat)
  ```bash
  install --no-install-recommends
  echo 'StartupWMClass=kpat' | sudo tee -a /usr/share/applications/org.kde.kpat.desktop
   => (apt.conf.d/100kpat)
  ```
- - Sweeper [#apt](apt://sweeper)
- - FeedReader [#apt](apt://feedreader)
- - OpenSSH server [#apt](apt//:openssh-server)
- - X11VNC [#apt](apt://x11vnc)
- - Caffeine [#apt](apt://caffeine)
+ - Sweeper [**#apt**](apt:sweeper)
+ - FeedReader [**#apt**](apt:feedreader)
+ - OpenSSH server [**#apt**](apt:openssh-server)
+ - X11VNC [**#apt**](apt:x11vnc)
+ - Caffeine [**#apt**](apt:caffeine)
  ```bash
  sudo rm -rfv /usr/share/applications/caffeine.desktop
  => (apt.conf.d/100caffeine)
