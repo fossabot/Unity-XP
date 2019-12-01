@@ -1,3 +1,2 @@
-pip install requests
-wget https://raw.githubusercontent.com/mmilidoni/github-downloads-count/master/gdc;chmod +x -v gdc
-./gdc rauldipeas Unity-XP | tac | awk 'NR <=1' | awk '{print $1}' | echo +$(xargs expr 600 +) Downloads | tee website/download-counter/download-counter.log
+wget -O- 'https://sourceforge.net/projects/unity-xp/files/stats/json?start_date=2010-01-1&end_date=2020-12-1' |\
+grep -Po '(?<=total)\W*\K[^ ]*' | sed 's/,//g' | echo +$(xargs expr 635 +) Downloads |\ tee website/download-counter/download-counter.log
