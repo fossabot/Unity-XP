@@ -39,8 +39,10 @@
  - LXTask [**#apt:lxtask**]()
  - Sweeper [**#apt:sweeper**]()
 
-#### Compiz
+#### GSettings
  ```bash
+ gsettings set com.canonical.indicator.datetime show-date true
+ gsettings set com.canonical.indicator.datetime show-day true
  gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ focus-prevention-level 0
  gsettings set org.compiz.place:/org/compiz/profiles/unity/plugins/place/ mode 1
  gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
