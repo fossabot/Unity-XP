@@ -51,6 +51,9 @@
 #### MIME
  ```bash
  xdg-mime default nemo.desktop inode/directory
+ xdg-mime default org.gnome.gThumb.desktop image/gif
+ xdg-mime default org.gnome.gThumb.desktop image/jpg
+ xdg-mime default org.gnome.gThumb.desktop image/png
  ```
 
 #### LightDM (NVIDIA)
