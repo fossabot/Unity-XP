@@ -10,6 +10,6 @@ echo 'StartupWMClass=resolve' | sudo tee -a /usr/share/applications/com.blackmag
 echo 'Categories=AudioVideo;' | sudo tee -a /usr/share/applications/com.blackmagicdesign.resolve.desktop
 sudo sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' /usr/share/applications/com.blackmagicdesign.resolve.desktop
 sudo rm -rfv /usr/share/applications/com.blackmagicdesign.resolve-*.desktop
-sudo ln -s /usr/lib/x86_64-linux-gnu/ /usr/lib64
+sudo ln -s /usr/lib/x86_64-linux-gnu/* /usr/lib64/
 ```
 [![bashrun-url](images/bashrun-url.png)](br:resolve)
