@@ -14,10 +14,10 @@
 
 #### Deb/AppImage
  - [**!**]() 4KVideoDownloader [#deb](https://dl.4kdownload.com/app/4kvideodownloader_4.9.3-1_amd64.deb)
- - [**ø**]() AsarUI [#deb](https://github.com/myazarc/AsarUI/releases/download/v1.0.2/asarui_1.0.2_amd64.deb) [#appimage](https://github.com/myazarc/AsarUI/releases/download/v1.0.2/asarui-1.0.2-x86_64.AppImage)
+ - [**!**]() AsarUI [#deb](https://github.com/myazarc/AsarUI/releases/download/v1.0.2/asarui_1.0.2_amd64.deb) [#appimage](https://github.com/myazarc/AsarUI/releases/download/v1.0.2/asarui-1.0.2-x86_64.AppImage)
  - Dropbox [#deb](https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2019.02.14_amd64.deb) (_Nemo_) [#deb](https://launchpad.net/~embrosyn/+archive/ubuntu/cinnamon/+files/nemo-dropbox_4.0.0-1~disco0_amd64.deb)
  - [**!**]() Deezloader [#appimage](https://t.me/DeezloaderRemix/97)
- - [**ø**]() Etcher [#deb](https://github.com/balena-io/etcher/releases/download/v1.5.64/balena-etcher-electron_1.5.64_amd64.deb) [#appimage](https://github.com/balena-io/etcher/releases/download/v1.5.64/balenaEtcher-1.5.64-x64.AppImage)
+ - [**!**]() Etcher [#deb](https://github.com/balena-io/etcher/releases/download/v1.5.64/balena-etcher-electron_1.5.64_amd64.deb) [#appimage](https://github.com/balena-io/etcher/releases/download/v1.5.64/balenaEtcher-1.5.64-x64.AppImage)
  - [**!**]() GNOME ALSA mixer [#deb](https://github.com/rauldipeas/Unity-XP/resources/debs/gnome-alsamixer.tar.gz)
  ```bash
  sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/gnome-alsamixer\/gnome-alsamixer-icon.png/Icon=gnome-alsamixer-icon/g' /usr/share/applications/gnome-alsamixer.desktop
@@ -27,15 +27,15 @@
  - ToneLib Zoom [#deb](https://www.tonelib.net/download/ToneLib-Zoom-amd64.deb)
 
 #### APT
- - Inkscape [**#apt**](apt:inkscape)
- - KPat [**#apt**](apt:kpat)
+ - Inkscape [**#apt:inkscape**]()
+ - KPat [**#apt:kpat**]()
  ```bash
- install --no-install-recommends
+ --no-install-recommends
  ```
- - Sweeper [**#apt**](apt:sweeper)
- - [**ø**]() OpenSSH server [**#apt**](apt:openssh-server)
- - [**ø**]() X11VNC [**#apt**](apt:x11vnc)
- - Caffeine [**#apt**](apt:caffeine)
+ - Sweeper [**#apt:sweeper**]()
+ - [**ø**]() OpenSSH server [**#apt:openssh-server**]()
+ - [**ø**]() X11VNC [**#apt:x11vnc**]()
+ - Caffeine [**#apt:caffeine**]()
  ```bash
  sudo rm -rfv /usr/share/applications/caffeine.desktop
  => (apt.conf.d/100caffeine)
