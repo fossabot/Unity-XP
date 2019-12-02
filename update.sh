@@ -210,7 +210,7 @@ if promptyn "Você deseja instalar o XFCE notifyd? (s/n)"; then
   sudo apt install -y xfce4-notifyd
   sudo wget -O /etc/xdg/autostart/xfce4-notifyd-unity.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/launchers/xfce4-notifyd-unity.desktop
   sudo sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g' /usr/share/applications/xfce4-notifyd-config.desktop
-  echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100xfce4-notifyd-unity
+  echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE\;/OnlyShowIn=XFCE\;Unity\;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100xfce4-notifyd-unity
 fi
 
 # WINE staging

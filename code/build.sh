@@ -226,11 +226,11 @@ sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
 # XFCE4 notifyd
 sudo cp -rfv resources/launchers/xfce4-notifyd-unity.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/xfce4-notifyd-unity.desktop
 sudo sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g' $HOME/Unity-XP/chroot/usr/share/applications/xfce4-notifyd-config.desktop
-echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100xfce4-notifyd-unity
+echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE\;/OnlyShowIn=XFCE\;Unity\;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100xfce4-notifyd-unity
 # Gestures
-sed -i 's/#EXTRA_GROUPS/EXTRA_GROUPS/g' $HOME/Unity-XP/chroot/etc/adduser.conf
-sed -i 's/plugdev users/plugdev users input virtualbox/g' $HOME/Unity-XP/chroot/etc/adduser.conf
-sed -i 's/#ADD_EXTRA_GROUPS/ADD_EXTRA_GROUPS/g' $HOME/Unity-XP/chroot/etc/adduser.conf
+sudo sed -i 's/#EXTRA_GROUPS/EXTRA_GROUPS/g' $HOME/Unity-XP/chroot/etc/adduser.conf
+sudo sed -i 's/plugdev users/plugdev users input virtualbox/g' $HOME/Unity-XP/chroot/etc/adduser.conf
+sudo sed -i 's/#ADD_EXTRA_GROUPS/ADD_EXTRA_GROUPS/g' $HOME/Unity-XP/chroot/etc/adduser.conf
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/bulletmark/libinput-gestures.git"
 sudo chroot $HOME/Unity-XP/chroot sh -c "cd libinput-gestures;sudo make install;cd ..;rm -rfv libinput-gestures*"
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://gitlab.com/cunidev/gestures"
