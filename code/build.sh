@@ -267,6 +267,7 @@ sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/status/*
 sudo chroot $HOME/Unity-XP/chroot sh -c "ln -sv /usr/share/icons/Papirus/22x22/panel/ /usr/share/icons/Yaru++/status/24"
 sudo chroot $HOME/Unity-XP/chroot sh -c "sed -i 's/Yaru,/Papirus,/g' /usr/share/icons/Yaru++/index.theme"
 sudo sed -i 's/Yaru,/Yaru,Papirus,/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
+sudo cp -rfv $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/actions $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/
 sudo touch $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 # Suru++(ícones)(inherit)
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -O- https://raw.githubusercontent.com/Bonandry/suru-plus-ubuntu/master/install.sh | sh"
