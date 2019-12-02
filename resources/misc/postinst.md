@@ -28,9 +28,6 @@
 
 #### APT
  - Inkscape [**#apt**](apt:inkscape)
- ```bash
- sudo cp -rfv /usr/share/icons/Yaru++-Dark/actions /usr/share/icons/Yaru++/
- ```
  - KPat [**#apt**](apt:kpat)
  ```bash
  install --no-install-recommends
