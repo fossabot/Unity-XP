@@ -50,3 +50,8 @@
  gsettings set org.compiz.place:/org/compiz/profiles/unity/plugins/place/ mode 1
  gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
  ```
+
+#### MIME
+ ```bash
+ xdg-mime default nemo.desktop inode/directory
+ ```
