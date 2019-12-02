@@ -43,3 +43,10 @@
  sudo rm -rfv /usr/share/applications/caffeine.desktop
  => (apt.conf.d/100caffeine)
  ```
+
+#### Compiz
+ ```bash
+ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
+ gsettings set org.compiz.place:/org/compiz/profiles/unity/plugins/place/ mode 1
+ gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
+ ```
