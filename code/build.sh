@@ -223,7 +223,7 @@ sudo chmod +x -v $HOME/Unity-XP/chroot/usr/bin/bashrun-url
 sudo cp -rfv resources/launchers/bashrun.desktop $HOME/Unity-XP/chroot/usr/share/applications/bashrun.desktop
 sudo chroot $HOME/Unity-XP/chroot update-desktop-database
 sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
-# XFCE4 notifyd
+# XFCE notifyd
 sudo cp -rfv resources/launchers/xfce4-notifyd-unity.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/xfce4-notifyd-unity.desktop
 sudo sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g' $HOME/Unity-XP/chroot/usr/share/applications/xfce4-notifyd-config.desktop
 echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE\;/OnlyShowIn=XFCE\;Unity\;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100xfce4-notifyd-unity
