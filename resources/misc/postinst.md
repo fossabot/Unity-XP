@@ -26,17 +26,18 @@
  - ToneLib Zoom [#deb](https://www.tonelib.net/download/ToneLib-Zoom-amd64.deb)
 
 #### APT
- - Inkscape [**#apt:inkscape**]()
- - KPat [**#apt:kpat**]()
- ```bash
- --no-install-recommends
- ```
- - Sweeper [**#apt:sweeper**]()
  - Caffeine [**#apt:caffeine**]()
  ```bash
  sudo rm -rfv /usr/share/applications/caffeine.desktop
  => (apt.conf.d/100caffeine)
  ```
+ - Inkscape [**#apt:inkscape**]()
+ - KPat [**#apt:kpat**]()
+ ```bash
+ --no-install-recommends
+ ```
+ - LXTask [**apt:lxtask**]()
+ - Sweeper [**#apt:sweeper**]()
 
 #### Compiz
  ```bash
