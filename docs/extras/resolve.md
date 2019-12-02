@@ -1,4 +1,4 @@
-### [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
+#### [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
 
 ### [BAIXE O INSTALADOR DO DAVINCI RESOLVE MANUALMENTE NO SITE OFICIAL](https://www.blackmagicdesign.com/products/davinciresolve)
 ```bash
