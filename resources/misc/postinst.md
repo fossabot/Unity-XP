@@ -36,7 +36,7 @@
  ```bash
  --no-install-recommends
  ```
- - LXTask [**apt:lxtask**]()
+ - LXTask [**#apt:lxtask**]()
  - Sweeper [**#apt:sweeper**]()
 
 #### Compiz
