@@ -133,6 +133,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     indicator-application \
     indicator-appmenu \
     indicator-session \
+    kcolorchooser \
     libinput-tools \
     libnss-winbind \
     libreoffice-calc \
@@ -309,7 +310,6 @@ sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y \
     fonts-freefont-ttf \
     fonts-lato \
     fonts-liberation2 \
-    fonts-open-sans \
     gnome-accessibility-themes \
     gnome-session-canberra \
     gnome-shell \
