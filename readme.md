@@ -144,6 +144,7 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**Rambox**](https://docs.unityxp.tk/extras/rambox)
   - [**REAPER**](https://docs.unityxp.tk/extras/reaper)
   - [**Resolve**](https://docs.unityxp.tk/extras/resolve)
+  - [**SC controller**](https://docs.unityxp.tk/extras/sc-controller)
   - [**Ubuntu make**](https://docs.unityxp.tk/extras/ubuntu-make)
   - [**VirtualBox**](https://docs.unityxp.tk/extras/virtualbox)
   - [**ZSH**](https://docs.unityxp.tk/extras/zsh)

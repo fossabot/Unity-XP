@@ -23,6 +23,7 @@
 * [Rambox](extras/rambox.md)
 * [REAPER](extras/reaper.md)
 * [Resolve](extras/resolve.md)
+* [SC controller](extras/sc-controller.md)
 * [Ubuntu Make](extras/ubuntu-make.md)
 * [VirtualBox](extras/virtualbox.md)
 * [ZSH](extras/zsh.md)
