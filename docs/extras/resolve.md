@@ -11,4 +11,4 @@ sudo sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' /us
 sudo rm -rfv /usr/share/applications/com.blackmagicdesign.resolve-*.desktop
 sudo ln -s /usr/lib/x86_64-linux-gnu/ /usr/lib64
 ```
-[![bashrun-url](images/bashrun-url.png)](br:pjeoffice)
+[![bashrun-url](images/bashrun-url.png)](br:resolve)
