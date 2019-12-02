@@ -18,7 +18,7 @@
  - Dropbox [#deb](https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2019.02.14_amd64.deb) (_Nemo_) [#deb](https://launchpad.net/~embrosyn/+archive/ubuntu/cinnamon/+files/nemo-dropbox_4.0.0-1~disco0_amd64.deb)
  - [**!**]() Deezloader [#appimage](https://t.me/DeezloaderRemix/97)
  - [**ø**]() Etcher [#deb](https://github.com/balena-io/etcher/releases/download/v1.5.64/balena-etcher-electron_1.5.64_amd64.deb) [#appimage](https://github.com/balena-io/etcher/releases/download/v1.5.64/balenaEtcher-1.5.64-x64.AppImage)
- - GNOME ALSA mixer [#deb](https://github.com/rauldipeas/Unity-XP/resources/debs/gnome-alsamixer.tar.gz)
+ - [**!**]() GNOME ALSA mixer [#deb](https://github.com/rauldipeas/Unity-XP/resources/debs/gnome-alsamixer.tar.gz)
  ```bash
  sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/gnome-alsamixer\/gnome-alsamixer-icon.png/Icon=gnome-alsamixer-icon/g' /usr/share/applications/gnome-alsamixer.desktop
  ```
