@@ -52,3 +52,13 @@
  ```bash
  xdg-mime default nemo.desktop inode/directory
  ```
+
+#### LightDM (NVIDIA)
+ ```bash
+ echo '#!/bin/sh
+ xrandr --setprovideroutputsource modesetting NVIDIA-0
+ xrandr --auto' | sudo tee /usr/local/bin/nvidia_lightdm_display_setup.sh
+ sudo chmod +x -v /usr/local/bin/nvidia_lightdm_display_setup.sh
+ echo '[Seat:*]
+ display-setup-script=/usr/local/bin/nvidia_lightdm_display_setup.sh' | sudo tee /etc/lightdm/lightdm.conf.d/nvidia-display-setup.conf
+ ```
