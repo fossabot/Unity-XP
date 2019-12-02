@@ -53,6 +53,8 @@
  xdg-mime default org.gnome.gThumb.desktop image/gif
  xdg-mime default org.gnome.gThumb.desktop image/jpg
  xdg-mime default org.gnome.gThumb.desktop image/png
+ xdg-mime default smplayer.desktop video/mp4
+ xdg-mime default smplayer.desktop video/mkv
  ```
 
 #### LightDM (NVIDIA)
