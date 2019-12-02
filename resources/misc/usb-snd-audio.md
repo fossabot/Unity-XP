@@ -9,8 +9,8 @@ sudo apt build-dep linux -y
 mkdir -pv snd-usb-audio;cd snd-usb-audio
 wget -c https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.4.1.tar.xz
 wget -c https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.3.8.tar.xz
-tar -xvf linux-5.4.1.tar.gz
-tar -xvf linux-5.3.8.tar.gz
+tar -xvf linux-5.4.1.tar.xz
+tar -xvf linux-5.3.8.tar.xz
 cd linux-5.4.1
 cp /lib/modules/`uname -r`/build/.config . -v
 cp /lib/modules/`uname -r`/build/Module.symvers . -v
