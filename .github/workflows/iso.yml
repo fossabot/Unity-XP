@@ -26,6 +26,7 @@ jobs:
     - name: Notificação no Telegram
       uses: appleboy/telegram-action@master
       with:
-        to: 58113361
+        to: -1001205590386
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: The ${{ github.event_name }} event triggered first step.
+        args: Uma nova imagem de instalação do Unity XP está disponível para download no site.
+        photo: resources/images/github-hero.png
