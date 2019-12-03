@@ -48,6 +48,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
  - [Hardcode-tray](https://github.com/bilelmoussaoui/Hardcode-Tray)
  - [HardInfo](https://www.berlios.de/software/hardinfo/)
+ - [Indicator KDEConnect](https://github.com/Bajoja/indicator-kdeconnect)
  - [KColorChooser](https://kde.org/applications/graphics/org.kde.kcolorchooser)
  - [KDEConnect](https://community.kde.org/KDEConnect)
  - [Kvantum](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
