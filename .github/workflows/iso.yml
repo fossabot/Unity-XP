@@ -28,5 +28,7 @@ jobs:
       with:
         to: -1001205590386
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: Uma nova imagem de instalação do Unity XP está disponível para download no site. ${{ commit.ref }}
+        args: |
+              Uma nova imagem de instalação do Unity XP está disponível para download no site.
+              Commit de referência ${{ commit.ref }}.
         photo: resources/images/github-hero.png
