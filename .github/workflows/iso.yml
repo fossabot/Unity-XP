@@ -23,3 +23,9 @@ jobs:
       run: bash code/build.sh
     - name: Upload da imagem de instalação para o SourceForge
       run: sshpass -p '${{ secrets.SOURCEFORGE_PASS }}' rsync -avP -e 'ssh -o StrictHostKeyChecking=no' $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* rauldipeas@frs.sourceforge.net:/home/frs/project/unity-xp/ISO
+    - name: Notificação no Telegram
+      uses: appleboy/telegram-action@master
+      with:
+        to: 58113361
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        args: The ${{ github.event_name }} event triggered first step.
