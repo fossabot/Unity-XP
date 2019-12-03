@@ -22,6 +22,6 @@ jobs:
     - name: Compilação da imagem de instalação
       run: bash code/build.sh
     - name: Upload da imagem de instalação para o Dropbox
-      run: 'curl -X POST https://content.dropboxapi.com/2/files/upload --header "Authorization: Bearer ${{ secrets.DROPBOX_API_KEY }}" --header "Dropbox-API-Arg: {\"path\": \"/unity-xp-19.10-amd64.iso\"}" --header "Content-Type: application/octet-stream" --data-binary @iso/unity-xp-19.10-amd64.iso --verbose'
+      run: 'curl -X POST https://content.dropboxapi.com/2/files/upload --header "Authorization: Bearer ${{ secrets.DROPBOX_API_KEY }}" --header "Dropbox-API-Arg: {\"path\": \"/unity-xp-19.10-amd64.iso\"}" --header "Content-Type: application/octet-stream" --data-binary @$HOME/Unity-XP/iso/unity-xp-19.10-amd64.iso --verbose'
     - name: Upload da imagem de instalação para o SourceForge
       run: sshpass -p '${{ secrets.SOURCEFORGE_PASS }}' rsync -avP -e 'ssh -o StrictHostKeyChecking=no' $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* rauldipeas@frs.sourceforge.net:/home/frs/project/unity-xp/ISO
