@@ -371,7 +371,7 @@ sudo umount $HOME/Unity-XP/chroot/run
 sudo cp -rfv code/grub $HOME/Unity-XP/chroot/boot/grub/themes
 echo 'GRUB_THEME="/boot/grub/themes/Tela/theme.txt"' | sudo tee -a $HOME/Unity-XP/chroot/etc/default/grub
 sudo sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' $HOME/Unity-XP/chroot/etc/default/grub
-echo sed -i \'s/quiet splash\\\"/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off\\\"/g\' /etc/default/grub | sudo tee $HOME/Unity-XP/chroot/usr/loca/bin/grub-mitigations-off
+echo sed -i \'s/quiet splash\\\"/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off\\\"/g\' /etc/default/grub | sudo tee $HOME/Unity-XP/chroot/usr/local/bin/grub-mitigations-off
 sudo chmod +x -v $HOME/Unity-XP/chroot/usr/local/bin/grub-mitigations-off
 echo DPkg::Post-Invoke \{\"grub-mitigations-off\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100grub
 sudo tar -vzxf resources/misc/placidity.tar.gz -C $HOME/Unity-XP/chroot/usr/share/plymouth/themes/
