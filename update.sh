@@ -59,7 +59,7 @@ fi
 # Yaru++ (Papirus status)
 if promptyn "Você deseja mudar os ícones de status para o tema Papirus? (s/n)"; then
   sudo sed -i 's/Papirus/Yaru/g' /usr/share/icons/Yaru++/index.theme
-  sudo sed -i 's/Yaru,/Papirus,/g' /usr/share/icons/Yaru++/index.theme
+  sudo sed -i 's/Inherits=Yaru,Humanity,breeze,hicolor/Inherits=Papirus,Humanity,breeze,hicolor,/g' /usr/share/icons/Yaru++/index.theme
   sudo rm -rfv /usr/share/icons/Yaru++/status/*
   sudo ln -s /usr/share/icons/Papirus/22x22/panel/ /usr/share/icons/Yaru++/status/24
   sudo cp -rfv /usr/share/icons/Yaru++-Dark/actions /usr/share/icons/Yaru++/
@@ -203,7 +203,7 @@ if promptyn "Você deseja instalar o Folder color para o Nemo? (s/n)"; then
   sudo add-apt-repository -y ppa:costales/folder-color
   sudo apt install -y folder-color-nemo
   wget -O- https://raw.githubusercontent.com/Bonandry/suru-plus-ubuntu/master/install.sh | sh
-  sudo sed -i 's/Papirus/Suru++-Ubuntu,Papirus/g' /usr/share/icons/Yaru++/index.theme
+  sudo sed -i 's/Inherits=Papirus,Humanity,breeze,hicolor/Inherits=Suru++-Ubuntu,Papirus,Humanity,breeze,hicolor/g' /usr/share/icons/Yaru++/index.theme
 fi
 
 # XFCE notifyd
@@ -211,7 +211,7 @@ if promptyn "Você deseja instalar o XFCE notifyd? (s/n)"; then
   sudo apt install -y xfce4-notifyd
   sudo wget -O /etc/xdg/autostart/xfce4-notifyd-unity.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/launchers/xfce4-notifyd-unity.desktop
   sudo sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g' /usr/share/applications/xfce4-notifyd-config.desktop
-  echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE\;/OnlyShowIn=XFCE\;Unity\;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100xfce4-notifyd-unity
+  echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE\;\\\n/OnlyShowIn=XFCE\;Unity\;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100xfce4-notifyd-unity
 fi
 
 # WINE staging

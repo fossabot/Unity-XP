@@ -226,7 +226,7 @@ sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/applications/debian-*xterm.desktop
 # XFCE notifyd
 sudo cp -rfv resources/launchers/xfce4-notifyd-unity.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/xfce4-notifyd-unity.desktop
 sudo sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCE;Unity;/g' $HOME/Unity-XP/chroot/usr/share/applications/xfce4-notifyd-config.desktop
-echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE\;/OnlyShowIn=XFCE\;Unity\;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100xfce4-notifyd-unity
+echo DPkg::Post-Invoke \{\"sed -i \'s/OnlyShowIn=XFCE\;\\\n/OnlyShowIn=XFCE\;Unity\;/g\' /usr/share/applications/xfce4-notifyd-config.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100xfce4-notifyd-unity
 # Gestures
 sudo sed -i 's/#EXTRA_GROUPS/EXTRA_GROUPS/g' $HOME/Unity-XP/chroot/etc/adduser.conf
 sudo sed -i 's/plugdev users/plugdev users input virtualbox/g' $HOME/Unity-XP/chroot/etc/adduser.conf
@@ -371,6 +371,7 @@ sudo umount $HOME/Unity-XP/chroot/run
 sudo cp -rfv code/grub $HOME/Unity-XP/chroot/boot/grub/themes
 echo 'GRUB_THEME="/boot/grub/themes/Tela/theme.txt"' | sudo tee -a $HOME/Unity-XP/chroot/etc/default/grub
 sudo sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' $HOME/Unity-XP/chroot/etc/default/grub
+echo DPkg::Post-Invoke \{\"sed -i \'s/quiet splash\\\"/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off\\\"/g\' /etc/default/grub\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100grub
 sudo tar -vzxf resources/misc/placidity.tar.gz -C $HOME/Unity-XP/chroot/usr/share/plymouth/themes/
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth 100"
 sudo chroot $HOME/Unity-XP/chroot sh -c "update-alternatives --set default.plymouth /usr/share/plymouth/themes/placidity/placidity.plymouth"
