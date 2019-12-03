@@ -21,7 +21,7 @@ jobs:
       run: |
             sudo apt update
             sudo apt install -y apt-transport-https debootstrap mtools npm rsync squashfs-tools sshpass xorriso
-            wget -c https://github.com/rauldipeas/Unity-XP/blob/master/resources/debs/megacmd_1.1.0_amd64.deb
+            wget https://github.com/rauldipeas/Unity-XP/blob/master/resources/debs/megacmd_1.1.0_amd64.deb
             sudo apt install -y ./megacmd*.deb
     - name: Compilação da imagem de instalação
       run: bash code/build.sh
