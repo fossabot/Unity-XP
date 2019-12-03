@@ -77,6 +77,6 @@
  Type=Application
  Terminal=false
  Name=ALSA Restore
- Exec=alsactl restore --file ~/.config/asound.state' | tee ~/.config/autostart/alsa-restore.desktop
+ Exec=sh -c "sleep 2;alsactl restore --file ~/.config/asound.state"' | tee ~/.config/autostart/alsa-restore.desktop
  alsactl store --file ~/.configu/asound.state
  ```
