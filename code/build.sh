@@ -41,6 +41,8 @@ sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:papirus/papirus-dev
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:papirus/hardcode-tray
 # Folder color
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:costales/folder-color
+# KDEConnect indicator
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:webupd8team/indicator-kdeconnect
 # VSCodium
 echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/vscodium.list
 wget -O- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/vscodium.gpg
@@ -132,6 +134,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     ibus-gtk3 \
     indicator-application \
     indicator-appmenu \
+    indicator-kdeconnect \
     indicator-session \
     kcolorchooser \
     libinput-tools \
@@ -217,6 +220,8 @@ sudo unzip resources/misc/GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/e
 sudo cp -rfv resources/launchers/gputest.desktop $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.desktop 
 # Pling store
 sudo cp -rfv resources/launchers/pling-store.desktop $HOME/Unity-XP/chroot/usr/share/applications/pling-store.desktop
+# KDEConnect indicator
+echo DPkg::Post-Invoke \{\"rm -rfv /usr/share/applications/org.kde.kdeconnect.nonplasma.desktop\"\;\}\; | sudo tee $HOME/Unity-XP/chroot/etc/apt/apt.conf.d/100kdeconnect
 # Bash run
 sudo cp -rfv resources/misc/bashrun-url $HOME/Unity-XP/chroot/usr/bin/bashrun-url
 sudo chmod +x -v $HOME/Unity-XP/chroot/usr/bin/bashrun-url
