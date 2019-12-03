@@ -69,3 +69,14 @@
  echo '[Seat:*]
  display-setup-script=/usr/local/bin/nvidia_lightdm_display_setup.sh' | sudo tee /etc/lightdm/lightdm.conf.d/nvidia-display-setup.conf
  ```
+
+#### ALSA settings
+ ```bash
+ mkdir -pv ~/.config/autostart
+ echo '[Desktop Entry]
+ Type=Application
+ Terminal=false
+ Name=ALSA Restore
+ Exec=alsactl restore --file ~/.config/asound.state' | tee ~/.config/autostart/alsa-restore.desktop
+ alsactl store --file ~/.configu/asound.state
+ ```
