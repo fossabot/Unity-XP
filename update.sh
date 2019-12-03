@@ -118,6 +118,7 @@ if promptyn "Você deseja instalar o tema Tela para o GRUB? (s/n)"; then
   sudo ./install.sh -t;cd ..;rm -rfv grub2-themes
   sudo wget -O /usr/share/grub/themes/Tela/terminus-24.pf2 https://github.com/rauldipeas/Unity-XP/raw/master/code/grub/Tela/terminus-24.pf2
   sudo sed -i 's/14/24/g' /usr/share/grub/themes/Tela/theme.txt;sudo sed -i 's/16/24/g' /usr/share/grub/themes/Tela/theme.txt
+  sudo sed -i 's/quiet splash\"/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off\"/g' /etc/default/grub
 fi
 
 # VSCodium
