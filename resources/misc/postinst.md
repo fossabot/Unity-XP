@@ -37,6 +37,7 @@
  --no-install-recommends
  ```
  - LXTask [**#apt:lxtask**]()
+ - Nextcloud [**#apt:nextcloud-desktop**]() (_Nemo_) [**#apt:nemo-nextcloud**]()
  - Open SSH server [**#apt:openssh-server**]()
  - Sweeper [**#apt:sweeper**]()
 
