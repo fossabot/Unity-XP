@@ -37,6 +37,7 @@
  --no-install-recommends
  ```
  - LXTask [**#apt:lxtask**]()
+ - Open SSH server [**#apt:openssh-server**]()
  - Sweeper [**#apt:sweeper**]()
 
 #### GSettings
