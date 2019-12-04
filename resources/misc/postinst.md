@@ -73,6 +73,7 @@
  xdg-mime default smplayer.desktop audio/flac
  xdg-mime default smplayer.desktop video/mp4
  xdg-mime default smplayer.desktop video/mkv
+ xdg-mime default smplayer.desktop video/quicktime
  ```
 
 #### LightDM (NVIDIA)
