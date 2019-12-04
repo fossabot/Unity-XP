@@ -44,7 +44,6 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [GNOME calculator](https://wiki.gnome.org/Apps/Calculator)
  - [GNOME font viewer](https://launchpad.net/ubuntu/+source/gnome-font-viewer)
  - [GpuTest](https://www.geeks3d.com/20140304/gputest-0-7-0-opengl-benchmark-win-linux-osx-new-fp64-opengl-4-test-and-online-gpu-database/)
- - [GpuTest](https://www.geeks3d.com/20140304/gputest-0-7-0-opengl-benchmark-win-linux-osx-new-fp64-opengl-4-test-and-online-gpu-database/)
  - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
  - [Hardcode-tray](https://github.com/bilelmoussaoui/Hardcode-Tray)
  - [HardInfo](https://www.berlios.de/software/hardinfo/)
