@@ -58,6 +58,7 @@
  gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
  gsettings set org.compiz.workarounds:/org/compiz/profiles/unity/plugins/workarounds/ force-swap-buffers true
  gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
+ gsettings set org.gnome.Epiphany.reader color-scheme dark
  ```
 
 #### MIME
