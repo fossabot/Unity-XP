@@ -21,12 +21,14 @@ jobs:
       run: sudo apt update;sudo apt install -y apt-transport-https debootstrap mtools rsync squashfs-tools sshpass xorriso
     - name: Compilação da imagem de instalação
       run: bash code/build.sh
-    - name: Upload da imagem de instalação para o SourceForge
-      run: sshpass -p '${{ secrets.SOURCEFORGE_PASS }}' rsync -avP -e 'ssh -o StrictHostKeyChecking=no' $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* rauldipeas@frs.sourceforge.net:/home/frs/project/unity-xp/ISO
-    - name: Notificação no Telegram
-      uses: appleboy/telegram-action@master
-      with:
-        to: -1001205590386
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: Uma nova imagem de instalação do Unity XP está disponível para download no site.
-        photo: resources/images/github-hero.png
+    - name: Upload da imagem de instalação para o Nextcloud
+      run: 'curl -k -T $HOME/Unity-XP/iso/unity-xp-19.10-amd64.iso -u "JaeqpxrrJkSjNWN:unityxp2019" -H "X-Requested-With: XMLHttpRequest" https://cs.unixuniverse.com.br/cloud/public.php/webdav/unity-xp-19.10-amd64.iso'
+    #- name: Upload da imagem de instalação para o SourceForge
+    #  run: sshpass -p '${{ secrets.SOURCEFORGE_PASS }}' rsync -avP -e 'ssh -o StrictHostKeyChecking=no' $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* rauldipeas@frs.sourceforge.net:/home/frs/project/unity-xp/ISO
+    #- name: Notificação no Telegram
+    #  uses: appleboy/telegram-action@master
+    #  with:
+    #    to: -1001205590386
+    #    token: ${{ secrets.TELEGRAM_TOKEN }}
+    #    args: Uma nova imagem de instalação do Unity XP está disponível para download no site.
+    #    photo: resources/images/github-hero.png
