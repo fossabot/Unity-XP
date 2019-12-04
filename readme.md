@@ -2,13 +2,13 @@ O **Unity eXPerience** é um projeto de prova de conceito, que visa a possibilid
 
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**XanMod**](https://xanmod.org/).
 
-[![**downlad**](resources/images/download.png)](https://sourceforge.net/projects/unity-xp/files/ISO/)
+[![Download Unity XP](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/unity-xp/files/ISO)
 
 ### Imagens
 
 1 | 2 | 3 | 4 | 5
 -|-|-|-|-
-[![desktop](screenshots/desktop.png)](screenshots/desktop.png)|[![epiphany](screenshots/epiphany.png)](screenshots/epiphany.png)|[![tilix+nemo](screenshots/tilix+nemo.png)](screenshots/tilix+nemo.png)|[![apps](screenshots/apps.png)](screenshots/apps.png)|[![plymouth](screenshots/plymouth.png)](screenshots/plymouth.png)|
+[![desktop](screenshots/desktop.png)](screenshots/desktop.png)|[![epiphany](screenshots/epiphany.png)](screenshots/epiphany.png)|[![tilix+nemo](screenshots/tilix+nemo.png)](screenshots/tilix+nemo.png)|[![apps](screenshots/apps.png)](screenshots/apps.png)|[![plymouth](screenshots/plymouth.png)](screenshots/plymouth.png)
 
 ### Características
  - [**Ubuntu 19.10**](https://ubuntu.com)
