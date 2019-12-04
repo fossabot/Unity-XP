@@ -1,7 +1,7 @@
 <presets>
 	<Resolve>
 		<label>DaVinci Resolve</label>
-		<params>-vcodec dnxhd -acodec pcm_s24le -r 30000/1001 -b:v 36M -pix_fmt yuv422p -f mov</params>
+		<params>-vcodec dnxhd -acodec pcm_s24le -r 30 -b:v 36M -pix_fmt yuv422p -f mov</params>
 		<extension>mov</extension>
 	</Resolve>
 </presets>
