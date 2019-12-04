@@ -31,6 +31,7 @@
  sudo rm -rfv /usr/share/applications/caffeine.desktop
  => (apt.conf.d/100caffeine)
  ```
+ - DConf editor [**#apt:dconf-editor**]()
  - GUVCView [**#apt:guvcview**]()
  ```bash
  sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/guvcview\/guvcview.png/Icon=guvcview/g' /usr/share/applications/guvcview.desktop
