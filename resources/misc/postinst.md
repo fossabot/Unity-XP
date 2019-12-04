@@ -47,6 +47,7 @@
  - MediaInfo GUI [**#apt:mediainfo-gui**]()
  - Nextcloud [**#apt:nextcloud-desktop**]() (_Nemo_) [**#apt:nemo-nextcloud**]()
  - Open SSH server [**#apt:openssh-server**]()
+ - Shotwell [**#apt:shotwell**]()
  - Sweeper [**#apt:sweeper**]()
 
 #### GSettings
