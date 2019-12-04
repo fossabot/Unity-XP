@@ -31,6 +31,11 @@
  sudo rm -rfv /usr/share/applications/caffeine.desktop
  => (apt.conf.d/100caffeine)
  ```
+ - GUVCView [**#apt:guvcview**]()
+ ```bash
+ sudo sed -i 's/Icon=\/usr\/share\/pixmaps\/guvcview\/guvcview.png/Icon=guvcview/g' /usr/share/applications/guvcview.desktop
+ => (apt.conf.d/100guvcview)
+ ```
  - Inkscape [**#apt:inkscape**]()
  - KPat [**#apt:kpat**]()
  ```bash
