@@ -30,5 +30,5 @@ jobs:
       with:
         to: -1001205590386
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: Uma nova imagem de instalação do **Unity XP** está disponível para download no site https://unityxp.tk
-        photo: resources/images/unity-xp.gif
+        args: Uma nova imagem de instalação do Unity XP está disponível para download no site https://unityxp.tk
+        photo: resources/images/github-hero.png
