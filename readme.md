@@ -134,6 +134,7 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**Chromium**](https://docs.unityxp.tk/extras/chromium)
   - [**DBeaver**](https://docs.unityxp.tk/extras/dbeaver)
   - [**Drawers**](https://docs.unityxp.tk/extras/drawers)
+  - [**Flutter**](https://docs.unityxp.tk/extras/flutter)
   - [**FreeOffice**](https://docs.unityxp.tk/extras/freeoffice)
   - [**Insomnia**](https://docs.unityxp.tk/extras/insomnia)
   - [**Jack**](https://docs.unityxp.tk/extras/jack)
