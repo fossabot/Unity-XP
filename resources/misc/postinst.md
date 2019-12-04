@@ -9,6 +9,7 @@
  - Rambox [#extras](https://docs.unityxp.tk/extras/rambox)
  - REAPER [#extras](https://docs.unityxp.tk/extras/reaper)
  - Resolve [#extras](https://docs.unityxp.tk/extras/resolve)
+ - SC controller [#extras](https://docs.unityxp.tk/extras/sc-controler)
  - VirtualBox [#extras](https://docs.unityxp.tk/extras/virtualbox)
 
 #### Deb/AppImage
