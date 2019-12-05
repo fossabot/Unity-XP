@@ -8,7 +8,7 @@
  - [**!**]() MKUSB [#extras](https://docs.unityxp.tk/extras/mkusb)
  - Rambox [#extras](https://docs.unityxp.tk/extras/rambox)
  - REAPER [#extras](https://docs.unityxp.tk/extras/reaper)
- - Resolve [#extras](https://docs.unityxp.tk/extras/resolve)
+ - [**!**]() Resolve [#extras](https://docs.unityxp.tk/extras/resolve)
  - SC controller [#extras](https://docs.unityxp.tk/extras/sc-controler)
  - VirtualBox [#extras](https://docs.unityxp.tk/extras/virtualbox)
 
@@ -65,6 +65,7 @@
 
 #### MIME
  ```bash
+ xdg-mime default deluge.desktop application/x-bittorrent
  xdg-mime default nemo.desktop inode/directory
  xdg-mime default org.gnome.gThumb.desktop image/gif
  xdg-mime default org.gnome.gThumb.desktop image/jpg
