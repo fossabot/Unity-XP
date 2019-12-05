@@ -5,13 +5,13 @@
 ```bash
 wget -c https://launchpad.net/~cteehayder/+archive/ubuntu/ffmulticonverter/+files/ffmulticonverter_1.8.0-dmo1-1ubuntu1_all.deb
 sudo apt install -y ./ffmulticonverter*.deb ocl-icd-libopencl1;rm -rfv ffmulticonverter*.deb
-mkdir -pv ~/.config/ffmulticonverter
+mkdir -pv ~/.config/ffmulticonverter ~/resolve
 wget -O ~/.config/ffmulticonverter/presets.xml https://github.com/rauldipeas/Unity-XP/raw/master/resources/misc/presets.xml
-unzip $HOME/Downloads/DaVinci_Resolve*.zip;./DaVinci_Resolve*Linux.run;rm -rfv *esolve* Linux_Installation_Instructions.pdf
-echo 'StartupWMClass=resolve' | sudo tee -a /usr/share/applications/com.blackmagicdesign.resolve.desktop
-echo 'Categories=AudioVideo;' | sudo tee -a /usr/share/applications/com.blackmagicdesign.resolve.desktop
-sudo sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' /usr/share/applications/com.blackmagicdesign.resolve.desktop
-sudo rm -rfv /usr/share/applications/com.blackmagicdesign.resolve-*.desktop
-sudo ln -s /usr/lib/x86_64-linux-gnu/* /usr/lib64/
+wget -cO ~/resolve/makeresolvedeb.tar.gz http://www.danieltufvesson.com/download/?file=makeresolvedeb/makeresolvedeb_16.1.1-3.sh.tar.gz
+cd resolve;tar -vzxf makeresolvedeb*.tar.gz
+sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' makeresolvedeb*.sh
+sed -i 's/Architecture: amd64/Architecture: amd64\nDepends: ocl-icd-libopencl1\nSection: video/g' makeresolvedeb*.sh
+unzip ~/Downloads/DaVinci_Resolve_16.1.1_Linux.zip -d .;./makeresolvedeb*.sh lite
+sudo gdebi -n ./davinci-resolve*.deb
 ```
 [![bashrun-url](images/bashrun-url.png)](br:resolve)
