@@ -1,10 +1,16 @@
 ### Destaques(em construção)
 
-![Android studio](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/androidstudio.svg?sanitize=true)|![ASDF-VM](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/utilities-terminal.svg?sanitize=true)|![Bash-it](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/utilities-terminal.svg?sanitize=true)|![Blender](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/blender.svg?sanitize=true)
--|-|-|-
-[**Android studio**](extras/android-studio.md)|[**ASDF-VM**](extras/asdf-vm.md)|[**Bash-it**](extras/bash-it.md)|[**Blender**](extras/blender.md)|
+[![Android studio](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/androidstudio.svg?sanitize=true) **Android Studio**](extras/android-studio.md)
 
-[Chromium](extras/chromium.md)
+[![ASDF-VM](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/utilities-terminal.svg?sanitize=true) **ASDF-VM**](extras/asdf-vm.md)
+
+
+[![Bash-it](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/utilities-terminal.svg?sanitize=true) **Bash-it**](extras/bash-it.md)
+
+
+[![Blender](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/blender.svg?sanitize=true) **Blender**](extras/blender.md)
+
+[![Chromium](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/chromium-browser.svg?sanitize=true)**Chromium**](extras/chromium.md)
 
 [DBeaver](extras/dbeaver.md)
 
