@@ -27,4 +27,5 @@
 * [SC controller](extras/sc-controller.md)
 * [Ubuntu Make](extras/ubuntu-make.md)
 * [VirtualBox](extras/virtualbox.md)
+* [Yandex disk](extras/yandex-disk.md)
 * [ZSH](extras/zsh.md)

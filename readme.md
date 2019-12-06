@@ -149,4 +149,5 @@ Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as 
   - [**SC controller**](https://docs.unityxp.tk/extras/sc-controller)
   - [**Ubuntu make**](https://docs.unityxp.tk/extras/ubuntu-make)
   - [**VirtualBox**](https://docs.unityxp.tk/extras/virtualbox)
+  - [**Yandex disk**](https://docs.unityxp.tk/extras/yandex-disk)
   - [**ZSH**](https://docs.unityxp.tk/extras/zsh)
