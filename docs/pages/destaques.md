@@ -2,7 +2,7 @@
 
 ![Android studio](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/androidstudio.svg?sanitize=true)|![ASDF-VM](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/utilities-terminal.svg?sanitize=true)|![Bash-it](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/utilities-terminal.svg?sanitize=true)|![Blender](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/blender.svg?sanitize=true)
 -|-|-|-
-[**Android studio**](extras/android-studio.md)|[ASDF-VM](extras/asdf-vm.md)|[Bash-it](extras/bash-it.md)|[Blender](extras/blender.md)|
+[**Android studio**](extras/android-studio.md)|[**ASDF-VM**](extras/asdf-vm.md)|[**Bash-it**](extras/bash-it.md)|[**Blender**](extras/blender.md)|
 
 [Chromium](extras/chromium.md)
 
