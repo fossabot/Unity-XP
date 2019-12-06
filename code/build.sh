@@ -116,6 +116,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     dos2unix \
     epiphany-browser \
     feedreader \
+    ffmpegthumbnailer \
     folder-color-nemo \
     fonts-dejavu-core \
     fonts-emojione \

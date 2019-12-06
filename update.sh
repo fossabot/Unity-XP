@@ -262,3 +262,8 @@ fi
 if promptyn "Você deseja instalar o FeedReader? (s/n)"; then
   sudo apt install -y feedreader
 fi
+
+# FFmpegthumbnailer
+if promptyn "Você deseja instalar o FFmpegthumbnailer? (s/n)"; then
+  sudo apt install -y ffmpegthumbnailer
+fi

@@ -60,12 +60,18 @@
  gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
  gsettings set org.compiz.workarounds:/org/compiz/profiles/unity/plugins/workarounds/ force-swap-buffers true
  gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
+ gsettings set org.gnome.Epiphany homepage-url https://unityxp.tk
  gsettings set org.gnome.Epiphany.reader color-scheme dark
+ gsettings set org.gnome.Epiphany.ui expand-tabs-bar false
+ gsettings set org.gnome.Epiphany.web:/ hardware-acceleration-policy 'always'
+ gsettings set org.nemo.preferences show-image-thumbnails 'always'
+ gsettings set org.nemo.preferences thumbnail-limit 'uint64 4294967295'
  ```
 
 #### MIME
  ```bash
  xdg-mime default deluge.desktop application/x-bittorrent
+ xdg-mime default deluge.desktop x-scheme-handler/magnet
  xdg-mime default nemo.desktop inode/directory
  xdg-mime default org.gnome.gThumb.desktop image/gif
  xdg-mime default org.gnome.gThumb.desktop image/jpeg

@@ -37,6 +37,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Epiphany(Web)](https://wiki.gnome.org/Apps/Web)
  - [FeedReader](https://jangernert.github.io/FeedReader/)
  - [Ferramenta de captura de tela do GNOME](https://en.wikipedia.org/wiki/GNOME_Screenshot)
+ - [FFmpegthumbnailer](https://github.com/dirkvdb/ffmpegthumbnailer)
  - [Folder color Nemo](http://foldercolor.tuxfamily.org/)
  - [GDebI](https://launchpad.net/gdebi)
  - [Gestures](https://gitlab.com/cunidev/gestures)
