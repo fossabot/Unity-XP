@@ -18,9 +18,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Instalação de dependências
-      run: sudo apt update;sudo apt install -y apt-transport-https debootstrap mtools rsync squashfs-tools sshpass xorriso
+      run: sudo apt update;sudo apt install -y apt-transport-https debootstrap mktorrent mtools rsync squashfs-tools sshpass xorriso
     - name: Compilação da imagem de instalação
       run: bash code/build.sh
+    - name: Criação do arquivo torrent da imagem de instalação
+      run: cd $HOME/Unity-XP/iso;mktorrent -v -c "Unity eXPerience https://unityxp.tk" -n "unity-xp-19.10-amd64" -w https://iweb.dl.sourceforge.net/project/unity-xp/ISO/unity-xp-19.10-amd64.iso unity-xp-19.10-amd64.iso
     - name: Upload da imagem de instalação para o Nextcloud
       run: 'curl -k -T $HOME/Unity-XP/iso/unity-xp-19.10-amd64.iso -u "${{ secrets.NEXTCLOUD_ID }}" -H "X-Requested-With: XMLHttpRequest" https://cs.unixuniverse.com.br/cloud/public.php/webdav/unity-xp-19.10-amd64.iso'
     - name: Upload da imagem de instalação para o SourceForge
