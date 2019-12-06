@@ -22,22 +22,22 @@ jobs:
     - name: Compilação da imagem de instalação
       run: bash code/build.sh
     - name: Criação do arquivo torrent da imagem de instalação
-      run: cd $HOME/Unity-XP/iso;mktorrent -v -a udp://tracker.openbittorrent.com:80 -c "Unity eXPerience https://unityxp.tk" -n "unity-xp-19.10-amd64" -w https://iweb.dl.sourceforge.net/project/unity-xp/ISO/unity-xp-19.10-amd64.iso unity-xp-19.10-amd64.iso
+      run: cd $HOME/Unity-XP/iso;mktorrent -v -a udp://tracker.openbittorrent.com:80 -c "Unity eXPerience https://unityxp.tk" -n "unity-xp-19.10-amd64.iso" -w https://iweb.dl.sourceforge.net/project/unity-xp/ISO/unity-xp-19.10-amd64.iso unity-xp-19.10-amd64.iso
     - name: Upload da imagem de instalação para o Yandex disk
       run: |
             wget -c http://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
             sudo apt install -y ./yandex-disk*.deb
             yandex-disk token -p '${{ secrets.YANDEX_PASS }}' rauldipeas
-            echo 'dir=Unity-XP/iso' | tee -a $HOME/.config/yandex-disk/config.cfg
+            echo 'dir=/home/runner/Unity-XP/iso' | tee -a $HOME/.config/yandex-disk/config.cfg
             yandex-disk sync
 #    - name: Upload da imagem de instalação para o Nextcloud
 #      run: 'curl -k -T $HOME/Unity-XP/iso/unity-xp-19.10-amd64.iso -u "${{ secrets.NEXTCLOUD_ID }}" -H "X-Requested-With: XMLHttpRequest" https://cs.unixuniverse.com.br/cloud/public.php/webdav/unity-xp-19.10-amd64.iso'
-    - name: Upload da imagem de instalação para o SourceForge
-      run: sshpass -p '${{ secrets.SOURCEFORGE_PASS }}' rsync -avP -e 'ssh -o StrictHostKeyChecking=no' $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* rauldipeas@frs.sourceforge.net:/home/frs/project/unity-xp/ISO
-    - name: Notificação no Telegram
-      uses: appleboy/telegram-action@master
-      with:
-        to: -1001205590386
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: Uma nova imagem de instalação do Unity XP está disponível para download no site https://unityxp.tk
-        photo: resources/images/github-hero.png
+#    - name: Upload da imagem de instalação para o SourceForge
+#      run: sshpass -p '${{ secrets.SOURCEFORGE_PASS }}' rsync -avP -e 'ssh -o StrictHostKeyChecking=no' $HOME/Unity-XP/iso/unity-xp-19.10-amd64.* rauldipeas@frs.sourceforge.net:/home/frs/project/unity-xp/ISO
+#    - name: Notificação no Telegram
+#      uses: appleboy/telegram-action@master
+#      with:
+#        to: -1001205590386
+#        token: ${{ secrets.TELEGRAM_TOKEN }}
+#        args: Uma nova imagem de instalação do Unity XP está disponível para download no site https://unityxp.tk
+#        photo: resources/images/github-hero.png
