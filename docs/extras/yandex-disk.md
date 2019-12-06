@@ -1,7 +1,7 @@
 ### [Yandex disk](https://disk.yandex.com)
 ```bash
 wget -c http://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
-sudo apt install -y ./yandex-disk*.deb
+sudo apt install -y ./yandex-disk*.deb;rm -rfv yandex-disk*.deb
 sudo rm -rfv /etc/apt/sources.list.d/slytomcat-ubuntu-ppa* /etc/apt/trusted.gpg.d/slytomcat_ubuntu_ppa*
 sudo add-apt-repository -y ppa:slytomcat/ppa
 sudo apt install -y yd-tools
