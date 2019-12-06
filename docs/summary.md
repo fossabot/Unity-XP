@@ -7,7 +7,7 @@
 
 ## Extras
 
-* [Android Studio](extras/android-studio.md)
+* [Android studio](extras/android-studio.md)
 * [ASDF-VM](extras/asdf-vm.md)
 * [Bash-it](extras/bash-it.md)
 * [Blender](extras/blender.md)
@@ -20,13 +20,13 @@
 * [Jack](extras/jack.md)
 * [LinVST](extras/linvst.md)
 * [MKUSB](extras/mkusb.md)
-* [PJe Office](extras/pjeoffice.md)
+* [PJe office](extras/pjeoffice.md)
 * [Pushbullet indicator](extras/pushbullet-indicator.md)
 * [Rambox](extras/rambox.md)
 * [REAPER](extras/reaper.md)
 * [Resolve](extras/resolve.md)
 * [SC controller](extras/sc-controller.md)
-* [Ubuntu Make](extras/ubuntu-make.md)
+* [Ubuntu make](extras/ubuntu-make.md)
 * [VirtualBox](extras/virtualbox.md)
 * [Yandex disk](extras/yandex-disk.md)
 * [ZSH](extras/zsh.md)
