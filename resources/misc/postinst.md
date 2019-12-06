@@ -45,6 +45,7 @@
  ```
  - LXTask [**#apt:lxtask**]()
  - MediaInfo GUI [**#apt:mediainfo-gui**]()
+ - Nemo GTK hash[**#apt:nemo-gtkhash**]()
  - Nextcloud [**#apt:nextcloud-desktop**]() (_Nemo_) [**#apt:nemo-nextcloud**]()
  - Open SSH server [**#apt:openssh-server**]()
  - Shotwell [**#apt:shotwell**]()
