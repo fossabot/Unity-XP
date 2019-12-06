@@ -1,14 +1,20 @@
 ### Destaques(em construção)
 
-[Android studio](extras/android-studio.md)
+[**Android studio**](extras/android-studio.md)
 
-![Android studio](https://i.ytimg.com/vi/dv6lu0LDodU/maxresdefault.jpg)
+![Android studio](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/androidstudio.svg)
 
 [ASDF-VM](extras/asdf-vm.md)
 
+![ASDF-VM](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/utilities-terminal.svg)
+
 [Bash-it](extras/bash-it.md)
 
+![Bash-it](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/utilities-terminal.svg)
+
 [Blender](extras/blender.md)
+
+![Blender](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/blender.svg)
 
 [Chromium](extras/chromium.md)
 
