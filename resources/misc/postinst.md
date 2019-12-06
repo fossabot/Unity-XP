@@ -10,7 +10,7 @@
  - REAPER [#extras](https://docs.unityxp.tk/extras/reaper)
  - [**!**]() Resolve [#extras](https://docs.unityxp.tk/extras/resolve)
  - SC controller [#extras](https://docs.unityxp.tk/extras/sc-controler)
- - VirtualBox [#extras](https://docs.unityxp.tk/extras/virtualbox)
+ - [**!**]() VirtualBox [#extras](https://docs.unityxp.tk/extras/virtualbox)
  - Yandex disk [#extras](https://docs.unityxp.tk/extras/yandex-disk)
 
 #### Deb/AppImage
@@ -47,7 +47,6 @@
  - LXTask [**#apt:lxtask**]()
  - MediaInfo GUI [**#apt:mediainfo-gui**]()
  - Nemo GTK hash[**#apt:nemo-gtkhash**]()
- - Nextcloud [**#apt:nextcloud-desktop**]() (_Nemo_) [**#apt:nemo-nextcloud**]()
  - Open SSH server [**#apt:openssh-server**]()
  - Shotwell [**#apt:shotwell**]()
  - Sweeper [**#apt:sweeper**]()
