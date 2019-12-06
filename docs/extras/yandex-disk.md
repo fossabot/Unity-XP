@@ -10,5 +10,6 @@ echo DPkg::Post-Invoke \{\"sed -i \'s/Icon = \\/usr\\/share\\/yd-tools\\/icons\\
 mkdir -pv ~/.config/yd-tools/icons/dark
 cp -v /usr/share/icons/Papirus/22x22/panel/yd-* ~/.config/yd-tools/icons/dark/
 cd ~/.config/yd-tools/icons/dark/;for i in *; do rsvg-convert $i -o `echo $i | sed -e 's/svg$/png/'`; done
+rm -rfv ~/.config/yd-tools/icons/dark/*.svg
 ```
 [![bashrun-url](images/bashrun-url.png)](br:yandex-disk)
