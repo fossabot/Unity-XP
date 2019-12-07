@@ -89,6 +89,10 @@ fi
 if promptyn "Você deseja mudar o greeter do LightDM para o GTK? (s/n)"; then
   sudo apt install -y lightdm-gtk-greeter-settings
   sudo wget -O /etc/lightdm/lightdm-gtk-greeter.conf https://github.com/rauldipeas/Unity-XP/raw/master/code/settings/lightdm-gtk-greeter.conf
+  sudo mkdir -pv /usr/loca/bin
+  sudo wget -O /usr/local/bin/ https://github.com/rauldipeas/Unity-XP/raw/master/code/settings/nvidia_lightdm_display_setup.sh
+  sudo chmod +x -v /usr/local/bin/nvidia_lightdm_display_setup.sh
+  sudo wget -O /etc/lightdm/lightdm.conf.d/nvidia-display-setup.conf https://github.com/rauldipeas/Unity-XP/raw/master/code/settings/nvidia-display-setup.conf
 fi
 
 # Fonts EmojiOne
