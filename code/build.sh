@@ -388,12 +388,17 @@ echo "RESUME=none" | sudo tee $HOME/Unity-XP/chroot/etc/initramfs-tools/conf.d/r
 echo "FRAMEBUFFER=y" | sudo tee $HOME/Unity-XP/chroot/etc/initramfs-tools/conf.d/splash
 
 # Configuração do kernel e do driver NVIDIA
-sudo cp -rfv code/settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
-sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
-sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
-sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
-# Configurações do Qt5
 sudo cp -rfv code/settings/lightdm-gtk-greeter.conf $HOME/Unity-XP/chroot/etc/lightdm/lightdm-gtk-greeter.conf
+sudo cp -rfv code/settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
+sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
+sudo cp -rfv code/settings/nvidia-display-setup.conf $HOME/Unity-XP/chroot/etc/lightdm/lightdm.conf.d/nvidia-display-setup.conf
+sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
+sudo mkdir -pv $HOME/Unity-XP/chroot/usr/local/bin
+sudo cp -rfv code/settings/nvidia_lightdm_display_setup.sh $HOME/Unity-XP/chroot/usr/local/bin/nvidia_lightdm_display_setup.sh
+sudo chmod +x -v $HOME/Unity-XP/chroot/usr/local/bin/nvidia_lightdm_display_setup.sh
+sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
+
+# Configurações do Qt5
 sudo cp -rfv code/settings/99qt5ct.conf $HOME/Unity-XP/chroot/etc/environment.d/99qt5ct.conf
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,smplayer,qt5ct,olivevideoeditor.org/Olive}
 sudo cp -rfv code/settings/appimagelauncher.cfg $HOME/Unity-XP/chroot/etc/skel/.config/appimagelauncher.cfg
