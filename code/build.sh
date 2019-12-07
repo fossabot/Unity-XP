@@ -314,6 +314,7 @@ sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y \
     dmz-cursor-theme \
     doc-base \
     eog \
+    evolution-data-server \
     fonts-freefont-ttf \
     fonts-lato \
     fonts-liberation2 \
