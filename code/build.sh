@@ -322,6 +322,7 @@ sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y \
     gnome-session-canberra \
     gnome-shell \
     gnome-terminal \
+    gnome-themes-extra* \
     gsfonts \
     humanity-icon-theme \
     info \
