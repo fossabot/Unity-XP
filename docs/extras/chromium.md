@@ -14,9 +14,7 @@ sudo cp -rfv opt/google/chrome/WidevineCdm/ /usr/lib/chromium-browser/;cd ..;rm 
 ```
 [![bashrun-url](images/bashrun-url.png)](br:chromium)
 
-{% hint style="info" %}
 ### **Chave API**
-
 
 ###### Alguns recursos do Chromium, incluindo o Sync, exigem uma chave de API, que não está incluída nos pacotes instalados.
 ###### Para usar esses recursos, siga as 11 etapas indicadas:
@@ -28,5 +26,4 @@ sudo cp -rfv opt/google/chrome/WidevineCdm/ /usr/lib/chromium-browser/;cd ..;rm 
 ###### `export GOOGLE_DEFAULT_CLIENT_SECRET="client_secret"`
 
 ###### Substitua o que está entre aspas (após o sinal `=` em cada linha) pelo valor apropriado.
-###### Você precisará fazer logoff e logon novamente (ou reiniciar, se preferir) para que o Chromium use as chaves. 
-{% end hint %}
+###### Você precisará fazer logoff e logon novamente (ou reiniciar, se preferir) para que o Chromium use as chaves.
