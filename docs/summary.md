@@ -10,6 +10,7 @@
 * [ASDF-VM](extras/asdf-vm.md)
 * [Bash-it](extras/bash-it.md)
 * [Blender](extras/blender.md)
+* [Brave](extras/brave.md)
 * [Chromium](extras/chromium.md)
 * [DBeaver](extras/dbeaver.md)
 * [Drawers](extras/drawers.md)
