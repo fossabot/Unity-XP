@@ -105,6 +105,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     activity-log-manager \
     audacity \
+    b43-fwcutter \
+    bcmwl-kernel-source \
     breeze-cursor-theme \
     codium \
     compizconfig-settings-manager \
@@ -113,6 +115,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     deluged \
     deluge-gtk \
     diodon \
+    dkms \
     dos2unix \
     epiphany-browser \
     feedreader \
@@ -121,6 +124,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     fonts-dejavu-core \
     fonts-emojione \
     fonts-ubuntu \
+    fonts-mikachan \
     gdebi \
     gimp \
     git \
