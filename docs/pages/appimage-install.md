@@ -2,7 +2,7 @@
 
 Para instalar programas empacotados no formato [**AppImage**](https://appimage.org/) no **Unity XP** é muito simples, basta _acessar a página de download do programa_, baixar o pacote e assim que o download é concluído, o programa já estará disponível no menu automaticamente, **nenhum passo adicional é necessário**.
 
-Mas se você gosta de manter seus arquivos bem organizados e não quer deixar os programas na pasta de downloads, pode utilizar o método a seguir, os arquivos **AppImage** ficarão _salvos_ na pasta `~/.local/bin`
+Mas se você gosta de manter seus arquivos bem organizados e não quer deixar os programas na pasta de _Downloads_, pode utilizar o método a seguir, os arquivos **AppImage** ficarão _salvos_ na pasta `~/.local/bin`
 
 Acesse o site **https://appimagehub.com** e navegue até a página do programa que deseja instalar:
 
@@ -29,3 +29,5 @@ O programa estará disponível no _dash_ do **Unity XP**.
 ![appimage-ao](images/appimage-ao.png)
 
 ~~**Aviso**: Na primeira vez que você executar esse procedimento, será necessário reiniciar a sessão, porque a pasta criada pelo **OCS-URL** para armazenar os programas, não estará sendo monitorada pelo **AppImageD**(daemon que faz a integração automática), nas execuções seguintes não será necessário reiniciar a sessão.~~
+
+**Aviso**: Ao executar um programa no formato AppImage, salvo na pasta de _Downloads_, o sistema irá perguntar se você deseja mover o arquivo para a pasta `~/.local/bin`, esse passo é opcional, você pode manter o programa na pasta de _Downloads_.
