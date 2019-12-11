@@ -7,6 +7,7 @@
 
 ## Extras
 
+* [AdBlock](extras/adblock.md)
 * [Android studio](extras/android-studio.md)
 * [ASDF-VM](extras/asdf-vm.md)
 * [Bash-it](extras/bash-it.md)
