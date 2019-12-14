@@ -75,7 +75,7 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'debconf debconf/frontend select N
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'resolvconf resolvconf/linkify-resolvconf boolean false' | debconf-set-selections"
 
 # Ferramentas base do Ubuntu
-sudo chroot $HOME/Unity-XP/chroot apt install -y \
+sudo chroot $HOME/Unity-XP/chroot apt install -y --fix-missing \
     casper \
     discover \
     laptop-detect \
