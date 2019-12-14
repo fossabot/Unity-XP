@@ -4,6 +4,11 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 [![Download Unity XP](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/unity-xp/files/ISO)
 
+[![GitHub Actions badge](https://github.com/rauldipeas/Unity-XP/workflows/Unity%20XP%20%28ISO%29/badge.svg)](https://github.com/rauldipeas/Unity-XP/actions?query=workflow%3A%22Unity+XP+%28ISO%29%22)
+
+[![GitHub Actions badge](https://github.com/rauldipeas/Unity-XP/workflows/Unity%20XP%20%28download-counter%29/badge.svg)](https://github.com/rauldipeas/Unity-XP/actions?query=workflow%3A%22Unity+XP+%28download-counter%29%22)
+
+
 ### Imagens
 
 1 | 2 | 3 | 4 | 5
