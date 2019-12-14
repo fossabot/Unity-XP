@@ -123,8 +123,9 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     folder-color-nemo \
     fonts-dejavu-core \
     fonts-emojione \
-    fonts-ubuntu \
     fonts-mikachan \
+    fonts-noto-cjk \
+    fonts-ubuntu \
     gdebi \
     gimp \
     git \
