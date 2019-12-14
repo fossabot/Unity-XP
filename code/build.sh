@@ -53,7 +53,7 @@ wget -O- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbu
 echo 'deb http://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_19.10/ /' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/mellowplayer.list
 wget -O- https://download.opensuse.org/repositories/home:ColinDuquesnoy/xUbuntu_19.10/Release.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/mellowplayer.gpg
 # XanMod
-echo 'deb [arch=amd64] http://deb.xanmod.org releases main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/xanmod-kernel.list
+echo 'deb http://deb.xanmod.org releases main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/xanmod-kernel.list
 wget -O- https://dl.xanmod.org/gpg.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/xanmod-kernel.gpg
 # Pop!_OS (NVIDIA drivers)
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:system76/pop
