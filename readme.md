@@ -3,6 +3,7 @@ O **Unity eXPerience** é um projeto de prova de conceito, que visa a possibilid
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**XanMod**](https://xanmod.org/).
 
 [![Download Unity XP](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/unity-xp/files/ISO)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frauldipeas%2FUnity-XP.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frauldipeas%2FUnity-XP?ref=badge_shield)
 
 ![GitHub Actions badge](https://github.com/rauldipeas/Unity-XP/workflows/Unity%20XP%20%28ISO%29/badge.svg)
 ![SourceForge badge](https://img.shields.io/sourceforge/dm/unity-xp.svg)
@@ -132,3 +133,6 @@ bash <(curl -sL https://git.io/unity-xp-update)
 ```
 
 Você pode usar as opções `-s` ou `-y` para instalar automaticamente todas as atualizações.
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frauldipeas%2FUnity-XP.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frauldipeas%2FUnity-XP?ref=badge_large)
