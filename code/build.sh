@@ -47,13 +47,13 @@ sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:webupd8team/indicat
 echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/vscodium.list
 wget -O- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/vscodium.gpg
 # WINE staging
-echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_`lsb_release -sr` ./" | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/wine-obs.list
-wget -O- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_`lsb_release -sr`/Release.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/wine-obs.gpg
+echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.10 ./" | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/wine-obs.list
+wget -O- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.10/Release.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/wine-obs.gpg
 # MellowPlayer
 echo 'deb http://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_19.10/ /' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/mellowplayer.list
 wget -O- https://download.opensuse.org/repositories/home:ColinDuquesnoy/xUbuntu_19.10/Release.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/mellowplayer.gpg
 # XanMod
-echo 'deb http://deb.xanmod.org releases main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/xanmod-kernel.list
+echo 'deb [arch=amd64] http://deb.xanmod.org releases main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/xanmod-kernel.list
 wget -O- https://dl.xanmod.org/gpg.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/xanmod-kernel.gpg
 # Pop!_OS (NVIDIA drivers)
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:system76/pop
