@@ -6,6 +6,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 ![SourceForge badge](https://img.shields.io/sourceforge/dm/unity-xp.svg)
 ![SourceForge badge](https://img.shields.io/sourceforge/dw/unity-xp.svg)
 ![SourceForge badge](https://img.shields.io/sourceforge/dd/unity-xp.svg)
+![SourceForge badge](https://img.shields.io/badge/-Telegram-blue?style=flat&logo=telegram)
 
 ### Faça você mesmo
 Você pode _compilar a imagem por sua conta e risco_, usando os comandos _abaixo_:
